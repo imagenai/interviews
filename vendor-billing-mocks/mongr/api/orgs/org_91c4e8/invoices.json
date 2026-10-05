@@ -1,0 +1,863 @@
+{
+  "org_id": "org_91c4e8",
+  "results": [
+    {
+      "id": "inv_91c4e8_202609",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2026-09-01",
+      "period_end": "2026-09-30",
+      "subtotal": 10903.09,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 7741.21
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 2289.68
+        },
+        {
+          "cluster": "backups",
+          "amount": 872.2
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202608",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2026-08-01",
+      "period_end": "2026-08-31",
+      "subtotal": 11799.31,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 8377.51
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 2477.85
+        },
+        {
+          "cluster": "backups",
+          "amount": 943.95
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202607",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2026-07-01",
+      "period_end": "2026-07-31",
+      "subtotal": 11480.43,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 8151.09
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 2410.86
+        },
+        {
+          "cluster": "backups",
+          "amount": 918.48
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202606",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "subtotal": 9723.29,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 6903.55
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 2041.87
+        },
+        {
+          "cluster": "backups",
+          "amount": 777.87
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202605",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2026-05-01",
+      "period_end": "2026-05-31",
+      "subtotal": 11110.12,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 7888.21
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 2333.11
+        },
+        {
+          "cluster": "backups",
+          "amount": 888.8
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202604",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2026-04-01",
+      "period_end": "2026-04-30",
+      "subtotal": 10203.91,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 7244.77
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 2142.81
+        },
+        {
+          "cluster": "backups",
+          "amount": 816.33
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202603",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "subtotal": 10359.31,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 7355.11
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 2175.47
+        },
+        {
+          "cluster": "backups",
+          "amount": 828.73
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202602",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "subtotal": 8945.72,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 6351.42
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1878.62
+        },
+        {
+          "cluster": "backups",
+          "amount": 715.68
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202601",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "subtotal": 9615.2,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 6826.83
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 2019.18
+        },
+        {
+          "cluster": "backups",
+          "amount": 769.19
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202512",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-12-01",
+      "period_end": "2025-12-31",
+      "subtotal": 9272.04,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 6583.14
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1947.13
+        },
+        {
+          "cluster": "backups",
+          "amount": 741.77
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202511",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-11-01",
+      "period_end": "2025-11-30",
+      "subtotal": 8579.46,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 6091.41
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1801.69
+        },
+        {
+          "cluster": "backups",
+          "amount": 686.36
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202510",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-10-01",
+      "period_end": "2025-10-31",
+      "subtotal": 8986.22,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 6380.23
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1887.11
+        },
+        {
+          "cluster": "backups",
+          "amount": 718.88
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202509",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-09-01",
+      "period_end": "2025-09-30",
+      "subtotal": 9179.14,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 6517.19
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1927.63
+        },
+        {
+          "cluster": "backups",
+          "amount": 734.32
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202508",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-08-01",
+      "period_end": "2025-08-31",
+      "subtotal": 9101.24,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 6461.89
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1911.29
+        },
+        {
+          "cluster": "backups",
+          "amount": 728.06
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202507",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-07-01",
+      "period_end": "2025-07-31",
+      "subtotal": 8439.2,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 5991.81
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1772.23
+        },
+        {
+          "cluster": "backups",
+          "amount": 675.16
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202506",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-06-01",
+      "period_end": "2025-06-30",
+      "subtotal": 7815.71,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 5549.15
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1641.29
+        },
+        {
+          "cluster": "backups",
+          "amount": 625.27
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202505",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-05-01",
+      "period_end": "2025-05-31",
+      "subtotal": 8959.22,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 6361.03
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1881.43
+        },
+        {
+          "cluster": "backups",
+          "amount": 716.76
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202504",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-04-01",
+      "period_end": "2025-04-30",
+      "subtotal": 7974.75,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 5662.08
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1674.68
+        },
+        {
+          "cluster": "backups",
+          "amount": 637.99
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202503",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-03-01",
+      "period_end": "2025-03-31",
+      "subtotal": 7826.28,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 5556.68
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1643.55
+        },
+        {
+          "cluster": "backups",
+          "amount": 626.05
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202502",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-02-01",
+      "period_end": "2025-02-28",
+      "subtotal": 7365.54,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 5229.54
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1546.75
+        },
+        {
+          "cluster": "backups",
+          "amount": 589.25
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202501",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-01-01",
+      "period_end": "2025-01-31",
+      "subtotal": 8224.58,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 5839.45
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1727.18
+        },
+        {
+          "cluster": "backups",
+          "amount": 657.95
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202412",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-12-01",
+      "period_end": "2024-12-31",
+      "subtotal": 7152.54,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 5078.31
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1502.02
+        },
+        {
+          "cluster": "backups",
+          "amount": 572.21
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202411",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-11-01",
+      "period_end": "2024-11-30",
+      "subtotal": 6818.89,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 4841.43
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1431.94
+        },
+        {
+          "cluster": "backups",
+          "amount": 545.52
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202410",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-10-01",
+      "period_end": "2024-10-31",
+      "subtotal": 7857.19,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 5578.62
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1650.05
+        },
+        {
+          "cluster": "backups",
+          "amount": 628.52
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202409",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-09-01",
+      "period_end": "2024-09-30",
+      "subtotal": 6929.39,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 4919.88
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1455.15
+        },
+        {
+          "cluster": "backups",
+          "amount": 554.36
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202408",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-08-01",
+      "period_end": "2024-08-31",
+      "subtotal": 7212.56,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 5120.93
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1514.62
+        },
+        {
+          "cluster": "backups",
+          "amount": 577.01
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202407",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-07-01",
+      "period_end": "2024-07-31",
+      "subtotal": 6947.65,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 4932.83
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1459.0
+        },
+        {
+          "cluster": "backups",
+          "amount": 555.82
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202406",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-06-01",
+      "period_end": "2024-06-30",
+      "subtotal": 6745.64,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 4789.41
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1416.6
+        },
+        {
+          "cluster": "backups",
+          "amount": 539.63
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202405",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-05-01",
+      "period_end": "2024-05-31",
+      "subtotal": 6473.29,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 4596.02
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1359.37
+        },
+        {
+          "cluster": "backups",
+          "amount": 517.9
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202404",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-04-01",
+      "period_end": "2024-04-30",
+      "subtotal": 5933.7,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 4212.92
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1246.06
+        },
+        {
+          "cluster": "backups",
+          "amount": 474.72
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202403",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-03-01",
+      "period_end": "2024-03-31",
+      "subtotal": 6625.87,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 4704.38
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1391.43
+        },
+        {
+          "cluster": "backups",
+          "amount": 530.06
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202402",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-02-01",
+      "period_end": "2024-02-29",
+      "subtotal": 5500.78,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 3905.54
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1155.18
+        },
+        {
+          "cluster": "backups",
+          "amount": 440.06
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202401",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-01-01",
+      "period_end": "2024-01-31",
+      "subtotal": 5880.23,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 4174.95
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1234.86
+        },
+        {
+          "cluster": "backups",
+          "amount": 470.42
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202312",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2023-12-01",
+      "period_end": "2023-12-31",
+      "subtotal": 5592.55,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 3970.69
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1174.42
+        },
+        {
+          "cluster": "backups",
+          "amount": 447.44
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202311",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2023-11-01",
+      "period_end": "2023-11-30",
+      "subtotal": 5497.8,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 3903.41
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1154.52
+        },
+        {
+          "cluster": "backups",
+          "amount": 439.87
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202310",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2023-10-01",
+      "period_end": "2023-10-31",
+      "subtotal": 5947.88,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 4222.98
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1249.06
+        },
+        {
+          "cluster": "backups",
+          "amount": 475.84
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202309",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2023-09-01",
+      "period_end": "2023-09-30",
+      "subtotal": 5465.41,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 3880.44
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1147.71
+        },
+        {
+          "cluster": "backups",
+          "amount": 437.26
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202308",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2023-08-01",
+      "period_end": "2023-08-31",
+      "subtotal": 5356.2,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 3802.91
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 1124.8
+        },
+        {
+          "cluster": "backups",
+          "amount": 428.49
+        }
+      ]
+    },
+    {
+      "id": "inv_91c4e8_202307",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2023-07-01",
+      "period_end": "2023-07-31",
+      "subtotal": 2320.66,
+      "lines": [
+        {
+          "cluster": "prod-main (M50)",
+          "amount": 1647.7
+        },
+        {
+          "cluster": "prod-analytics (M30)",
+          "amount": 487.33
+        },
+        {
+          "cluster": "backups",
+          "amount": 185.63
+        }
+      ]
+    }
+  ]
+}

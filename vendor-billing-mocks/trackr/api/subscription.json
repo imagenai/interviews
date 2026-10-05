@@ -8,5 +8,6 @@
   "billing_anchor_day": 14,
   "current_period_start": "2026-10-14",
   "current_period_end": "2026-11-13",
-  "next_charge_on": "2026-11-14"
+  "next_charge_on": "2026-11-14",
+  "customer_since": "2022-01-01"
 }

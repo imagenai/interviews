@@ -152,6 +152,11 @@ td.cr{color:var(--sun)}
     </div>
   </section>
 
+  <section class="card" style="--c:var(--vio)">
+    <div class="ch"><h2>Monthly statements</h2><span class="tag" id="stTag">…</span><span class="r"><button class="btn" data-fake>Export all</button></span></div>
+    <div class="scroll"><table><thead><tr><th>Month</th><th class="n">Usage</th><th class="n">Credits</th><th class="n">Net</th><th>Status</th></tr></thead><tbody id="statements"></tbody></table></div>
+  </section>
+
   <section class="card">
     <div class="ch"><h2>Charges &amp; credits</h2><span class="tag" id="rowsTag">…</span><span class="r"><button class="btn" data-fake>Columns ▾</button></span></div>
     <div class="scroll"><table><thead><tr><th>Date</th><th>ID</th><th>Type</th><th>Description</th><th class="n">Amount</th></tr></thead><tbody id="rows"></tbody></table></div>
@@ -258,8 +263,20 @@ async function loadCharges() {
   $("hsub").textContent = `${monthName} · through ${day(usage[0].created)} · account ${res.account}`;
   $("chTag").textContent = monthName;
   drawChart(usage.map(c => ({date: c.created.slice(0, 10), v: c.amount})).reverse());
-  $("rowsTag").textContent = `${charges.length} records · newest first`;
-  $("rows").innerHTML = charges.map(c => {
+  const byMonth = new Map();
+  for (const c of charges) {
+    const ym = c.created.slice(0, 7);
+    const m = byMonth.get(ym) || {month: ym, usage: 0, credits: 0};
+    if (c.type === "credit") m.credits += c.amount; else m.usage += c.amount;
+    byMonth.set(ym, m);
+  }
+  const statements = [...byMonth.values()].sort((a, b) => b.month.localeCompare(a.month));
+  const monthLabel = ym => new Date(ym + "-01T00:00:00Z").toLocaleDateString("en-GB", {month: "long", year: "numeric", timeZone: "UTC"});
+  $("stTag").textContent = `${statements.length} months · newest first`;
+  $("statements").innerHTML = statements.map(m => `<tr><td>${monthLabel(m.month)}</td><td class="n">${usd(m.usage)}</td><td class="n cr">${m.credits ? "−" + usd(m.credits) : "–"}</td><td class="n">${usd(m.usage - m.credits)}</td><td><span class="badge ${m.month === month ? "credit" : ""}">${m.month === month ? "open" : "paid"}</span></td></tr>`).join("");
+
+  $("rowsTag").textContent = `${monthName} · ${inMonth.length} records · newest first`;
+  $("rows").innerHTML = inMonth.map(c => {
     const credit = c.type === "credit";
     return `<tr><td>${day(c.created)}</td><td class="mono">${c.id}</td><td><span class="badge ${c.type}">${c.type}</span></td><td>${c.description}</td><td class="n ${credit ? "cr" : ""}">${credit ? "−" : ""}${usd(c.amount)}</td></tr>`;
   }).join("");

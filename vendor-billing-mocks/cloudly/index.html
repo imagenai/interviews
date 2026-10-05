@@ -213,6 +213,11 @@ td.t{font-weight:600}
         <div class="card-h"><h2>Daily cost breakdown</h2><span class="tag">UTC · complete days</span><div class="r"><button class="btn" data-fake>Group by: service ▾</button></div></div>
         <div class="scroll"><table><thead><tr><th>Date</th><th class="n">Compute</th><th class="n">Storage</th><th class="n">Network</th><th class="n">Total</th><th style="width:22%"></th></tr></thead><tbody id="rows"></tbody></table></div>
       </section>
+
+      <section class="glass">
+        <div class="card-h"><h2>Monthly spend</h2><span class="tag" id="monTag">…</span><div class="r"><button class="btn" data-fake>Download history</button></div></div>
+        <div class="scroll"><table><thead><tr><th>Month</th><th class="n">Compute</th><th class="n">Storage</th><th class="n">Network</th><th class="n">Total</th><th class="n">vs prior month</th><th style="width:18%"></th></tr></thead><tbody id="months"></tbody></table></div>
+      </section>
     </main>
   </div>
 </div>
@@ -323,12 +328,17 @@ async function loadCosts() {
   await sleep(450);
   const data = await getJson("api/cost-and-usage.json");
   const month = data.generated_at.slice(0, 7), prev = prevMonth(month);
-  const byDay = new Map();
+  const byDay = new Map(), byMonth = new Map();
   let prevTotal = 0;
   for (const r of data.results) {
     const dollars = r.cost / 100;
-    if (r.date.startsWith(prev)) prevTotal += dollars;
-    if (!r.date.startsWith(month)) continue;
+    const ym = r.date.slice(0, 7);
+    const m = byMonth.get(ym) || {month: ym, compute: 0, storage: 0, network: 0, total: 0};
+    m[r.service] += dollars;
+    m.total += dollars;
+    byMonth.set(ym, m);
+    if (ym === prev) prevTotal += dollars;
+    if (ym !== month) continue;
     const d = byDay.get(r.date) || {date: r.date, compute: 0, storage: 0, network: 0, total: 0};
     d[r.service] += dollars;
     d.total += dollars;
@@ -354,6 +364,15 @@ async function loadCosts() {
   drawChart(days);
   drawDonut(bySvc, mtd);
   const max = Math.max(...days.map(d => d.total));
+  const months = [...byMonth.values()].sort((a, b) => b.month.localeCompare(a.month));
+  const monthMax = Math.max(...months.map(m => m.total));
+  const monthLabel = ym => new Date(ym + "-01T00:00:00Z").toLocaleDateString("en-GB", {month: "short", year: "numeric", timeZone: "UTC"});
+  $("monTag").textContent = `since ${monthLabel(months[months.length - 1].month)} · ${month === months[0].month ? "current month to date" : ""}`;
+  $("months").innerHTML = months.map((m, i) => {
+    const prior = months[i + 1];
+    const change = prior && m.month !== month ? `${m.total >= prior.total ? "+" : ""}${((m.total / prior.total - 1) * 100).toFixed(1)}%` : (m.month === month ? "to date" : "–");
+    return `<tr><td>${monthLabel(m.month)}</td>${SVC.map(s => `<td class="n">${usd.format(m[s])}</td>`).join("")}<td class="n t">${usd.format(m.total)}</td><td class="n">${change}</td><td><div class="bar" style="width:${m.total / monthMax * 100}%"></div></td></tr>`;
+  }).join("");
   $("rows").innerHTML = days.map(d => `<tr><td>${dayLabel(d.date)}</td>${SVC.map(s => `<td class="n">${usd.format(d[s])}</td>`).join("")}<td class="n t">${usd.format(d.total)}</td><td><div class="bar" style="width:${d.total / max * 100}%"></div></td></tr>`).join("");
 }
 

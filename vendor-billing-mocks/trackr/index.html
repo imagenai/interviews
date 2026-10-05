@@ -89,7 +89,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .kv small{display:block;font-size:11px;color:var(--mute);letter-spacing:.12em;text-transform:uppercase;font-weight:700}
 .kv b{font-size:16px}
 
-.inv{display:flex;flex-direction:column;gap:10px}
+.inv{display:flex;flex-direction:column;gap:10px;max-height:640px;overflow:auto;padding:2px 6px 2px 2px}
 .invrow{display:grid;grid-template-columns:auto 1.2fr 1.4fr .6fr .9fr auto;align-items:center;gap:16px;padding:14px 16px;border-radius:20px;
   background:rgba(255,255,255,.75);border:1px solid var(--line);transition:transform .15s,box-shadow .15s}
 .invrow:hover{transform:translateX(4px);box-shadow:0 12px 30px -20px rgba(60,60,140,.6)}
@@ -174,7 +174,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 
   <section class="card">
     <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px">
-      <div><h2>Invoices</h2><p class="hint" style="margin:0">Billed in advance at the start of every period.</p></div>
+      <div><h2>Invoices</h2><p class="hint" style="margin:0" id="invHint">Billed in advance at the start of every period.</p></div>
       <div class="sp"></div>
       <button class="btn" data-fake>Filter: all</button>
       <button class="btn dark" data-fake>Download all (ZIP)</button>
@@ -232,6 +232,8 @@ async function loadBilling() {
   $("seatHint").textContent = sub.seats_used >= sub.seats ? "All seats in use. New invites will add seats." : `${sub.seats - sub.seats_used} seats free`;
   $("ppu").textContent = money(sub.price_per_seat, sub.currency) + " / month";
   $("cur").textContent = sub.currency === "ILS" ? "Israeli new shekel (₪)" : sub.currency;
+  const lifetime = invoices.reduce((t, i) => t + i.total, 0);
+  $("invHint").textContent = `${invoices.length} invoices since ${day(invoices[invoices.length - 1].issued_on)} · ${money(lifetime, current.currency)} billed in total. Billed in advance at the start of every period.`;
   $("inv").innerHTML = invoices.map(i => `
     <div class="invrow">
       <div class="doc">PDF</div>

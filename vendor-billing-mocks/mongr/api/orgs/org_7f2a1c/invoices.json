@@ -1,0 +1,1111 @@
+{
+  "org_id": "org_7f2a1c",
+  "results": [
+    {
+      "id": "inv_7f2a1c_202609",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2026-09-01",
+      "period_end": "2026-09-30",
+      "subtotal": 429.3,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 300.49
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 128.81
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202608",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2026-08-01",
+      "period_end": "2026-08-31",
+      "subtotal": 452.81,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 316.95
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 135.86
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202607",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2026-07-01",
+      "period_end": "2026-07-31",
+      "subtotal": 486.95,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 340.84
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 146.11
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202606",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "subtotal": 462.34,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 323.6
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 138.74
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202605",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2026-05-01",
+      "period_end": "2026-05-31",
+      "subtotal": 456.4,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 319.46
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 136.94
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202604",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2026-04-01",
+      "period_end": "2026-04-30",
+      "subtotal": 459.89,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 321.89
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 138.0
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202603",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "subtotal": 487.83,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 341.45
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 146.38
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202602",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "subtotal": 407.34,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 285.13
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 122.21
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202601",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "subtotal": 467.52,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 327.25
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 140.27
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202512",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-12-01",
+      "period_end": "2025-12-31",
+      "subtotal": 442.74,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 309.92
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 132.82
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202511",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-11-01",
+      "period_end": "2025-11-30",
+      "subtotal": 439.5,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 307.62
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 131.88
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202510",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-10-01",
+      "period_end": "2025-10-31",
+      "subtotal": 464.94,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 325.46
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 139.48
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202509",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-09-01",
+      "period_end": "2025-09-30",
+      "subtotal": 430.13,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 301.04
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 129.09
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202508",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-08-01",
+      "period_end": "2025-08-31",
+      "subtotal": 460.43,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 322.28
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 138.15
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202507",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-07-01",
+      "period_end": "2025-07-31",
+      "subtotal": 445.32,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 311.74
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 133.58
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202506",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-06-01",
+      "period_end": "2025-06-30",
+      "subtotal": 452.12,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 316.49
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 135.63
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202505",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-05-01",
+      "period_end": "2025-05-31",
+      "subtotal": 487.63,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 341.33
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 146.3
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202504",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-04-01",
+      "period_end": "2025-04-30",
+      "subtotal": 467.44,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 327.21
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 140.23
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202503",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-03-01",
+      "period_end": "2025-03-31",
+      "subtotal": 458.93,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 321.25
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 137.68
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202502",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-02-01",
+      "period_end": "2025-02-28",
+      "subtotal": 414.22,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 289.93
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 124.29
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202501",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2025-01-01",
+      "period_end": "2025-01-31",
+      "subtotal": 486.46,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 340.52
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 145.94
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202412",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-12-01",
+      "period_end": "2024-12-31",
+      "subtotal": 463.44,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 324.41
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 139.03
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202411",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-11-01",
+      "period_end": "2024-11-30",
+      "subtotal": 436.01,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 305.21
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 130.8
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202410",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-10-01",
+      "period_end": "2024-10-31",
+      "subtotal": 481.04,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 336.72
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 144.32
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202409",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-09-01",
+      "period_end": "2024-09-30",
+      "subtotal": 437.63,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 306.33
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 131.3
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202408",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-08-01",
+      "period_end": "2024-08-31",
+      "subtotal": 472.54,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 330.76
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 141.78
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202407",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-07-01",
+      "period_end": "2024-07-31",
+      "subtotal": 465.44,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 325.82
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 139.62
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202406",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-06-01",
+      "period_end": "2024-06-30",
+      "subtotal": 456.08,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 319.26
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 136.82
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202405",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-05-01",
+      "period_end": "2024-05-31",
+      "subtotal": 484.94,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 339.48
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 145.46
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202404",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-04-01",
+      "period_end": "2024-04-30",
+      "subtotal": 454.34,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 318.04
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 136.3
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202403",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-03-01",
+      "period_end": "2024-03-31",
+      "subtotal": 458.72,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 321.11
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 137.61
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202402",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-02-01",
+      "period_end": "2024-02-29",
+      "subtotal": 418.36,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 292.82
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 125.54
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202401",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2024-01-01",
+      "period_end": "2024-01-31",
+      "subtotal": 473.23,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 331.24
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 141.99
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202312",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2023-12-01",
+      "period_end": "2023-12-31",
+      "subtotal": 470.21,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 329.15
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 141.06
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202311",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2023-11-01",
+      "period_end": "2023-11-30",
+      "subtotal": 469.81,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 328.88
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 140.93
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202310",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2023-10-01",
+      "period_end": "2023-10-31",
+      "subtotal": 467.43,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 327.19
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 140.24
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202309",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2023-09-01",
+      "period_end": "2023-09-30",
+      "subtotal": 467.12,
+      "lines": [
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 326.98
+        },
+        {
+          "cluster": "snapshot storage",
+          "amount": 140.14
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202308",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2023-08-01",
+      "period_end": "2023-08-31",
+      "subtotal": 3943.39,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2918.11
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 709.82
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 315.46
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202307",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2023-07-01",
+      "period_end": "2023-07-31",
+      "subtotal": 3613.79,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2674.19
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 650.49
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 289.11
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202306",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2023-06-01",
+      "period_end": "2023-06-30",
+      "subtotal": 3526.03,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2609.26
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 634.68
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 282.09
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202305",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2023-05-01",
+      "period_end": "2023-05-31",
+      "subtotal": 4022.86,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2976.91
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 724.12
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 321.83
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202304",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2023-04-01",
+      "period_end": "2023-04-30",
+      "subtotal": 3901.1,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2886.78
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 702.2
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 312.12
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202303",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2023-03-01",
+      "period_end": "2023-03-31",
+      "subtotal": 3556.21,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2631.58
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 640.11
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 284.52
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202302",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2023-02-01",
+      "period_end": "2023-02-28",
+      "subtotal": 3547.61,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2625.21
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 638.55
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 283.85
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202301",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2023-01-01",
+      "period_end": "2023-01-31",
+      "subtotal": 3698.15,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2736.62
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 665.66
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 295.87
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202212",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2022-12-01",
+      "period_end": "2022-12-31",
+      "subtotal": 3696.59,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2735.49
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 665.37
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 295.73
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202211",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2022-11-01",
+      "period_end": "2022-11-30",
+      "subtotal": 3844.32,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2844.77
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 691.98
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 307.57
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202210",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2022-10-01",
+      "period_end": "2022-10-31",
+      "subtotal": 3514.27,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2600.59
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 632.56
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 281.12
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202209",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2022-09-01",
+      "period_end": "2022-09-30",
+      "subtotal": 3375.39,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2497.81
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 607.57
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 270.01
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202208",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2022-08-01",
+      "period_end": "2022-08-31",
+      "subtotal": 3600.59,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2664.42
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 648.12
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 288.05
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202207",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2022-07-01",
+      "period_end": "2022-07-31",
+      "subtotal": 3425.55,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2534.93
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 616.6
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 274.02
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202206",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2022-06-01",
+      "period_end": "2022-06-30",
+      "subtotal": 3316.84,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2454.48
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 597.04
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 265.32
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202205",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2022-05-01",
+      "period_end": "2022-05-31",
+      "subtotal": 3818.33,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2825.56
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 687.3
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 305.47
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202204",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2022-04-01",
+      "period_end": "2022-04-30",
+      "subtotal": 3315.26,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2453.29
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 596.72
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 265.25
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202203",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2022-03-01",
+      "period_end": "2022-03-31",
+      "subtotal": 3845.2,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2845.45
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 692.13
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 307.62
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202202",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2022-02-01",
+      "period_end": "2022-02-28",
+      "subtotal": 3330.65,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2464.69
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 599.52
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 266.44
+        }
+      ]
+    },
+    {
+      "id": "inv_7f2a1c_202201",
+      "status": "PAID",
+      "currency": "USD",
+      "period_start": "2022-01-01",
+      "period_end": "2022-01-31",
+      "subtotal": 3353.65,
+      "lines": [
+        {
+          "cluster": "legacy-main (M30)",
+          "amount": 2481.73
+        },
+        {
+          "cluster": "legacy-reporting (M10)",
+          "amount": 603.64
+        },
+        {
+          "cluster": "legacy-archive (M10)",
+          "amount": 268.28
+        }
+      ]
+    }
+  ]
+}

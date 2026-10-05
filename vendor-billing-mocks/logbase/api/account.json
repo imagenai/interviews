@@ -3,5 +3,6 @@
   "plan": "Pro Usage",
   "retention_days": 30,
   "sources": 41,
-  "ingest_region": "eu-central"
+  "ingest_region": "eu-central",
+  "customer_since": "2022-01-01"
 }
