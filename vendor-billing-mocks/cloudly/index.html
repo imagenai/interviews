@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>Cloudly Billing</title>
+<style>:root{--a:#d9480f}
+*{box-sizing:border-box}body{margin:0;font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+background:#f5f6f8;color:#1d2330}a{color:var(--a)}header{background:var(--a);color:#fff;padding:14px 24px;
+display:flex;align-items:center;gap:24px}header b{font-size:18px;letter-spacing:-.01em}header nav{display:flex;
+gap:18px;opacity:.85;font-size:13px}header .acct{margin-left:auto;font-size:12px;opacity:.85}
+main{max-width:1000px;margin:0 auto;padding:28px 24px 64px;display:flex;flex-direction:column;gap:20px}
+h1{font-size:22px;margin:0}h2{font-size:15px;margin:0 0 10px}.card{background:#fff;border:1px solid #e3e6ea;
+border-radius:10px;padding:18px 20px}.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:14px}.kpi .l{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#6b7280}.kpi .v{font-size:26px;
+font-weight:600}table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:6px 8px;
+border-bottom:1px solid #eef0f3}th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#6b7280}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}code,pre{font:12.5px ui-monospace,Menlo,monospace;
+background:#f1f3f6;border-radius:5px}code{padding:1px 5px}pre{padding:12px;overflow:auto}.muted{color:#6b7280;
+font-size:12px}.scroll{max-height:360px;overflow:auto}.tag{display:inline-block;font-size:11px;padding:1px 8px;
+border-radius:99px;background:#eef0f3}
+</style></head>
+<body><header><b>cloudly</b><nav><span>Overview</span><span>Usage</span><u>Billing</u><span>API</span></nav>
+<span class="acct">acct-4471-imagen</span></header><main><h1>Billing and Cost Management</h1>
+<div class="kpis"><div class="card kpi"><div class="l">Month-to-date (Oct)</div><div class="v">$46,054.16</div>
+<div class="muted">through 14 Oct 2026, UTC</div></div><div class="card kpi"><div class="l">Last month (Sep)</div>
+<div class="v">$87,588.14</div></div></div>
+<section class="card"><h2>Daily cost, October</h2><div class="scroll"><table><thead><tr><th>Date</th>
+<th class="n">Cost</th></tr></thead><tbody><tr><td>2026-10-01</td><td class='n'>$3,849.84</td></tr><tr><td>2026-10-02</td><td class='n'>$3,570.42</td></tr><tr><td>2026-10-03</td><td class='n'>$2,761.06</td></tr><tr><td>2026-10-04</td><td class='n'>$3,151.64</td></tr><tr><td>2026-10-05</td><td class='n'>$3,685.15</td></tr><tr><td>2026-10-06</td><td class='n'>$3,700.20</td></tr><tr><td>2026-10-07</td><td class='n'>$3,526.68</td></tr><tr><td>2026-10-08</td><td class='n'>$3,122.08</td></tr><tr><td>2026-10-09</td><td class='n'>$3,074.38</td></tr><tr><td>2026-10-10</td><td class='n'>$2,562.23</td></tr><tr><td>2026-10-11</td><td class='n'>$2,432.27</td></tr><tr><td>2026-10-12</td><td class='n'>$3,468.00</td></tr><tr><td>2026-10-13</td><td class='n'>$3,933.26</td></tr><tr><td>2026-10-14</td><td class='n'>$3,216.95</td></tr></tbody></table></div></section>
+<section class="card"><h2>Billing API</h2>
+<table><thead><tr><th></th><th>Path</th><th>Returns</th></tr></thead><tbody><tr><td><code>GET</code></td><td><code>api/cost-and-usage.json</code></td><td>Daily cost per service since 1 Sep</td></tr></tbody></table>
+<p class="muted">All monetary values in the API are integers in the smallest currency unit (cents). Days are UTC. A day appears once it is complete.</p></section></main></body></html>

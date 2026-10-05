@@ -1,0 +1,10 @@
+{
+  "plan": "Standard",
+  "seats": 60,
+  "price_per_seat": 97,
+  "currency": "USD",
+  "billing_interval": "month",
+  "billing_anchor_day": 14,
+  "current_period_start": "2026-10-14",
+  "current_period_end": "2026-11-13"
+}

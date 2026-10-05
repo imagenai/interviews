@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "number": "TRK-2026-0107",
+      "issued_on": "2026-10-14",
+      "period_start": "2026-10-14",
+      "period_end": "2026-11-13",
+      "description": "Trackr Cloud Standard, 60 seats x $97/seat",
+      "seats": 60,
+      "total": 5820.0,
+      "currency": "USD",
+      "status": "open"
+    },
+    {
+      "number": "TRK-2026-0106",
+      "issued_on": "2026-09-14",
+      "period_start": "2026-09-14",
+      "period_end": "2026-10-13",
+      "description": "Trackr Cloud Standard, 58 seats x $97/seat",
+      "seats": 58,
+      "total": 5626.0,
+      "currency": "USD",
+      "status": "paid"
+    },
+    {
+      "number": "TRK-2026-0105",
+      "issued_on": "2026-08-14",
+      "period_start": "2026-08-14",
+      "period_end": "2026-09-13",
+      "description": "Trackr Cloud Standard, 55 seats x $97/seat",
+      "seats": 55,
+      "total": 5335.0,
+      "currency": "USD",
+      "status": "paid"
+    },
+    {
+      "number": "TRK-2026-0104",
+      "issued_on": "2026-07-14",
+      "period_start": "2026-07-14",
+      "period_end": "2026-08-13",
+      "description": "Trackr Cloud Standard, 52 seats x $97/seat",
+      "seats": 52,
+      "total": 5044.0,
+      "currency": "USD",
+      "status": "paid"
+    },
+    {
+      "number": "TRK-2026-0103",
+      "issued_on": "2026-06-14",
+      "period_start": "2026-06-14",
+      "period_end": "2026-07-13",
+      "description": "Trackr Cloud Standard, 49 seats x $97/seat",
+      "seats": 49,
+      "total": 4753.0,
+      "currency": "USD",
+      "status": "paid"
+    },
+    {
+      "number": "TRK-2026-0102",
+      "issued_on": "2026-05-14",
+      "period_start": "2026-05-14",
+      "period_end": "2026-06-13",
+      "description": "Trackr Cloud Standard, 46 seats x $97/seat",
+      "seats": 46,
+      "total": 4462.0,
+      "currency": "USD",
+      "status": "paid"
+    },
+    {
+      "number": "TRK-2026-0101",
+      "issued_on": "2026-04-14",
+      "period_start": "2026-04-14",
+      "period_end": "2026-05-13",
+      "description": "Trackr Cloud Standard, 44 seats x $97/seat",
+      "seats": 44,
+      "total": 4268.0,
+      "currency": "USD",
+      "status": "paid"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>SaaS costs monitor</title>
+<style>:root{--a:#1d2330}
+*{box-sizing:border-box}body{margin:0;font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+background:#f5f6f8;color:#1d2330}a{color:var(--a)}header{background:var(--a);color:#fff;padding:14px 24px;
+display:flex;align-items:center;gap:24px}header b{font-size:18px;letter-spacing:-.01em}header nav{display:flex;
+gap:18px;opacity:.85;font-size:13px}header .acct{margin-left:auto;font-size:12px;opacity:.85}
+main{max-width:1000px;margin:0 auto;padding:28px 24px 64px;display:flex;flex-direction:column;gap:20px}
+h1{font-size:22px;margin:0}h2{font-size:15px;margin:0 0 10px}.card{background:#fff;border:1px solid #e3e6ea;
+border-radius:10px;padding:18px 20px}.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:14px}.kpi .l{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#6b7280}.kpi .v{font-size:26px;
+font-weight:600}table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:6px 8px;
+border-bottom:1px solid #eef0f3}th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#6b7280}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}code,pre{font:12.5px ui-monospace,Menlo,monospace;
+background:#f1f3f6;border-radius:5px}code{padding:1px 5px}pre{padding:12px;overflow:auto}.muted{color:#6b7280;
+font-size:12px}.scroll{max-height:360px;overflow:auto}.tag{display:inline-block;font-size:11px;padding:1px 8px;
+border-radius:99px;background:#eef0f3}
+</style></head>
+<body><header><b>Interview assignment</b>
+<span class="acct"></span></header><main><h1>SaaS costs monitor</h1>
+<section class="card"><p>R&amp;D pays the four vendors below. Build something that shows the R&amp;D lead
+<b>what we spend this month</b> and <b>which vendor will go over its monthly budget</b>.</p>
+<ul><li>Today is <b>Thursday, 15 October 2026</b>.</li>
+<li>60 minutes. Any language, framework or tool, AI included.</li>
+<li>UI polish is not scored.</li>
+<li>No auth. Every endpoint is a static JSON file over HTTPS, with open CORS.</li></ul>
+<p>We will spend 30 minutes afterwards going through what you built.</p></section>
+<section class="card"><h2>Vendors</h2><table><thead><tr><th>Vendor</th><th>Billing portal</th><th>API endpoint</th>
+<th class="n">Monthly budget</th></tr></thead><tbody><tr><td>Cloudly</td><td><a data-abs href='cloudly/'>cloudly/</a></td><td><a data-abs href='cloudly/api/cost-and-usage.json'>cloudly/api/cost-and-usage.json</a></td><td class='n'>$90,900</td></tr><tr><td>Trackr</td><td><a data-abs href='trackr/'>trackr/</a></td><td><a data-abs href='trackr/api/invoices.json'>trackr/api/invoices.json</a></td><td class='n'>$7,300</td></tr><tr><td>Mongr</td><td><a data-abs href='mongr/'>mongr/</a></td><td><a data-abs href='mongr/api/orgs/org_7f2a1c/invoices/current.json'>mongr/api/orgs/org_7f2a1c/invoices/current.json</a></td><td class='n'>$10,900</td></tr><tr><td>Logbase</td><td><a data-abs href='logbase/'>logbase/</a></td><td><a data-abs href='logbase/api/charges.json'>logbase/api/charges.json</a></td><td class='n'>$14,500</td></tr></tbody></table></section>
+<script>document.querySelectorAll('[data-abs]').forEach(a=>{a.textContent=new URL(a.getAttribute('href'),location.href).href})</script></main></body></html>

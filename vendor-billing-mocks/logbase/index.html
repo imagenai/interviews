@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>Logbase</title>
+<style>:root{--a:#6b3fd4}
+*{box-sizing:border-box}body{margin:0;font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+background:#f5f6f8;color:#1d2330}a{color:var(--a)}header{background:var(--a);color:#fff;padding:14px 24px;
+display:flex;align-items:center;gap:24px}header b{font-size:18px;letter-spacing:-.01em}header nav{display:flex;
+gap:18px;opacity:.85;font-size:13px}header .acct{margin-left:auto;font-size:12px;opacity:.85}
+main{max-width:1000px;margin:0 auto;padding:28px 24px 64px;display:flex;flex-direction:column;gap:20px}
+h1{font-size:22px;margin:0}h2{font-size:15px;margin:0 0 10px}.card{background:#fff;border:1px solid #e3e6ea;
+border-radius:10px;padding:18px 20px}.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:14px}.kpi .l{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#6b7280}.kpi .v{font-size:26px;
+font-weight:600}table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:6px 8px;
+border-bottom:1px solid #eef0f3}th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#6b7280}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}code,pre{font:12.5px ui-monospace,Menlo,monospace;
+background:#f1f3f6;border-radius:5px}code{padding:1px 5px}pre{padding:12px;overflow:auto}.muted{color:#6b7280;
+font-size:12px}.scroll{max-height:360px;overflow:auto}.tag{display:inline-block;font-size:11px;padding:1px 8px;
+border-radius:99px;background:#eef0f3}
+</style></head>
+<body><header><b>logbase</b><nav><span>Overview</span><span>Usage</span><u>Billing</u><span>API</span></nav>
+<span class="acct">imagen-ai</span></header><main><h1>Billing</h1>
+<div class="kpis"><div class="card kpi"><div class="l">Month-to-date (Oct)</div><div class="v">$5,974.04</div>
+<div class="muted">net of credits, through 14 Oct</div></div><div class="card kpi"><div class="l">Credits applied</div>
+<div class="v">$727.00</div></div></div>
+<section class="card"><h2>October charges</h2><div class="scroll"><table><thead><tr><th>ID</th><th>Date</th>
+<th>Description</th><th class="n">Amount</th></tr></thead><tbody><tr><td><code>chg_8215</code></td><td>2026-10-01</td><td>Log ingestion and retention, 01 Oct</td><td class='n'>$521.55</td></tr><tr><td><code>chg_8216</code></td><td>2026-10-02</td><td>Log ingestion and retention, 02 Oct</td><td class='n'>$539.43</td></tr><tr><td><code>chg_8217</code></td><td>2026-10-03</td><td>Log ingestion and retention, 03 Oct</td><td class='n'>$446.86</td></tr><tr><td><code>chg_8218</code></td><td>2026-10-04</td><td>Log ingestion and retention, 04 Oct</td><td class='n'>$489.19</td></tr><tr><td><code>chg_8219</code></td><td>2026-10-05</td><td>Log ingestion and retention, 05 Oct</td><td class='n'>$545.74</td></tr><tr><td><code>chg_8220</code></td><td>2026-10-06</td><td>Log ingestion and retention, 06 Oct</td><td class='n'>$555.58</td></tr><tr><td><code>chg_8221</code></td><td>2026-10-07</td><td>Log ingestion and retention, 07 Oct</td><td class='n'>$414.58</td></tr><tr><td><code>chg_8222</code></td><td>2026-10-08</td><td>Log ingestion and retention, 08 Oct</td><td class='n'>$525.47</td></tr><tr><td><code>cr_0193</code></td><td>2026-10-09</td><td>SLA credit, ingestion outage 3 Oct</td><td class='n'>-$727.00</td></tr><tr><td><code>chg_8223</code></td><td>2026-10-09</td><td>Log ingestion and retention, 09 Oct</td><td class='n'>$500.51</td></tr><tr><td><code>chg_8224</code></td><td>2026-10-10</td><td>Log ingestion and retention, 10 Oct</td><td class='n'>$387.71</td></tr><tr><td><code>chg_8225</code></td><td>2026-10-11</td><td>Log ingestion and retention, 11 Oct</td><td class='n'>$423.14</td></tr><tr><td><code>chg_8226</code></td><td>2026-10-12</td><td>Log ingestion and retention, 12 Oct</td><td class='n'>$481.86</td></tr><tr><td><code>chg_8227</code></td><td>2026-10-13</td><td>Log ingestion and retention, 13 Oct</td><td class='n'>$428.87</td></tr><tr><td><code>chg_8228</code></td><td>2026-10-14</td><td>Log ingestion and retention, 14 Oct</td><td class='n'>$440.55</td></tr></tbody></table></div></section>
+<section class="card"><h2>Billing API</h2>
+<table><thead><tr><th></th><th>Path</th><th>Returns</th></tr></thead><tbody><tr><td><code>GET</code></td><td><code>api/charges.json</code></td><td>Charges and credits since 16 Sep, newest first</td></tr></tbody></table>
+<p class="muted">Amounts in USD. <code>type</code> is <code>usage</code> or <code>credit</code>.</p></section></main></body></html>
