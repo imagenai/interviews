@@ -1,32 +1,277 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex"><title>Mongr Cloud</title>
-<style>:root{--a:#13795b}
-*{box-sizing:border-box}body{margin:0;font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-background:#f5f6f8;color:#1d2330}a{color:var(--a)}header{background:var(--a);color:#fff;padding:14px 24px;
-display:flex;align-items:center;gap:24px}header b{font-size:18px;letter-spacing:-.01em}header nav{display:flex;
-gap:18px;opacity:.85;font-size:13px}header .acct{margin-left:auto;font-size:12px;opacity:.85}
-main{max-width:1000px;margin:0 auto;padding:28px 24px 64px;display:flex;flex-direction:column;gap:20px}
-h1{font-size:22px;margin:0}h2{font-size:15px;margin:0 0 10px}.card{background:#fff;border:1px solid #e3e6ea;
-border-radius:10px;padding:18px 20px}.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:14px}.kpi .l{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#6b7280}.kpi .v{font-size:26px;
-font-weight:600}table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:6px 8px;
-border-bottom:1px solid #eef0f3}th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#6b7280}
-td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}code,pre{font:12.5px ui-monospace,Menlo,monospace;
-background:#f1f3f6;border-radius:5px}code{padding:1px 5px}pre{padding:12px;overflow:auto}.muted{color:#6b7280;
-font-size:12px}.scroll{max-height:360px;overflow:auto}.tag{display:inline-block;font-size:11px;padding:1px 8px;
-border-radius:99px;background:#eef0f3}
-</style></head>
-<body><header><b>Mongr Cloud</b><nav><span>Overview</span><span>Usage</span><u>Billing</u><span>API</span></nav>
-<span class="acct">imagen-ai</span></header><main><h1>Organization billing</h1>
-<section class="card"><h2>Your organizations</h2><table><thead><tr><th>Organization</th><th>ID</th>
-<th>Clusters</th><th class="n">Pending invoice (Oct)</th></tr></thead><tbody>
-<tr><td>imagen-legacy</td><td><code>org_7f2a1c</code></td><td>0</td><td class="n">$0.00</td></tr>
-<tr><td>imagen-prod</td><td><code>org_91c4e8</code></td><td>3</td><td class="n">$5,617.27</td></tr>
-</tbody></table></section>
-<section class="card"><h2>imagen-prod, October by cluster</h2><table><thead><tr><th>Cluster</th>
-<th class="n">To date</th></tr></thead><tbody><tr><td>prod-main (M50)</td><td class='n'>$3,988.27</td></tr><tr><td>prod-analytics (M30)</td><td class='n'>$1,179.62</td></tr><tr><td>backups</td><td class='n'>$449.38</td></tr></tbody></table>
-<p class="muted">Usage through 14 Oct 2026. The pending invoice closes on 31 Oct.</p></section>
-<section class="card"><h2>Billing API</h2>
-<table><thead><tr><th></th><th>Path</th><th>Returns</th></tr></thead><tbody><tr><td><code>GET</code></td><td><code>api/orgs.json</code></td><td>Organizations you can access</td></tr><tr><td><code>GET</code></td><td><code>api/orgs/{org_id}/invoices/current.json</code></td><td>Pending invoice for the current month, with daily line items</td></tr></tbody></table>
-<p class="muted">Amounts in USD.</p></section></main></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>MONGR//CLOUD · billing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#030604;--p:#39ff88;--p2:#a6ffcb;--dim:#2c8f57;--mag:#ff3df2;--amb:#ffc23d;--line:rgba(57,255,136,.18);--line2:rgba(57,255,136,.35);--ink:#d8ffe9;--mute:#6fbf91}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:var(--bg);color:var(--ink);font:13.5px/1.55 "JetBrains Mono",ui-monospace,monospace;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;
+  background:repeating-linear-gradient(0deg,rgba(0,0,0,.28) 0 1px,transparent 1px 3px);mix-blend-mode:multiply}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background:radial-gradient(ellipse at 50% -10%,rgba(57,255,136,.14),transparent 60%),radial-gradient(ellipse at 100% 100%,rgba(255,61,242,.08),transparent 50%)}
+button{font:inherit;color:inherit;cursor:pointer;background:none}
+.h{font-family:"Chakra Petch",sans-serif;letter-spacing:.04em;text-transform:uppercase}
+
+.top{display:flex;align-items:center;gap:14px;height:56px;padding:0 18px;border-bottom:1px solid var(--line);background:rgba(3,6,4,.85);position:sticky;top:0;z-index:20}
+.logo{font-family:"Chakra Petch";font-weight:700;font-size:18px;color:var(--p);text-shadow:0 0 12px rgba(57,255,136,.6);letter-spacing:.06em}
+.logo span{color:var(--mag)}
+.org{position:relative}
+.orgbtn{display:flex;align-items:center;gap:10px;height:34px;padding:0 12px;border:1px solid var(--line2);color:var(--p2)}
+.orgbtn:hover{background:rgba(57,255,136,.08)}
+.orgbtn small{color:var(--mute)}
+.menu{position:absolute;top:40px;left:0;min-width:300px;border:1px solid var(--line2);background:#050b07;display:none;z-index:30;box-shadow:0 0 0 1px #000,0 20px 50px rgba(0,0,0,.8)}
+.menu.on{display:block}
+.menu button{display:flex;width:100%;justify-content:space-between;gap:16px;padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}
+.menu button:hover,.menu button.on{background:rgba(57,255,136,.1);color:var(--p)}
+.menu small{color:var(--mute)}
+.menu .mh{padding:8px 12px;color:var(--mute);font-size:11px;border-bottom:1px solid var(--line)}
+.status{display:flex;align-items:center;gap:8px;color:var(--mute);font-size:12px}
+.status i{width:8px;height:8px;background:var(--p);box-shadow:0 0 8px var(--p);animation:blink 1.4s steps(2) infinite}
+@keyframes blink{50%{opacity:.25}}
+.sp{flex:1}
+.tbtn{height:34px;padding:0 12px;border:1px solid var(--line);color:var(--mute)}
+.tbtn:hover{color:var(--p);border-color:var(--line2)}
+
+.app{display:grid;grid-template-columns:220px 1fr;min-height:calc(100vh - 56px)}
+.rail{border-right:1px solid var(--line);padding:16px 10px;display:flex;flex-direction:column;gap:2px}
+.rail .lbl{color:var(--dim);font-size:11px;padding:10px 10px 6px}
+.rail button{display:flex;align-items:center;gap:10px;padding:8px 10px;text-align:left;color:var(--mute);border-left:2px solid transparent}
+.rail button:hover{color:var(--p2);background:rgba(57,255,136,.05)}
+.rail button.on{color:var(--p);border-left-color:var(--p);background:linear-gradient(90deg,rgba(57,255,136,.14),transparent)}
+.rail kbd{margin-left:auto;font-size:10px;color:var(--dim)}
+
+main{padding:24px 28px 80px;display:flex;flex-direction:column;gap:20px;min-width:0}
+.path{color:var(--dim);font-size:12px}
+.path b{color:var(--p2);font-weight:500}
+.title{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.title h1{margin:0;font-family:"Chakra Petch";font-weight:700;font-size:38px;line-height:1;color:var(--p);text-shadow:0 0 18px rgba(57,255,136,.45);position:relative}
+.title h1::after{content:"_";animation:blink 1s steps(2) infinite}
+.cmd{height:36px;padding:0 14px;border:1px solid var(--line2);color:var(--p2)}
+.cmd:hover{background:var(--p);color:#021006}
+.cmd.mag{border-color:rgba(255,61,242,.5);color:#ffb3fa}
+.cmd.mag:hover{background:var(--mag);color:#1a0019}
+
+.frame{position:relative;border:1px solid var(--line2);padding:18px 20px;background:rgba(5,14,8,.6)}
+.frame::before,.frame::after{content:"";position:absolute;width:12px;height:12px;border:2px solid var(--p)}
+.frame::before{top:-2px;left:-2px;border-right:0;border-bottom:0}
+.frame::after{bottom:-2px;right:-2px;border-left:0;border-top:0}
+.frame .fh{display:flex;align-items:center;gap:10px;margin:-4px 0 14px;color:var(--mute);font-size:12px}
+.frame .fh b{font-family:"Chakra Petch";color:var(--p2);font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.frame .fh .r{margin-left:auto}
+
+.hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:20px}
+.amount{font-family:"Chakra Petch";font-weight:700;font-size:clamp(44px,6vw,76px);line-height:1;color:var(--p);text-shadow:0 0 24px rgba(57,255,136,.5);letter-spacing:.01em}
+.amount.zero{color:var(--p2)}
+.sub{color:var(--mute);margin-top:10px}
+.prog{margin-top:18px;color:var(--p2);white-space:pre;overflow:hidden}
+.prog b{color:var(--p)}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.kv div{background:#040a06;padding:14px}
+.kv small{display:block;color:var(--dim);font-size:11px}
+.kv b{color:var(--p2);font-weight:500;font-size:15px}
+
+.cl{display:flex;flex-direction:column;gap:14px}
+.cl .r1{display:flex;justify-content:space-between;gap:10px}
+.cl .r1 span{color:var(--p2)}
+.cl .bar{height:10px;border:1px solid var(--line2);position:relative}
+.cl .bar i{position:absolute;inset:1px auto 1px 1px;background:repeating-linear-gradient(90deg,var(--p) 0 6px,transparent 6px 8px);box-shadow:0 0 10px rgba(57,255,136,.5)}
+
+table{width:100%;border-collapse:collapse}
+th{color:var(--dim);font-weight:500;text-align:left;font-size:11.5px;padding:8px 10px;border-bottom:1px dashed var(--line2)}
+td{padding:8px 10px;border-bottom:1px dashed var(--line);font-variant-numeric:tabular-nums}
+tbody tr:hover td{background:rgba(57,255,136,.06);color:var(--p)}
+td.n,th.n{text-align:right}
+.scroll{max-height:420px;overflow:auto}
+.empty{border:1px dashed var(--line2);padding:36px;text-align:center;color:var(--mute)}
+.empty b{display:block;font-family:"Chakra Petch";color:var(--amb);font-size:18px;letter-spacing:.06em;margin-bottom:6px}
+
+.boot{color:var(--dim);white-space:pre;font-size:12px;min-height:60px}
+.toast{position:fixed;left:18px;bottom:18px;z-index:60;border:1px solid var(--mag);background:#0d020c;color:#ffb3fa;padding:10px 14px;opacity:0;transform:translateY(10px);transition:.15s}
+.toast.on{opacity:1;transform:none}
+
+@media (max-width:980px){.hero{grid-template-columns:1fr}}
+@media (max-width:760px){.app{grid-template-columns:1fr}.rail{display:none}main{padding:16px}.status,.tbtn{display:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="logo">MONGR<span>//</span>CLOUD</div>
+  <div class="org">
+    <button class="orgbtn" id="orgBtn"><small>org:</small><span id="orgName">…</span><small>▾</small></button>
+    <div class="menu" id="orgMenu"></div>
+  </div>
+  <div class="status"><i></i><span id="statusText">connecting…</span></div>
+  <div class="sp"></div>
+  <button class="tbtn" data-fake>docs</button>
+  <button class="tbtn" data-fake>support</button>
+  <button class="tbtn" data-fake>⌁ mongr-shell</button>
+</header>
+
+<div class="app">
+  <nav class="rail">
+    <div class="lbl">// DATA</div>
+    <button data-fake>▣ clusters<kbd>g c</kbd></button>
+    <button data-fake>⇄ data api<kbd>g d</kbd></button>
+    <button data-fake>⌕ vector search<kbd>g s</kbd></button>
+    <button data-fake>⚑ triggers<kbd>g t</kbd></button>
+    <div class="lbl">// ORG</div>
+    <button class="on">$ billing<kbd>g b</kbd></button>
+    <button data-fake>⚿ access manager<kbd>g a</kbd></button>
+    <button data-fake>≡ activity feed<kbd>g f</kbd></button>
+    <button data-fake>⚙ settings<kbd>g ,</kbd></button>
+  </nav>
+
+  <main>
+    <div class="path">~/orgs/<b id="pathOrg">…</b>/billing</div>
+    <div class="title">
+      <h1 class="h">Billing</h1>
+      <div class="sp"></div>
+      <button class="cmd" data-fake>&gt; past_invoices</button>
+      <button class="cmd" data-fake>&gt; payment_methods</button>
+      <button class="cmd mag" data-fake>&gt; export_csv</button>
+    </div>
+
+    <section class="hero">
+      <div class="frame">
+        <div class="fh"><b>Pending invoice</b><span id="periodLbl">…</span><span class="r" id="statusLbl"></span></div>
+        <div class="boot" id="boot"></div>
+        <div id="heroBody" hidden>
+          <div class="amount" id="amount">$0.00</div>
+          <div class="sub" id="amountSub"></div>
+          <div class="prog" id="prog"></div>
+        </div>
+      </div>
+      <div class="frame">
+        <div class="fh"><b>Org</b><span class="r" id="orgId"></span></div>
+        <div class="kv">
+          <div><small>name</small><b id="kName">…</b></div>
+          <div><small>clusters</small><b id="kClusters">…</b></div>
+          <div><small>created</small><b id="kCreated">…</b></div>
+          <div><small>currency</small><b id="kCur">…</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="frame">
+      <div class="fh"><b>Usage by cluster</b><span>this period</span></div>
+      <div class="cl" id="clusters"></div>
+    </section>
+
+    <section class="frame">
+      <div class="fh"><b>Line items</b><span id="liCount"></span><span class="r">sorted: date ↓</span></div>
+      <div class="scroll" id="items"></div>
+    </section>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const $ = id => document.getElementById(id);
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const usd = v => new Intl.NumberFormat("en-US", {style: "currency", currency: "USD"}).format(v);
+const day = iso => new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", {day: "2-digit", month: "short", year: "numeric", timeZone: "UTC"});
+const STORE = "mongr.lastOrg";
+let orgs = [];
+
+async function getJson(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(path + " " + res.status);
+  return res.json();
+}
+function toast(msg) {
+  const t = $("toast");
+  t.textContent = msg;
+  t.classList.add("on");
+  clearTimeout(t._h);
+  t._h = setTimeout(() => t.classList.remove("on"), 2200);
+}
+document.querySelectorAll("[data-fake]").forEach(b => b.addEventListener("click", () => toast("ERR 403: role ORG_READ_ONLY cannot run this command")));
+
+function remembered() {
+  try { return localStorage.getItem(STORE); } catch { return null; }
+}
+function remember(id) {
+  try { localStorage.setItem(STORE, id); } catch {}
+}
+
+async function bootLines(lines) {
+  const el = $("boot");
+  el.hidden = false;
+  el.textContent = "";
+  for (const line of lines) { el.textContent += line + "\n"; await sleep(110); }
+}
+
+function renderMenu(currentId) {
+  $("orgMenu").innerHTML = `<div class="mh">// switch organization</div>` + orgs.map(o =>
+    `<button data-org="${o.id}" class="${o.id === currentId ? "on" : ""}"><span>${o.name}</span><small>${o.id} · ${o.clusters} clusters</small></button>`).join("");
+  $("orgMenu").querySelectorAll("[data-org]").forEach(b => b.addEventListener("click", () => {
+    $("orgMenu").classList.remove("on");
+    loadOrg(b.dataset.org);
+  }));
+}
+
+async function loadOrg(orgId) {
+  const org = orgs.find(o => o.id === orgId) || orgs[0];
+  remember(org.id);
+  renderMenu(org.id);
+  $("orgName").textContent = org.name;
+  $("pathOrg").textContent = org.name;
+  $("orgId").textContent = org.id;
+  $("kName").textContent = org.name;
+  $("kClusters").textContent = org.clusters;
+  $("kCreated").textContent = day(org.created);
+  $("heroBody").hidden = true;
+  await bootLines([`$ mongr billing current --org ${org.id}`, "> resolving invoice…", "> streaming line items…"]);
+
+  const inv = await getJson(`api/orgs/${org.id}/invoices/current.json`);
+  const items = [...inv.line_items].sort((a, b) => b.date.localeCompare(a.date) || b.amount - a.amount);
+  const total = items.reduce((s, i) => s + i.amount, 0);
+  const lastDay = items.length ? items[0].date : inv.updated_at.slice(0, 10);
+  const start = new Date(inv.period_start + "T00:00:00Z"), end = new Date(inv.period_end + "T00:00:00Z");
+  const periodDays = Math.round((end - start) / 864e5) + 1;
+  const done = items.length ? Math.round((new Date(lastDay + "T00:00:00Z") - start) / 864e5) + 1 : 0;
+
+  $("boot").hidden = true;
+  $("heroBody").hidden = false;
+  $("periodLbl").textContent = `${day(inv.period_start)} → ${day(inv.period_end)}`;
+  $("statusLbl").textContent = `[${inv.status}]`;
+  $("kCur").textContent = inv.currency;
+  $("amount").textContent = usd(total);
+  $("amount").classList.toggle("zero", total === 0);
+  $("amountSub").textContent = items.length ? `accrued through ${day(lastDay)} · closes ${day(inv.period_end)}` : `no billable usage this period`;
+  const cells = 31, filled = Math.round(done / periodDays * cells);
+  $("prog").innerHTML = `period [<b>${"█".repeat(filled)}</b>${"░".repeat(cells - filled)}] ${done}/${periodDays}d`;
+
+  const byCluster = {};
+  for (const i of items) byCluster[i.cluster] = (byCluster[i.cluster] || 0) + i.amount;
+  const names = Object.keys(byCluster).sort((a, b) => byCluster[b] - byCluster[a]);
+  const max = Math.max(1, ...Object.values(byCluster));
+  $("clusters").innerHTML = names.length ? names.map(n => `<div><div class="r1"><span>${n}</span><span>${usd(byCluster[n])}</span></div><div class="bar"><i style="width:calc(${byCluster[n] / max * 100}% - 2px)"></i></div></div>`).join("")
+    : `<div class="empty"><b>NO CLUSTERS</b>this organization has no running deployments</div>`;
+
+  $("liCount").textContent = `${items.length} rows`;
+  $("items").innerHTML = items.length
+    ? `<table><thead><tr><th>date</th><th>cluster</th><th class="n">amount</th></tr></thead><tbody>${items.map(i => `<tr><td>${day(i.date)}</td><td>${i.cluster}</td><td class="n">${usd(i.amount)}</td></tr>`).join("")}</tbody></table>`
+    : `<div class="empty"><b>0 LINE ITEMS</b>nothing billed to ${org.name} in this period</div>`;
+}
+
+async function main() {
+  const [status, list] = await Promise.all([getJson("api/status.json"), getJson("api/orgs.json")]);
+  $("statusText").textContent = `all systems ${status.status}`;
+  orgs = list.results;
+  $("orgBtn").onclick = () => $("orgMenu").classList.toggle("on");
+  document.addEventListener("click", e => { if (!e.target.closest(".org")) $("orgMenu").classList.remove("on"); });
+  await loadOrg(remembered() || orgs[0].id);
+}
+main().catch(err => { console.error(err); toast("ERR: billing service unreachable"); });
+</script>
+</body>
+</html>

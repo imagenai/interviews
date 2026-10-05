@@ -1,24 +1,13 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex"><title>SaaS costs monitor</title>
-<style>:root{--a:#1d2330}
-*{box-sizing:border-box}body{margin:0;font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-background:#f5f6f8;color:#1d2330}a{color:var(--a)}header{background:var(--a);color:#fff;padding:14px 24px;
-display:flex;align-items:center;gap:24px}header b{font-size:18px;letter-spacing:-.01em}header nav{display:flex;
-gap:18px;opacity:.85;font-size:13px}header .acct{margin-left:auto;font-size:12px;opacity:.85}
-main{max-width:1000px;margin:0 auto;padding:28px 24px 64px;display:flex;flex-direction:column;gap:20px}
-h1{font-size:22px;margin:0}h2{font-size:15px;margin:0 0 10px}.card{background:#fff;border:1px solid #e3e6ea;
-border-radius:10px;padding:18px 20px}.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:14px}.kpi .l{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#6b7280}.kpi .v{font-size:26px;
-font-weight:600}table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:6px 8px;
-border-bottom:1px solid #eef0f3}th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#6b7280}
-td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}code,pre{font:12.5px ui-monospace,Menlo,monospace;
-background:#f1f3f6;border-radius:5px}code{padding:1px 5px}pre{padding:12px;overflow:auto}.muted{color:#6b7280;
-font-size:12px}.scroll{max-height:360px;overflow:auto}.tag{display:inline-block;font-size:11px;padding:1px 8px;
-border-radius:99px;background:#eef0f3}
+<meta name="robots" content="noindex"><title>Vendor billing portals</title>
+<style>
+*{box-sizing:border-box}html,body{height:100%;margin:0}
+body{display:grid;place-items:center;background:#0b0d12;font:600 17px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;width:min(560px,calc(100vw - 32px))}
+a{display:grid;place-items:center;height:96px;border-radius:16px;color:#fff;text-decoration:none;letter-spacing:.01em;
+border:1px solid rgba(255,255,255,.08);transition:transform .15s,box-shadow .15s}
+a:hover{transform:translateY(-2px);box-shadow:0 12px 32px -8px var(--g)}
+@media (max-width:420px){nav{grid-template-columns:1fr}}
 </style></head>
-<body><header><b>Interview assignment</b>
-<span class="acct"></span></header><main><h1>SaaS costs monitor</h1>
-<section class="card"><h2>Vendors</h2><table><thead><tr><th>Vendor</th><th>Billing portal</th><th>API endpoint</th>
-<th class="n">Monthly budget</th></tr></thead><tbody><tr><td>Cloudly</td><td><a data-abs href='cloudly/'>cloudly/</a></td><td><a data-abs href='cloudly/api/cost-and-usage.json'>cloudly/api/cost-and-usage.json</a></td><td class='n'>$90,900</td></tr><tr><td>Trackr</td><td><a data-abs href='trackr/'>trackr/</a></td><td><a data-abs href='trackr/api/invoices.json'>trackr/api/invoices.json</a></td><td class='n'>$7,300</td></tr><tr><td>Mongr</td><td><a data-abs href='mongr/'>mongr/</a></td><td><a data-abs href='mongr/api/orgs/org_7f2a1c/invoices/current.json'>mongr/api/orgs/org_7f2a1c/invoices/current.json</a></td><td class='n'>$10,900</td></tr><tr><td>Logbase</td><td><a data-abs href='logbase/'>logbase/</a></td><td><a data-abs href='logbase/api/charges.json'>logbase/api/charges.json</a></td><td class='n'>$14,500</td></tr></tbody></table></section>
-<script>document.querySelectorAll('[data-abs]').forEach(a=>{a.textContent=new URL(a.getAttribute('href'),location.href).href})</script></main></body></html>
+<body><nav><a href='cloudly/' style='background:linear-gradient(135deg,#ff7a2f,#8b5cff);--g:#ff7a2f'>Cloudly</a><a href='trackr/' style='background:linear-gradient(135deg,#7cf0d5,#7b8cff);color:#10132b;--g:#7b8cff'>Trackr</a><a href='mongr/' style='background:#050a07;color:#39ff88;border-color:#39ff88;font-family:ui-monospace,Menlo,monospace;--g:#39ff88'>Mongr</a><a href='logbase/' style='background:linear-gradient(135deg,#ff2d95,#2b0b5e);--g:#ff2d95'>Logbase</a></nav></body></html>

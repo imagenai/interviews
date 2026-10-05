@@ -8,184 +8,19 @@
   "subtotal": 5617.27,
   "line_items": [
     {
-      "date": "2026-10-01",
+      "date": "2026-10-14",
       "cluster": "prod-main (M50)",
-      "amount": 239.61
+      "amount": 281.27
     },
     {
-      "date": "2026-10-01",
+      "date": "2026-10-14",
       "cluster": "prod-analytics (M30)",
-      "amount": 70.87
+      "amount": 83.19
     },
     {
-      "date": "2026-10-01",
+      "date": "2026-10-14",
       "cluster": "backups",
-      "amount": 27.0
-    },
-    {
-      "date": "2026-10-02",
-      "cluster": "prod-main (M50)",
-      "amount": 317.46
-    },
-    {
-      "date": "2026-10-02",
-      "cluster": "prod-analytics (M30)",
-      "amount": 93.9
-    },
-    {
-      "date": "2026-10-02",
-      "cluster": "backups",
-      "amount": 35.76
-    },
-    {
-      "date": "2026-10-03",
-      "cluster": "prod-main (M50)",
-      "amount": 285.24
-    },
-    {
-      "date": "2026-10-03",
-      "cluster": "prod-analytics (M30)",
-      "amount": 84.37
-    },
-    {
-      "date": "2026-10-03",
-      "cluster": "backups",
-      "amount": 32.14
-    },
-    {
-      "date": "2026-10-04",
-      "cluster": "prod-main (M50)",
-      "amount": 286.99
-    },
-    {
-      "date": "2026-10-04",
-      "cluster": "prod-analytics (M30)",
-      "amount": 84.88
-    },
-    {
-      "date": "2026-10-04",
-      "cluster": "backups",
-      "amount": 32.34
-    },
-    {
-      "date": "2026-10-05",
-      "cluster": "prod-main (M50)",
-      "amount": 297.87
-    },
-    {
-      "date": "2026-10-05",
-      "cluster": "prod-analytics (M30)",
-      "amount": 88.1
-    },
-    {
-      "date": "2026-10-05",
-      "cluster": "backups",
-      "amount": 33.57
-    },
-    {
-      "date": "2026-10-06",
-      "cluster": "prod-main (M50)",
-      "amount": 320.2
-    },
-    {
-      "date": "2026-10-06",
-      "cluster": "prod-analytics (M30)",
-      "amount": 94.71
-    },
-    {
-      "date": "2026-10-06",
-      "cluster": "backups",
-      "amount": 36.07
-    },
-    {
-      "date": "2026-10-07",
-      "cluster": "prod-main (M50)",
-      "amount": 321.61
-    },
-    {
-      "date": "2026-10-07",
-      "cluster": "prod-analytics (M30)",
-      "amount": 95.12
-    },
-    {
-      "date": "2026-10-07",
-      "cluster": "backups",
-      "amount": 36.24
-    },
-    {
-      "date": "2026-10-08",
-      "cluster": "prod-main (M50)",
-      "amount": 269.98
-    },
-    {
-      "date": "2026-10-08",
-      "cluster": "prod-analytics (M30)",
-      "amount": 79.85
-    },
-    {
-      "date": "2026-10-08",
-      "cluster": "backups",
-      "amount": 30.42
-    },
-    {
-      "date": "2026-10-09",
-      "cluster": "prod-main (M50)",
-      "amount": 316.02
-    },
-    {
-      "date": "2026-10-09",
-      "cluster": "prod-analytics (M30)",
-      "amount": 93.47
-    },
-    {
-      "date": "2026-10-09",
-      "cluster": "backups",
-      "amount": 35.61
-    },
-    {
-      "date": "2026-10-10",
-      "cluster": "prod-main (M50)",
-      "amount": 298.21
-    },
-    {
-      "date": "2026-10-10",
-      "cluster": "prod-analytics (M30)",
-      "amount": 88.2
-    },
-    {
-      "date": "2026-10-10",
-      "cluster": "backups",
-      "amount": 33.61
-    },
-    {
-      "date": "2026-10-11",
-      "cluster": "prod-main (M50)",
-      "amount": 249.27
-    },
-    {
-      "date": "2026-10-11",
-      "cluster": "prod-analytics (M30)",
-      "amount": 73.73
-    },
-    {
-      "date": "2026-10-11",
-      "cluster": "backups",
-      "amount": 28.08
-    },
-    {
-      "date": "2026-10-12",
-      "cluster": "prod-main (M50)",
-      "amount": 263.71
-    },
-    {
-      "date": "2026-10-12",
-      "cluster": "prod-analytics (M30)",
-      "amount": 78.0
-    },
-    {
-      "date": "2026-10-12",
-      "cluster": "backups",
-      "amount": 29.71
+      "amount": 31.69
     },
     {
       "date": "2026-10-13",
@@ -203,19 +38,184 @@
       "amount": 27.14
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-12",
       "cluster": "prod-main (M50)",
-      "amount": 281.27
+      "amount": 263.71
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-12",
       "cluster": "prod-analytics (M30)",
-      "amount": 83.19
+      "amount": 78.0
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-12",
       "cluster": "backups",
-      "amount": 31.69
+      "amount": 29.71
+    },
+    {
+      "date": "2026-10-11",
+      "cluster": "prod-main (M50)",
+      "amount": 249.27
+    },
+    {
+      "date": "2026-10-11",
+      "cluster": "prod-analytics (M30)",
+      "amount": 73.73
+    },
+    {
+      "date": "2026-10-11",
+      "cluster": "backups",
+      "amount": 28.08
+    },
+    {
+      "date": "2026-10-10",
+      "cluster": "prod-main (M50)",
+      "amount": 298.21
+    },
+    {
+      "date": "2026-10-10",
+      "cluster": "prod-analytics (M30)",
+      "amount": 88.2
+    },
+    {
+      "date": "2026-10-10",
+      "cluster": "backups",
+      "amount": 33.61
+    },
+    {
+      "date": "2026-10-09",
+      "cluster": "prod-main (M50)",
+      "amount": 316.02
+    },
+    {
+      "date": "2026-10-09",
+      "cluster": "prod-analytics (M30)",
+      "amount": 93.47
+    },
+    {
+      "date": "2026-10-09",
+      "cluster": "backups",
+      "amount": 35.61
+    },
+    {
+      "date": "2026-10-08",
+      "cluster": "prod-main (M50)",
+      "amount": 269.98
+    },
+    {
+      "date": "2026-10-08",
+      "cluster": "prod-analytics (M30)",
+      "amount": 79.85
+    },
+    {
+      "date": "2026-10-08",
+      "cluster": "backups",
+      "amount": 30.42
+    },
+    {
+      "date": "2026-10-07",
+      "cluster": "prod-main (M50)",
+      "amount": 321.61
+    },
+    {
+      "date": "2026-10-07",
+      "cluster": "prod-analytics (M30)",
+      "amount": 95.12
+    },
+    {
+      "date": "2026-10-07",
+      "cluster": "backups",
+      "amount": 36.24
+    },
+    {
+      "date": "2026-10-06",
+      "cluster": "prod-main (M50)",
+      "amount": 320.2
+    },
+    {
+      "date": "2026-10-06",
+      "cluster": "prod-analytics (M30)",
+      "amount": 94.71
+    },
+    {
+      "date": "2026-10-06",
+      "cluster": "backups",
+      "amount": 36.07
+    },
+    {
+      "date": "2026-10-05",
+      "cluster": "prod-main (M50)",
+      "amount": 297.87
+    },
+    {
+      "date": "2026-10-05",
+      "cluster": "prod-analytics (M30)",
+      "amount": 88.1
+    },
+    {
+      "date": "2026-10-05",
+      "cluster": "backups",
+      "amount": 33.57
+    },
+    {
+      "date": "2026-10-04",
+      "cluster": "prod-main (M50)",
+      "amount": 286.99
+    },
+    {
+      "date": "2026-10-04",
+      "cluster": "prod-analytics (M30)",
+      "amount": 84.88
+    },
+    {
+      "date": "2026-10-04",
+      "cluster": "backups",
+      "amount": 32.34
+    },
+    {
+      "date": "2026-10-03",
+      "cluster": "prod-main (M50)",
+      "amount": 285.24
+    },
+    {
+      "date": "2026-10-03",
+      "cluster": "prod-analytics (M30)",
+      "amount": 84.37
+    },
+    {
+      "date": "2026-10-03",
+      "cluster": "backups",
+      "amount": 32.14
+    },
+    {
+      "date": "2026-10-02",
+      "cluster": "prod-main (M50)",
+      "amount": 317.46
+    },
+    {
+      "date": "2026-10-02",
+      "cluster": "prod-analytics (M30)",
+      "amount": 93.9
+    },
+    {
+      "date": "2026-10-02",
+      "cluster": "backups",
+      "amount": 35.76
+    },
+    {
+      "date": "2026-10-01",
+      "cluster": "prod-main (M50)",
+      "amount": 239.61
+    },
+    {
+      "date": "2026-10-01",
+      "cluster": "prod-analytics (M30)",
+      "amount": 70.87
+    },
+    {
+      "date": "2026-10-01",
+      "cluster": "backups",
+      "amount": 27.0
     }
   ]
 }

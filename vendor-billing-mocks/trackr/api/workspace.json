@@ -1,0 +1,19 @@
+{
+  "name": "imagen-ai",
+  "plan": "Standard",
+  "members_total": 60,
+  "members_preview": [
+    "NB",
+    "OS",
+    "MK",
+    "TR",
+    "YA",
+    "LG",
+    "SH",
+    "EP"
+  ],
+  "admins": [
+    "Noa Ben-Ami",
+    "Omer Shalev"
+  ]
+}

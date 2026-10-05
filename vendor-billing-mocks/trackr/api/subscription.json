@@ -1,10 +1,12 @@
 {
   "plan": "Standard",
   "seats": 60,
-  "price_per_seat": 97,
-  "currency": "USD",
+  "seats_used": 60,
+  "price_per_seat": 359,
+  "currency": "ILS",
   "billing_interval": "month",
   "billing_anchor_day": 14,
   "current_period_start": "2026-10-14",
-  "current_period_end": "2026-11-13"
+  "current_period_end": "2026-11-13",
+  "next_charge_on": "2026-11-14"
 }

@@ -1,29 +1,273 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex"><title>Logbase</title>
-<style>:root{--a:#6b3fd4}
-*{box-sizing:border-box}body{margin:0;font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-background:#f5f6f8;color:#1d2330}a{color:var(--a)}header{background:var(--a);color:#fff;padding:14px 24px;
-display:flex;align-items:center;gap:24px}header b{font-size:18px;letter-spacing:-.01em}header nav{display:flex;
-gap:18px;opacity:.85;font-size:13px}header .acct{margin-left:auto;font-size:12px;opacity:.85}
-main{max-width:1000px;margin:0 auto;padding:28px 24px 64px;display:flex;flex-direction:column;gap:20px}
-h1{font-size:22px;margin:0}h2{font-size:15px;margin:0 0 10px}.card{background:#fff;border:1px solid #e3e6ea;
-border-radius:10px;padding:18px 20px}.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:14px}.kpi .l{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#6b7280}.kpi .v{font-size:26px;
-font-weight:600}table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:6px 8px;
-border-bottom:1px solid #eef0f3}th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#6b7280}
-td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}code,pre{font:12.5px ui-monospace,Menlo,monospace;
-background:#f1f3f6;border-radius:5px}code{padding:1px 5px}pre{padding:12px;overflow:auto}.muted{color:#6b7280;
-font-size:12px}.scroll{max-height:360px;overflow:auto}.tag{display:inline-block;font-size:11px;padding:1px 8px;
-border-radius:99px;background:#eef0f3}
-</style></head>
-<body><header><b>logbase</b><nav><span>Overview</span><span>Usage</span><u>Billing</u><span>API</span></nav>
-<span class="acct">imagen-ai</span></header><main><h1>Billing</h1>
-<div class="kpis"><div class="card kpi"><div class="l">Month-to-date (Oct)</div><div class="v">$5,974.04</div>
-<div class="muted">net of credits, through 14 Oct</div></div><div class="card kpi"><div class="l">Credits applied</div>
-<div class="v">$727.00</div></div></div>
-<section class="card"><h2>October charges</h2><div class="scroll"><table><thead><tr><th>ID</th><th>Date</th>
-<th>Description</th><th class="n">Amount</th></tr></thead><tbody><tr><td><code>chg_8215</code></td><td>2026-10-01</td><td>Log ingestion and retention, 01 Oct</td><td class='n'>$521.55</td></tr><tr><td><code>chg_8216</code></td><td>2026-10-02</td><td>Log ingestion and retention, 02 Oct</td><td class='n'>$539.43</td></tr><tr><td><code>chg_8217</code></td><td>2026-10-03</td><td>Log ingestion and retention, 03 Oct</td><td class='n'>$446.86</td></tr><tr><td><code>chg_8218</code></td><td>2026-10-04</td><td>Log ingestion and retention, 04 Oct</td><td class='n'>$489.19</td></tr><tr><td><code>chg_8219</code></td><td>2026-10-05</td><td>Log ingestion and retention, 05 Oct</td><td class='n'>$545.74</td></tr><tr><td><code>chg_8220</code></td><td>2026-10-06</td><td>Log ingestion and retention, 06 Oct</td><td class='n'>$555.58</td></tr><tr><td><code>chg_8221</code></td><td>2026-10-07</td><td>Log ingestion and retention, 07 Oct</td><td class='n'>$414.58</td></tr><tr><td><code>chg_8222</code></td><td>2026-10-08</td><td>Log ingestion and retention, 08 Oct</td><td class='n'>$525.47</td></tr><tr><td><code>cr_0193</code></td><td>2026-10-09</td><td>SLA credit, ingestion outage 3 Oct</td><td class='n'>-$727.00</td></tr><tr><td><code>chg_8223</code></td><td>2026-10-09</td><td>Log ingestion and retention, 09 Oct</td><td class='n'>$500.51</td></tr><tr><td><code>chg_8224</code></td><td>2026-10-10</td><td>Log ingestion and retention, 10 Oct</td><td class='n'>$387.71</td></tr><tr><td><code>chg_8225</code></td><td>2026-10-11</td><td>Log ingestion and retention, 11 Oct</td><td class='n'>$423.14</td></tr><tr><td><code>chg_8226</code></td><td>2026-10-12</td><td>Log ingestion and retention, 12 Oct</td><td class='n'>$481.86</td></tr><tr><td><code>chg_8227</code></td><td>2026-10-13</td><td>Log ingestion and retention, 13 Oct</td><td class='n'>$428.87</td></tr><tr><td><code>chg_8228</code></td><td>2026-10-14</td><td>Log ingestion and retention, 14 Oct</td><td class='n'>$440.55</td></tr></tbody></table></div></section>
-<section class="card"><h2>Billing API</h2>
-<table><thead><tr><th></th><th>Path</th><th>Returns</th></tr></thead><tbody><tr><td><code>GET</code></td><td><code>api/charges.json</code></td><td>Charges and credits since 16 Sep, newest first</td></tr></tbody></table>
-<p class="muted">Amounts in USD. <code>type</code> is <code>usage</code> or <code>credit</code>.</p></section></main></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Usage &amp; billing · logbase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0418;--bg2:#160829;--pink:#ff2d95;--cyan:#21f3ff;--vio:#9d4dff;--sun:#ffb347;--ink:#f4eaff;--ink2:#c7b4e8;--mute:#9b86c4;--line:rgba(196,140,255,.18)}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:var(--bg);color:var(--ink);font:14px/1.5 "IBM Plex Sans",system-ui,sans-serif;overflow-x:hidden}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+.mono{font-family:"IBM Plex Mono",monospace}
+
+/* hero with a synthwave horizon */
+.hero{position:relative;height:250px;overflow:hidden;background:linear-gradient(180deg,#14052b 0%,#2a0a4a 55%,#4a0f5a 75%,#0c0418 100%)}
+.sun{position:absolute;left:74%;bottom:58px;width:220px;height:220px;transform:translateX(-50%);border-radius:50%;
+  background:linear-gradient(180deg,var(--sun) 0%,var(--pink) 70%);
+  -webkit-mask:repeating-linear-gradient(180deg,#000 0 18px,transparent 18px 24px);mask:repeating-linear-gradient(180deg,#000 0 18px,transparent 18px 24px);opacity:.9}
+.grid{position:absolute;left:-50%;right:-50%;bottom:-40px;height:150px;transform:perspective(260px) rotateX(62deg);transform-origin:50% 0;
+  background-image:linear-gradient(var(--pink) 2px,transparent 2px),linear-gradient(90deg,var(--pink) 2px,transparent 2px);background-size:60px 40px;
+  animation:run 1.6s linear infinite;opacity:.75;-webkit-mask:linear-gradient(180deg,transparent,#000 30%);mask:linear-gradient(180deg,transparent,#000 30%)}
+@keyframes run{to{background-position:0 40px}}
+.stars{position:absolute;inset:0;background-image:radial-gradient(1px 1px at 20% 30%,#fff,transparent),radial-gradient(1px 1px at 70% 20%,#fff,transparent),radial-gradient(1.5px 1.5px at 40% 12%,#fff,transparent),radial-gradient(1px 1px at 85% 45%,#fff,transparent),radial-gradient(1px 1px at 10% 60%,#fff,transparent);opacity:.7}
+
+.nav{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;gap:6px;padding:16px 28px 26px;z-index:3;background:linear-gradient(180deg,rgba(12,4,24,.92) 55%,rgba(12,4,24,0))}
+.logo{font-family:Orbitron;font-weight:900;font-size:20px;letter-spacing:.08em;margin-right:22px;
+  color:#fff;text-shadow:0 0 10px var(--pink),0 0 22px var(--pink)}
+.nav .lnk{padding:8px 14px;border-radius:10px;color:var(--ink2);font-weight:500}
+.nav .lnk:hover{color:#fff;background:rgba(255,255,255,.06)}
+.nav .lnk.on{color:#fff;background:rgba(255,45,149,.18);box-shadow:inset 0 -2px 0 var(--pink)}
+.sp{flex:1}
+.pillx{display:flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:rgba(0,0,0,.35);border:1px solid var(--line);font-size:12.5px;color:var(--ink2)}
+.pillx b{color:var(--pink)}
+.ava{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--cyan),var(--vio));display:grid;place-items:center;font-weight:700;font-size:12px;color:#0c0418}
+
+.htitle{position:absolute;left:28px;bottom:34px;z-index:3}
+.htitle h1{margin:0;font-family:Orbitron;font-weight:900;font-size:clamp(28px,4.5vw,46px);letter-spacing:.04em;line-height:1;
+  color:#fff;text-shadow:0 0 18px rgba(255,45,149,.8)}
+.htitle p{margin:8px 0 0;color:var(--ink2)}
+
+/* live tail ticker */
+.tail{display:flex;gap:28px;overflow:hidden;white-space:nowrap;border-block:1px solid var(--line);background:#09030f;padding:9px 0;font:12px "IBM Plex Mono",monospace;color:var(--mute)}
+.tail .track{display:flex;gap:28px;animation:tick 40s linear infinite}
+@keyframes tick{to{transform:translateX(-50%)}}
+.tail .e{color:var(--pink)} .tail .w{color:var(--sun)} .tail .i{color:var(--cyan)}
+.tail .live{position:sticky;left:0;padding:0 14px;color:#fff;background:#09030f;font-weight:500;z-index:1}
+.tail .live::before{content:"●";color:var(--pink);margin-right:6px;animation:pulse 1s infinite}
+@keyframes pulse{50%{opacity:.2}}
+
+.page{width:min(1260px,calc(100% - 32px));margin:24px auto 90px;display:flex;flex-direction:column;gap:20px}
+.bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.tabs{display:flex;gap:4px;padding:4px;border-radius:12px;background:var(--bg2);border:1px solid var(--line)}
+.tabs button{padding:7px 14px;border-radius:9px;color:var(--mute);font-weight:500}
+.tabs button.on{color:#fff;background:linear-gradient(135deg,rgba(255,45,149,.35),rgba(157,77,255,.35))}
+.btn{height:38px;padding:0 16px;border-radius:10px;border:1px solid var(--line);background:var(--bg2);font-weight:500;color:var(--ink2)}
+.btn:hover{color:#fff;border-color:rgba(255,45,149,.6)}
+.btn.neon{border:0;background:linear-gradient(135deg,var(--pink),var(--vio));color:#fff;font-weight:600;box-shadow:0 0 0 1px rgba(255,255,255,.12) inset,0 10px 30px -10px var(--pink)}
+
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{position:relative;border-radius:18px;padding:20px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));border:1px solid var(--line);overflow:hidden}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,var(--c,var(--pink)),transparent)}
+.kpi small{font-family:Orbitron;font-size:10px;letter-spacing:.2em;color:var(--mute);text-transform:uppercase}
+.kpi b{display:block;font-family:Orbitron;font-weight:700;font-size:28px;letter-spacing:.02em;margin-top:8px;font-variant-numeric:tabular-nums}
+.kpi span{font-size:12.5px;color:var(--ink2)}
+.kpi b.neg{color:var(--cyan)}
+
+.row{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:16px}
+.ch{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.ch h2{margin:0;font-family:Orbitron;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.ch .tag{font-size:11.5px;color:var(--mute);padding:2px 9px;border:1px solid var(--line);border-radius:99px}
+.ch .r{margin-left:auto}
+svg text{fill:var(--mute);font:10.5px "IBM Plex Mono",monospace}
+
+.cap{display:flex;flex-direction:column;gap:14px}
+.ring{position:relative;display:grid;place-items:center;margin:4px 0 6px}
+.ring .c{position:absolute;text-align:center}
+.ring .c b{display:block;font-family:Orbitron;font-size:20px}
+.ring .c span{font-size:11px;color:var(--mute)}
+.rowkv{display:flex;justify-content:space-between;border-top:1px dashed var(--line);padding-top:10px;font-size:13px;color:var(--ink2)}
+.rowkv b{color:#fff;font-weight:500}
+
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-family:Orbitron;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);padding:10px 12px;border-bottom:1px solid var(--line)}
+td{padding:11px 12px;border-bottom:1px solid rgba(196,140,255,.08);font-variant-numeric:tabular-nums}
+tbody tr:hover{background:rgba(255,45,149,.06)}
+td.n,th.n{text-align:right}
+.badge{font:500 11px "IBM Plex Mono",monospace;padding:3px 8px;border-radius:6px;background:rgba(33,243,255,.12);color:var(--cyan)}
+.badge.credit{background:rgba(255,179,71,.15);color:var(--sun)}
+td.cr{color:var(--sun)}
+.scroll{max-height:460px;overflow:auto}
+.skel{background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.12),rgba(255,255,255,.04));background-size:200% 100%;animation:sh 1.2s infinite;border-radius:8px;color:transparent!important;text-shadow:none!important}
+@keyframes sh{to{background-position:-200% 0}}
+.toast{position:fixed;right:22px;top:22px;z-index:40;padding:12px 16px;border-radius:12px;background:#1b0833;border:1px solid var(--pink);color:#fff;
+  box-shadow:0 0 30px -8px var(--pink);opacity:0;transform:translateY(-10px);transition:.2s}
+.toast.on{opacity:1;transform:none}
+
+@media (max-width:1100px){.kpis{grid-template-columns:repeat(2,1fr)}.row{grid-template-columns:1fr}}
+@media (max-width:760px){.sun{left:85%;width:180px;height:180px}.nav .lnk:not(.on),.pillx{display:none}.htitle{left:16px}.nav{padding:14px 16px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="stars"></div><div class="sun"></div><div class="grid"></div>
+  <nav class="nav">
+    <div class="logo">LOGBASE</div>
+    <button class="lnk" data-fake>Explore</button>
+    <button class="lnk" data-fake>Live tail</button>
+    <button class="lnk" data-fake>Dashboards</button>
+    <button class="lnk" data-fake>Alerts</button>
+    <button class="lnk on">Usage &amp; billing</button>
+    <div class="sp"></div>
+    <span class="pillx" id="alerts">⚠ <b>·</b> firing</span>
+    <span class="pillx" id="plan">…</span>
+    <div class="ava">IA</div>
+  </nav>
+  <div class="htitle"><h1>USAGE &amp; BILLING</h1><p id="hsub">&nbsp;</p></div>
+</header>
+<div class="tail"><span class="live">LIVE</span><div class="track" id="track"></div></div>
+
+<main class="page">
+  <div class="bar">
+    <div class="tabs"><button class="on">Charges</button><button data-fake>Ingest volume</button><button data-fake>Retention</button><button data-fake>Quotas</button></div>
+    <div class="sp"></div>
+    <button class="btn" data-fake>Download statement</button>
+    <button class="btn" data-fake>Contact sales</button>
+    <button class="btn neon" data-fake>Set usage cap</button>
+  </div>
+
+  <section class="kpis">
+    <div class="card kpi"><small>Month-to-date</small><b class="skel" id="kMtd">$0,000.00</b><span>net of credits</span></div>
+    <div class="card kpi" style="--c:var(--cyan)"><small>Usage charges</small><b class="skel" id="kUsage">$0,000.00</b><span id="kUsageS">&nbsp;</span></div>
+    <div class="card kpi" style="--c:var(--sun)"><small>Credits applied</small><b class="skel neg" id="kCredit">$000.00</b><span id="kCreditS">&nbsp;</span></div>
+    <div class="card kpi" style="--c:var(--vio)"><small>Avg per day</small><b class="skel" id="kAvg">$000.00</b><span id="kAvgS">&nbsp;</span></div>
+  </section>
+
+  <section class="row">
+    <div class="card">
+      <div class="ch"><h2>Daily charges</h2><span class="tag" id="chTag">…</span></div>
+      <svg id="chart" viewBox="0 0 860 260" width="100%" preserveAspectRatio="none" style="height:260px"></svg>
+    </div>
+    <div class="card cap" style="--c:var(--cyan)">
+      <div class="ch"><h2>Account</h2></div>
+      <div class="ring"><svg id="ring" width="170" height="170" viewBox="0 0 170 170"></svg><div class="c"><b id="ringV">…</b><span>days retained</span></div></div>
+      <div class="rowkv"><span>Plan</span><b id="aPlan">…</b></div>
+      <div class="rowkv"><span>Log sources</span><b id="aSrc">…</b></div>
+      <div class="rowkv"><span>Ingest region</span><b id="aReg">…</b></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="ch"><h2>Charges &amp; credits</h2><span class="tag" id="rowsTag">…</span><span class="r"><button class="btn" data-fake>Columns ▾</button></span></div>
+    <div class="scroll"><table><thead><tr><th>Date</th><th>ID</th><th>Type</th><th>Description</th><th class="n">Amount</th></tr></thead><tbody id="rows"></tbody></table></div>
+  </section>
+</main>
+<div class="toast" id="toast"></div>
+
+<script>
+const $ = id => document.getElementById(id);
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const usd = v => new Intl.NumberFormat("en-US", {style: "currency", currency: "USD"}).format(v);
+const day = iso => new Date(iso.slice(0, 10) + "T00:00:00Z").toLocaleDateString("en-GB", {day: "2-digit", month: "short", year: "numeric", timeZone: "UTC"});
+
+async function getJson(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(path + " " + res.status);
+  return res.json();
+}
+function toast(msg) {
+  const t = $("toast");
+  t.textContent = msg;
+  t.classList.add("on");
+  clearTimeout(t._h);
+  t._h = setTimeout(() => t.classList.remove("on"), 2200);
+}
+document.querySelectorAll("[data-fake]").forEach(b => b.addEventListener("click", () => toast("Billing actions need the Owner role.")));
+
+function liveTail() {
+  const svc = ["api-gw", "auth", "editor-svc", "culling", "uploader", "billing-svc", "xmp-writer", "preview"];
+  const msgs = [["i", "INFO", "request served in 42ms"], ["i", "INFO", "job enqueued"], ["w", "WARN", "retrying upstream call (2/5)"],
+                ["i", "INFO", "cache hit ratio 0.93"], ["e", "ERROR", "upstream timeout after 30s"], ["i", "INFO", "worker heartbeat"],
+                ["w", "WARN", "queue depth above 1k"], ["i", "INFO", "export finished"]];
+  let html = "";
+  for (let n = 0; n < 40; n++) {
+    const [c, lvl, m] = msgs[n % msgs.length];
+    const ts = `14:${String(10 + n % 50).padStart(2, "0")}:${String((n * 7) % 60).padStart(2, "0")}`;
+    html += `<span>${ts} <span class="${c}">${lvl}</span> ${svc[(n * 3) % svc.length]} ${m}</span>`;
+  }
+  $("track").innerHTML = html + html;
+}
+
+function drawChart(daysAsc) {
+  const svg = $("chart"), W = 860, H = 260, pad = {l: 52, r: 10, t: 14, b: 28};
+  const max = Math.max(...daysAsc.map(d => d.v)) * 1.18;
+  const bw = (W - pad.l - pad.r) / daysAsc.length;
+  const y = v => H - pad.b - v / max * (H - pad.t - pad.b);
+  let g = `<defs><linearGradient id="nb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff2d95"/><stop offset="1" stop-color="#9d4dff" stop-opacity=".25"/></linearGradient></defs>`;
+  for (let k = 0; k <= 4; k++) {
+    const v = max / 4 * k;
+    g += `<line x1="${pad.l}" x2="${W - pad.r}" y1="${y(v)}" y2="${y(v)}" stroke="rgba(196,140,255,.1)"/><text x="${pad.l - 8}" y="${y(v) + 3}" text-anchor="end">$${Math.round(v)}</text>`;
+  }
+  daysAsc.forEach((d, i) => {
+    const x = pad.l + i * bw + bw * .18, w = bw * .64;
+    g += `<rect x="${x}" y="${y(d.v)}" width="${w}" height="${H - pad.b - y(d.v)}" rx="3" fill="url(#nb)"><title>${day(d.date)}: ${usd(d.v)}</title></rect>`;
+    g += `<rect x="${x}" y="${y(d.v)}" width="${w}" height="2" fill="#fff" opacity=".8"/>`;
+    g += `<text x="${x + w / 2}" y="${H - 9}" text-anchor="middle">${d.date.slice(8, 10)}</text>`;
+  });
+  svg.innerHTML = g;
+}
+
+function ring(days) {
+  const R = 70, C = 2 * Math.PI * R, frac = Math.min(days / 90, 1);
+  $("ring").innerHTML = `<circle cx="85" cy="85" r="${R}" fill="none" stroke="rgba(196,140,255,.12)" stroke-width="12"/>
+    <circle cx="85" cy="85" r="${R}" fill="none" stroke="#21f3ff" stroke-width="12" stroke-linecap="round" stroke-dasharray="${C * frac} ${C}" transform="rotate(-90 85 85)" style="filter:drop-shadow(0 0 8px #21f3ff)"/>`;
+  $("ringV").textContent = days;
+}
+
+async function loadShell() {
+  const [acct, alerts] = await Promise.all([getJson("api/account.json"), getJson("api/alerts/summary.json")]);
+  $("plan").textContent = acct.plan;
+  $("alerts").innerHTML = `⚠ <b>${alerts.firing}</b> firing`;
+  $("aPlan").textContent = acct.plan;
+  $("aSrc").textContent = acct.sources;
+  $("aReg").textContent = acct.ingest_region;
+  ring(acct.retention_days);
+}
+
+async function loadCharges() {
+  await sleep(500);
+  const res = await getJson("api/charges.json");
+  const month = res.generated_at.slice(0, 7);
+  const seen = new Set(), charges = [];
+  for (const c of res.data) {
+    if (seen.has(c.id)) continue;
+    seen.add(c.id);
+    charges.push(c);
+  }
+  charges.sort((a, b) => b.created.localeCompare(a.created));
+  const inMonth = charges.filter(c => c.created.startsWith(month));
+  const usage = inMonth.filter(c => c.type === "usage");
+  const credits = inMonth.filter(c => c.type === "credit");
+  const usageTotal = usage.reduce((s, c) => s + c.amount, 0);
+  const creditTotal = credits.reduce((s, c) => s + c.amount, 0);
+  const monthName = new Date(month + "-01T00:00:00Z").toLocaleDateString("en-GB", {month: "long", year: "numeric", timeZone: "UTC"});
+
+  for (const id of ["kMtd", "kUsage", "kCredit", "kAvg"]) $(id).classList.remove("skel");
+  $("kMtd").textContent = usd(usageTotal - creditTotal);
+  $("kUsage").textContent = usd(usageTotal);
+  $("kUsageS").textContent = `${usage.length} daily charges`;
+  $("kCredit").textContent = "−" + usd(creditTotal);
+  $("kCreditS").textContent = credits.map(c => c.description).join(", ") || "none this month";
+  $("kAvg").textContent = usd(usageTotal / usage.length);
+  $("kAvgS").textContent = "usage only";
+  $("hsub").textContent = `${monthName} · through ${day(usage[0].created)} · account ${res.account}`;
+  $("chTag").textContent = monthName;
+  drawChart(usage.map(c => ({date: c.created.slice(0, 10), v: c.amount})).reverse());
+  $("rowsTag").textContent = `${charges.length} records · newest first`;
+  $("rows").innerHTML = charges.map(c => {
+    const credit = c.type === "credit";
+    return `<tr><td>${day(c.created)}</td><td class="mono">${c.id}</td><td><span class="badge ${c.type}">${c.type}</span></td><td>${c.description}</td><td class="n ${credit ? "cr" : ""}">${credit ? "−" : ""}${usd(c.amount)}</td></tr>`;
+  }).join("");
+}
+
+liveTail();
+loadShell().catch(console.error);
+loadCharges().catch(err => { console.error(err); toast("Billing service unavailable."); });
+</script>
+</body>
+</html>

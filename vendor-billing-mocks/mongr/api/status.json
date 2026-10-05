@@ -1,0 +1,8 @@
+{
+  "status": "operational",
+  "regions": {
+    "eu-central": "ok",
+    "us-east": "ok",
+    "me-west": "ok"
+  }
+}

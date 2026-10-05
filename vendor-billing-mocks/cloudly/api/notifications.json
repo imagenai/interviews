@@ -1,0 +1,23 @@
+{
+  "unread": 3,
+  "items": [
+    {
+      "id": "n_301",
+      "kind": "budget",
+      "text": "October forecast crossed 90% of last month's spend",
+      "at": "2026-10-14T09:12:00Z"
+    },
+    {
+      "id": "n_298",
+      "kind": "security",
+      "text": "2 access keys have not rotated in 90 days",
+      "at": "2026-10-11T16:40:00Z"
+    },
+    {
+      "id": "n_290",
+      "kind": "product",
+      "text": "Orbit Compute g9 instances are now generally available",
+      "at": "2026-10-06T08:00:00Z"
+    }
+  ]
+}

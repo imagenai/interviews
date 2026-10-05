@@ -1,0 +1,9 @@
+{
+  "user": {
+    "name": "Dana Levi",
+    "email": "dana@imagen-ai.example",
+    "role": "BillingAdmin"
+  },
+  "account": "acct-4471-imagen",
+  "region": "us-east-orbit-1"
+}

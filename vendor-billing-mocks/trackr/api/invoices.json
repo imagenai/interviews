@@ -5,10 +5,11 @@
       "issued_on": "2026-10-14",
       "period_start": "2026-10-14",
       "period_end": "2026-11-13",
-      "description": "Trackr Cloud Standard, 60 seats x $97/seat",
+      "description": "Trackr Cloud Standard, 60 seats",
       "seats": 60,
-      "total": 5820.0,
-      "currency": "USD",
+      "unit_price": 359.0,
+      "total": 21540.0,
+      "currency": "ILS",
       "status": "open"
     },
     {
@@ -16,10 +17,11 @@
       "issued_on": "2026-09-14",
       "period_start": "2026-09-14",
       "period_end": "2026-10-13",
-      "description": "Trackr Cloud Standard, 58 seats x $97/seat",
+      "description": "Trackr Cloud Standard, 58 seats",
       "seats": 58,
-      "total": 5626.0,
-      "currency": "USD",
+      "unit_price": 359.0,
+      "total": 20822.0,
+      "currency": "ILS",
       "status": "paid"
     },
     {
@@ -27,10 +29,11 @@
       "issued_on": "2026-08-14",
       "period_start": "2026-08-14",
       "period_end": "2026-09-13",
-      "description": "Trackr Cloud Standard, 55 seats x $97/seat",
+      "description": "Trackr Cloud Standard, 55 seats",
       "seats": 55,
-      "total": 5335.0,
-      "currency": "USD",
+      "unit_price": 359.0,
+      "total": 19745.0,
+      "currency": "ILS",
       "status": "paid"
     },
     {
@@ -38,10 +41,11 @@
       "issued_on": "2026-07-14",
       "period_start": "2026-07-14",
       "period_end": "2026-08-13",
-      "description": "Trackr Cloud Standard, 52 seats x $97/seat",
+      "description": "Trackr Cloud Standard, 52 seats",
       "seats": 52,
-      "total": 5044.0,
-      "currency": "USD",
+      "unit_price": 359.0,
+      "total": 18668.0,
+      "currency": "ILS",
       "status": "paid"
     },
     {
@@ -49,10 +53,11 @@
       "issued_on": "2026-06-14",
       "period_start": "2026-06-14",
       "period_end": "2026-07-13",
-      "description": "Trackr Cloud Standard, 49 seats x $97/seat",
+      "description": "Trackr Cloud Standard, 49 seats",
       "seats": 49,
-      "total": 4753.0,
-      "currency": "USD",
+      "unit_price": 359.0,
+      "total": 17591.0,
+      "currency": "ILS",
       "status": "paid"
     },
     {
@@ -60,10 +65,11 @@
       "issued_on": "2026-05-14",
       "period_start": "2026-05-14",
       "period_end": "2026-06-13",
-      "description": "Trackr Cloud Standard, 46 seats x $97/seat",
+      "description": "Trackr Cloud Standard, 46 seats",
       "seats": 46,
-      "total": 4462.0,
-      "currency": "USD",
+      "unit_price": 359.0,
+      "total": 16514.0,
+      "currency": "ILS",
       "status": "paid"
     },
     {
@@ -71,10 +77,11 @@
       "issued_on": "2026-04-14",
       "period_start": "2026-04-14",
       "period_end": "2026-05-13",
-      "description": "Trackr Cloud Standard, 44 seats x $97/seat",
+      "description": "Trackr Cloud Standard, 44 seats",
       "seats": 44,
-      "total": 4268.0,
-      "currency": "USD",
+      "unit_price": 359.0,
+      "total": 15796.0,
+      "currency": "ILS",
       "status": "paid"
     }
   ]
