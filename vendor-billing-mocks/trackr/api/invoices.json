@@ -7,9 +7,9 @@
       "period_end": "2026-11-13",
       "description": "Trackr Cloud Standard, 60 seats",
       "seats": 60,
-      "unit_price": 359.0,
-      "total": 21540.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 5340.0,
+      "currency": "EUR",
       "status": "open"
     },
     {
@@ -19,9 +19,9 @@
       "period_end": "2026-10-13",
       "description": "Trackr Cloud Standard, 58 seats",
       "seats": 58,
-      "unit_price": 359.0,
-      "total": 20822.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 5162.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -31,9 +31,9 @@
       "period_end": "2026-09-13",
       "description": "Trackr Cloud Standard, 57 seats",
       "seats": 57,
-      "unit_price": 359.0,
-      "total": 20463.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 5073.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -43,9 +43,9 @@
       "period_end": "2026-08-13",
       "description": "Trackr Cloud Standard, 56 seats",
       "seats": 56,
-      "unit_price": 359.0,
-      "total": 20104.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 4984.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -55,9 +55,9 @@
       "period_end": "2026-07-13",
       "description": "Trackr Cloud Standard, 55 seats",
       "seats": 55,
-      "unit_price": 359.0,
-      "total": 19745.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 4895.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -67,9 +67,9 @@
       "period_end": "2026-06-13",
       "description": "Trackr Cloud Standard, 54 seats",
       "seats": 54,
-      "unit_price": 359.0,
-      "total": 19386.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 4806.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -79,9 +79,9 @@
       "period_end": "2026-05-13",
       "description": "Trackr Cloud Standard, 53 seats",
       "seats": 53,
-      "unit_price": 359.0,
-      "total": 19027.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 4717.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -91,9 +91,9 @@
       "period_end": "2026-04-13",
       "description": "Trackr Cloud Standard, 52 seats",
       "seats": 52,
-      "unit_price": 359.0,
-      "total": 18668.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 4628.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -103,9 +103,9 @@
       "period_end": "2026-03-13",
       "description": "Trackr Cloud Standard, 51 seats",
       "seats": 51,
-      "unit_price": 359.0,
-      "total": 18309.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 4539.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -115,9 +115,9 @@
       "period_end": "2026-02-13",
       "description": "Trackr Cloud Standard, 51 seats",
       "seats": 51,
-      "unit_price": 359.0,
-      "total": 18309.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 4539.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -127,9 +127,9 @@
       "period_end": "2026-01-13",
       "description": "Trackr Cloud Standard, 50 seats",
       "seats": 50,
-      "unit_price": 359.0,
-      "total": 17950.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 4450.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -139,9 +139,9 @@
       "period_end": "2025-12-13",
       "description": "Trackr Cloud Standard, 49 seats",
       "seats": 49,
-      "unit_price": 359.0,
-      "total": 17591.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 4361.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -151,9 +151,9 @@
       "period_end": "2025-11-13",
       "description": "Trackr Cloud Standard, 48 seats",
       "seats": 48,
-      "unit_price": 359.0,
-      "total": 17232.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 4272.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -163,9 +163,9 @@
       "period_end": "2025-10-13",
       "description": "Trackr Cloud Standard, 47 seats",
       "seats": 47,
-      "unit_price": 359.0,
-      "total": 16873.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 4183.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -175,9 +175,9 @@
       "period_end": "2025-09-13",
       "description": "Trackr Cloud Standard, 46 seats",
       "seats": 46,
-      "unit_price": 359.0,
-      "total": 16514.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 4094.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -187,9 +187,9 @@
       "period_end": "2025-08-13",
       "description": "Trackr Cloud Standard, 45 seats",
       "seats": 45,
-      "unit_price": 359.0,
-      "total": 16155.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 4005.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -199,9 +199,9 @@
       "period_end": "2025-07-13",
       "description": "Trackr Cloud Standard, 44 seats",
       "seats": 44,
-      "unit_price": 359.0,
-      "total": 15796.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 3916.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -211,9 +211,9 @@
       "period_end": "2025-06-13",
       "description": "Trackr Cloud Standard, 43 seats",
       "seats": 43,
-      "unit_price": 359.0,
-      "total": 15437.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 3827.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -223,9 +223,9 @@
       "period_end": "2025-05-13",
       "description": "Trackr Cloud Standard, 42 seats",
       "seats": 42,
-      "unit_price": 359.0,
-      "total": 15078.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 3738.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -235,9 +235,9 @@
       "period_end": "2025-04-13",
       "description": "Trackr Cloud Standard, 41 seats",
       "seats": 41,
-      "unit_price": 359.0,
-      "total": 14719.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 3649.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -247,9 +247,9 @@
       "period_end": "2025-03-13",
       "description": "Trackr Cloud Standard, 41 seats",
       "seats": 41,
-      "unit_price": 359.0,
-      "total": 14719.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 3649.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -259,9 +259,9 @@
       "period_end": "2025-02-13",
       "description": "Trackr Cloud Standard, 40 seats",
       "seats": 40,
-      "unit_price": 359.0,
-      "total": 14360.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 3560.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -271,9 +271,9 @@
       "period_end": "2025-01-13",
       "description": "Trackr Cloud Standard, 39 seats",
       "seats": 39,
-      "unit_price": 359.0,
-      "total": 14001.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 3471.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -283,9 +283,9 @@
       "period_end": "2024-12-13",
       "description": "Trackr Cloud Standard, 38 seats",
       "seats": 38,
-      "unit_price": 359.0,
-      "total": 13642.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 3382.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -295,9 +295,9 @@
       "period_end": "2024-11-13",
       "description": "Trackr Cloud Standard, 37 seats",
       "seats": 37,
-      "unit_price": 359.0,
-      "total": 13283.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 3293.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -307,9 +307,9 @@
       "period_end": "2024-10-13",
       "description": "Trackr Cloud Standard, 36 seats",
       "seats": 36,
-      "unit_price": 359.0,
-      "total": 12924.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 3204.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -319,9 +319,9 @@
       "period_end": "2024-09-13",
       "description": "Trackr Cloud Standard, 35 seats",
       "seats": 35,
-      "unit_price": 359.0,
-      "total": 12565.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 3115.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -331,9 +331,9 @@
       "period_end": "2024-08-13",
       "description": "Trackr Cloud Standard, 34 seats",
       "seats": 34,
-      "unit_price": 359.0,
-      "total": 12206.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 3026.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -343,9 +343,9 @@
       "period_end": "2024-07-13",
       "description": "Trackr Cloud Standard, 34 seats",
       "seats": 34,
-      "unit_price": 359.0,
-      "total": 12206.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 3026.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -355,9 +355,9 @@
       "period_end": "2024-06-13",
       "description": "Trackr Cloud Standard, 33 seats",
       "seats": 33,
-      "unit_price": 359.0,
-      "total": 11847.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 2937.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -367,9 +367,9 @@
       "period_end": "2024-05-13",
       "description": "Trackr Cloud Standard, 32 seats",
       "seats": 32,
-      "unit_price": 359.0,
-      "total": 11488.0,
-      "currency": "ILS",
+      "unit_price": 89.0,
+      "total": 2848.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -379,9 +379,9 @@
       "period_end": "2024-04-13",
       "description": "Trackr Cloud Standard, 31 seats",
       "seats": 31,
-      "unit_price": 302.0,
-      "total": 9362.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 2325.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -391,9 +391,9 @@
       "period_end": "2024-03-13",
       "description": "Trackr Cloud Standard, 30 seats",
       "seats": 30,
-      "unit_price": 302.0,
-      "total": 9060.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 2250.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -403,9 +403,9 @@
       "period_end": "2024-02-13",
       "description": "Trackr Cloud Standard, 29 seats",
       "seats": 29,
-      "unit_price": 302.0,
-      "total": 8758.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 2175.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -415,9 +415,9 @@
       "period_end": "2024-01-13",
       "description": "Trackr Cloud Standard, 29 seats",
       "seats": 29,
-      "unit_price": 302.0,
-      "total": 8758.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 2175.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -427,9 +427,9 @@
       "period_end": "2023-12-13",
       "description": "Trackr Cloud Standard, 28 seats",
       "seats": 28,
-      "unit_price": 302.0,
-      "total": 8456.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 2100.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -439,9 +439,9 @@
       "period_end": "2023-11-13",
       "description": "Trackr Cloud Standard, 27 seats",
       "seats": 27,
-      "unit_price": 302.0,
-      "total": 8154.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 2025.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -451,9 +451,9 @@
       "period_end": "2023-10-13",
       "description": "Trackr Cloud Standard, 26 seats",
       "seats": 26,
-      "unit_price": 302.0,
-      "total": 7852.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 1950.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -463,9 +463,9 @@
       "period_end": "2023-09-13",
       "description": "Trackr Cloud Standard, 25 seats",
       "seats": 25,
-      "unit_price": 302.0,
-      "total": 7550.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 1875.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -475,9 +475,9 @@
       "period_end": "2023-08-13",
       "description": "Trackr Cloud Standard, 24 seats",
       "seats": 24,
-      "unit_price": 302.0,
-      "total": 7248.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 1800.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -487,9 +487,9 @@
       "period_end": "2023-07-13",
       "description": "Trackr Cloud Standard, 24 seats",
       "seats": 24,
-      "unit_price": 302.0,
-      "total": 7248.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 1800.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -499,9 +499,9 @@
       "period_end": "2023-06-13",
       "description": "Trackr Cloud Standard, 23 seats",
       "seats": 23,
-      "unit_price": 302.0,
-      "total": 6946.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 1725.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -511,9 +511,9 @@
       "period_end": "2023-05-13",
       "description": "Trackr Cloud Standard, 22 seats",
       "seats": 22,
-      "unit_price": 302.0,
-      "total": 6644.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 1650.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -523,9 +523,9 @@
       "period_end": "2023-04-13",
       "description": "Trackr Cloud Standard, 21 seats",
       "seats": 21,
-      "unit_price": 302.0,
-      "total": 6342.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 1575.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -535,9 +535,9 @@
       "period_end": "2023-03-13",
       "description": "Trackr Cloud Standard, 21 seats",
       "seats": 21,
-      "unit_price": 302.0,
-      "total": 6342.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 1575.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -547,9 +547,9 @@
       "period_end": "2023-02-13",
       "description": "Trackr Cloud Standard, 20 seats",
       "seats": 20,
-      "unit_price": 302.0,
-      "total": 6040.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 1500.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -559,9 +559,9 @@
       "period_end": "2023-01-13",
       "description": "Trackr Cloud Standard, 19 seats",
       "seats": 19,
-      "unit_price": 302.0,
-      "total": 5738.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 1425.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -571,9 +571,9 @@
       "period_end": "2022-12-13",
       "description": "Trackr Cloud Standard, 18 seats",
       "seats": 18,
-      "unit_price": 302.0,
-      "total": 5436.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 1350.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -583,9 +583,9 @@
       "period_end": "2022-11-13",
       "description": "Trackr Cloud Standard, 18 seats",
       "seats": 18,
-      "unit_price": 302.0,
-      "total": 5436.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 1350.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -595,9 +595,9 @@
       "period_end": "2022-10-13",
       "description": "Trackr Cloud Standard, 17 seats",
       "seats": 17,
-      "unit_price": 302.0,
-      "total": 5134.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 1275.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -607,9 +607,9 @@
       "period_end": "2022-09-13",
       "description": "Trackr Cloud Standard, 16 seats",
       "seats": 16,
-      "unit_price": 302.0,
-      "total": 4832.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 1200.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -619,9 +619,9 @@
       "period_end": "2022-08-13",
       "description": "Trackr Cloud Standard, 16 seats",
       "seats": 16,
-      "unit_price": 302.0,
-      "total": 4832.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 1200.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -631,9 +631,9 @@
       "period_end": "2022-07-13",
       "description": "Trackr Cloud Standard, 15 seats",
       "seats": 15,
-      "unit_price": 302.0,
-      "total": 4530.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 1125.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -643,9 +643,9 @@
       "period_end": "2022-06-13",
       "description": "Trackr Cloud Standard, 14 seats",
       "seats": 14,
-      "unit_price": 302.0,
-      "total": 4228.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 1050.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -655,9 +655,9 @@
       "period_end": "2022-05-13",
       "description": "Trackr Cloud Standard, 14 seats",
       "seats": 14,
-      "unit_price": 302.0,
-      "total": 4228.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 1050.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -667,9 +667,9 @@
       "period_end": "2022-04-13",
       "description": "Trackr Cloud Standard, 13 seats",
       "seats": 13,
-      "unit_price": 302.0,
-      "total": 3926.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 975.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -679,9 +679,9 @@
       "period_end": "2022-03-13",
       "description": "Trackr Cloud Standard, 12 seats",
       "seats": 12,
-      "unit_price": 302.0,
-      "total": 3624.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 900.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -691,9 +691,9 @@
       "period_end": "2022-02-13",
       "description": "Trackr Cloud Standard, 12 seats",
       "seats": 12,
-      "unit_price": 302.0,
-      "total": 3624.0,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 900.0,
+      "currency": "EUR",
       "status": "paid"
     },
     {
@@ -703,9 +703,9 @@
       "period_end": "2022-01-13",
       "description": "Trackr Cloud Standard, 12 seats (prorated, 13 of 31 days)",
       "seats": 12,
-      "unit_price": 302.0,
-      "total": 1519.74,
-      "currency": "ILS",
+      "unit_price": 75.0,
+      "total": 377.42,
+      "currency": "EUR",
       "status": "paid"
     }
   ]
