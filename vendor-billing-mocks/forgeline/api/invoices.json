@@ -1,0 +1,1588 @@
+{
+  "data": [
+    {
+      "number": "FGL-202610",
+      "issued_on": "2026-10-06",
+      "currency": "USD",
+      "status": "open",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "34 seats x $30, 06 Oct 2026 to 05 Nov 2026",
+          "period_start": "2026-10-06",
+          "period_end": "2026-11-05",
+          "quantity": 34,
+          "unit_price": 30.0,
+          "amount": 1020.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Sep 2026 to 05 Oct 2026",
+          "period_start": "2026-09-06",
+          "period_end": "2026-10-05",
+          "quantity": 366636,
+          "unit_price": 0.006,
+          "amount": 2199.82
+        }
+      ],
+      "total": 3219.82
+    },
+    {
+      "number": "FGL-202609",
+      "issued_on": "2026-09-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "33 seats x $30, 06 Sep 2026 to 05 Oct 2026",
+          "period_start": "2026-09-06",
+          "period_end": "2026-10-05",
+          "quantity": 33,
+          "unit_price": 30.0,
+          "amount": 990.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Aug 2026 to 05 Sep 2026",
+          "period_start": "2026-08-06",
+          "period_end": "2026-09-05",
+          "quantity": 370872,
+          "unit_price": 0.006,
+          "amount": 2225.23
+        }
+      ],
+      "total": 3215.23
+    },
+    {
+      "number": "FGL-202608",
+      "issued_on": "2026-08-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "33 seats x $30, 06 Aug 2026 to 05 Sep 2026",
+          "period_start": "2026-08-06",
+          "period_end": "2026-09-05",
+          "quantity": 33,
+          "unit_price": 30.0,
+          "amount": 990.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Jul 2026 to 05 Aug 2026",
+          "period_start": "2026-07-06",
+          "period_end": "2026-08-05",
+          "quantity": 348349,
+          "unit_price": 0.006,
+          "amount": 2090.09
+        }
+      ],
+      "total": 3080.09
+    },
+    {
+      "number": "FGL-202607",
+      "issued_on": "2026-07-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "32 seats x $30, 06 Jul 2026 to 05 Aug 2026",
+          "period_start": "2026-07-06",
+          "period_end": "2026-08-05",
+          "quantity": 32,
+          "unit_price": 30.0,
+          "amount": 960.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Jun 2026 to 05 Jul 2026",
+          "period_start": "2026-06-06",
+          "period_end": "2026-07-05",
+          "quantity": 352876,
+          "unit_price": 0.006,
+          "amount": 2117.26
+        }
+      ],
+      "total": 3077.26
+    },
+    {
+      "number": "FGL-202606",
+      "issued_on": "2026-06-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "32 seats x $30, 06 Jun 2026 to 05 Jul 2026",
+          "period_start": "2026-06-06",
+          "period_end": "2026-07-05",
+          "quantity": 32,
+          "unit_price": 30.0,
+          "amount": 960.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 May 2026 to 05 Jun 2026",
+          "period_start": "2026-05-06",
+          "period_end": "2026-06-05",
+          "quantity": 391917,
+          "unit_price": 0.006,
+          "amount": 2351.5
+        }
+      ],
+      "total": 3311.5
+    },
+    {
+      "number": "FGL-202605",
+      "issued_on": "2026-05-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "32 seats x $30, 06 May 2026 to 05 Jun 2026",
+          "period_start": "2026-05-06",
+          "period_end": "2026-06-05",
+          "quantity": 32,
+          "unit_price": 30.0,
+          "amount": 960.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Apr 2026 to 05 May 2026",
+          "period_start": "2026-04-06",
+          "period_end": "2026-05-05",
+          "quantity": 349240,
+          "unit_price": 0.006,
+          "amount": 2095.44
+        }
+      ],
+      "total": 3055.44
+    },
+    {
+      "number": "FGL-202604",
+      "issued_on": "2026-04-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "31 seats x $30, 06 Apr 2026 to 05 May 2026",
+          "period_start": "2026-04-06",
+          "period_end": "2026-05-05",
+          "quantity": 31,
+          "unit_price": 30.0,
+          "amount": 930.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Mar 2026 to 05 Apr 2026",
+          "period_start": "2026-03-06",
+          "period_end": "2026-04-05",
+          "quantity": 338286,
+          "unit_price": 0.006,
+          "amount": 2029.72
+        }
+      ],
+      "total": 2959.72
+    },
+    {
+      "number": "FGL-202603",
+      "issued_on": "2026-03-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "31 seats x $30, 06 Mar 2026 to 05 Apr 2026",
+          "period_start": "2026-03-06",
+          "period_end": "2026-04-05",
+          "quantity": 31,
+          "unit_price": 30.0,
+          "amount": 930.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Feb 2026 to 05 Mar 2026",
+          "period_start": "2026-02-06",
+          "period_end": "2026-03-05",
+          "quantity": 312452,
+          "unit_price": 0.006,
+          "amount": 1874.71
+        }
+      ],
+      "total": 2804.71
+    },
+    {
+      "number": "FGL-202602",
+      "issued_on": "2026-02-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "30 seats x $30, 06 Feb 2026 to 05 Mar 2026",
+          "period_start": "2026-02-06",
+          "period_end": "2026-03-05",
+          "quantity": 30,
+          "unit_price": 30.0,
+          "amount": 900.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Jan 2026 to 05 Feb 2026",
+          "period_start": "2026-01-06",
+          "period_end": "2026-02-05",
+          "quantity": 342371,
+          "unit_price": 0.006,
+          "amount": 2054.23
+        }
+      ],
+      "total": 2954.23
+    },
+    {
+      "number": "FGL-202601",
+      "issued_on": "2026-01-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "30 seats x $30, 06 Jan 2026 to 05 Feb 2026",
+          "period_start": "2026-01-06",
+          "period_end": "2026-02-05",
+          "quantity": 30,
+          "unit_price": 30.0,
+          "amount": 900.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Dec 2025 to 05 Jan 2026",
+          "period_start": "2025-12-06",
+          "period_end": "2026-01-05",
+          "quantity": 297549,
+          "unit_price": 0.006,
+          "amount": 1785.29
+        }
+      ],
+      "total": 2685.29
+    },
+    {
+      "number": "FGL-202512",
+      "issued_on": "2025-12-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "29 seats x $30, 06 Dec 2025 to 05 Jan 2026",
+          "period_start": "2025-12-06",
+          "period_end": "2026-01-05",
+          "quantity": 29,
+          "unit_price": 30.0,
+          "amount": 870.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Nov 2025 to 05 Dec 2025",
+          "period_start": "2025-11-06",
+          "period_end": "2025-12-05",
+          "quantity": 307060,
+          "unit_price": 0.006,
+          "amount": 1842.36
+        }
+      ],
+      "total": 2712.36
+    },
+    {
+      "number": "FGL-202511",
+      "issued_on": "2025-11-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "29 seats x $30, 06 Nov 2025 to 05 Dec 2025",
+          "period_start": "2025-11-06",
+          "period_end": "2025-12-05",
+          "quantity": 29,
+          "unit_price": 30.0,
+          "amount": 870.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Oct 2025 to 05 Nov 2025",
+          "period_start": "2025-10-06",
+          "period_end": "2025-11-05",
+          "quantity": 316864,
+          "unit_price": 0.006,
+          "amount": 1901.18
+        }
+      ],
+      "total": 2771.18
+    },
+    {
+      "number": "FGL-202510",
+      "issued_on": "2025-10-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "28 seats x $30, 06 Oct 2025 to 05 Nov 2025",
+          "period_start": "2025-10-06",
+          "period_end": "2025-11-05",
+          "quantity": 28,
+          "unit_price": 30.0,
+          "amount": 840.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Sep 2025 to 05 Oct 2025",
+          "period_start": "2025-09-06",
+          "period_end": "2025-10-05",
+          "quantity": 291921,
+          "unit_price": 0.006,
+          "amount": 1751.53
+        }
+      ],
+      "total": 2591.53
+    },
+    {
+      "number": "FGL-202509",
+      "issued_on": "2025-09-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "28 seats x $30, 06 Sep 2025 to 05 Oct 2025",
+          "period_start": "2025-09-06",
+          "period_end": "2025-10-05",
+          "quantity": 28,
+          "unit_price": 30.0,
+          "amount": 840.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Aug 2025 to 05 Sep 2025",
+          "period_start": "2025-08-06",
+          "period_end": "2025-09-05",
+          "quantity": 307503,
+          "unit_price": 0.006,
+          "amount": 1845.02
+        }
+      ],
+      "total": 2685.02
+    },
+    {
+      "number": "FGL-202508",
+      "issued_on": "2025-08-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "27 seats x $30, 06 Aug 2025 to 05 Sep 2025",
+          "period_start": "2025-08-06",
+          "period_end": "2025-09-05",
+          "quantity": 27,
+          "unit_price": 30.0,
+          "amount": 810.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Jul 2025 to 05 Aug 2025",
+          "period_start": "2025-07-06",
+          "period_end": "2025-08-05",
+          "quantity": 287500,
+          "unit_price": 0.006,
+          "amount": 1725.0
+        }
+      ],
+      "total": 2535.0
+    },
+    {
+      "number": "FGL-202507",
+      "issued_on": "2025-07-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "27 seats x $30, 06 Jul 2025 to 05 Aug 2025",
+          "period_start": "2025-07-06",
+          "period_end": "2025-08-05",
+          "quantity": 27,
+          "unit_price": 30.0,
+          "amount": 810.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Jun 2025 to 05 Jul 2025",
+          "period_start": "2025-06-06",
+          "period_end": "2025-07-05",
+          "quantity": 258029,
+          "unit_price": 0.006,
+          "amount": 1548.17
+        }
+      ],
+      "total": 2358.17
+    },
+    {
+      "number": "FGL-202506",
+      "issued_on": "2025-06-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "26 seats x $30, 06 Jun 2025 to 05 Jul 2025",
+          "period_start": "2025-06-06",
+          "period_end": "2025-07-05",
+          "quantity": 26,
+          "unit_price": 30.0,
+          "amount": 780.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 May 2025 to 05 Jun 2025",
+          "period_start": "2025-05-06",
+          "period_end": "2025-06-05",
+          "quantity": 281442,
+          "unit_price": 0.006,
+          "amount": 1688.65
+        }
+      ],
+      "total": 2468.65
+    },
+    {
+      "number": "FGL-202505",
+      "issued_on": "2025-05-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "26 seats x $30, 06 May 2025 to 05 Jun 2025",
+          "period_start": "2025-05-06",
+          "period_end": "2025-06-05",
+          "quantity": 26,
+          "unit_price": 30.0,
+          "amount": 780.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Apr 2025 to 05 May 2025",
+          "period_start": "2025-04-06",
+          "period_end": "2025-05-05",
+          "quantity": 240904,
+          "unit_price": 0.006,
+          "amount": 1445.42
+        }
+      ],
+      "total": 2225.42
+    },
+    {
+      "number": "FGL-202504",
+      "issued_on": "2025-04-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "25 seats x $30, 06 Apr 2025 to 05 May 2025",
+          "period_start": "2025-04-06",
+          "period_end": "2025-05-05",
+          "quantity": 25,
+          "unit_price": 30.0,
+          "amount": 750.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Mar 2025 to 05 Apr 2025",
+          "period_start": "2025-03-06",
+          "period_end": "2025-04-05",
+          "quantity": 250709,
+          "unit_price": 0.006,
+          "amount": 1504.25
+        }
+      ],
+      "total": 2254.25
+    },
+    {
+      "number": "FGL-202503",
+      "issued_on": "2025-03-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "25 seats x $30, 06 Mar 2025 to 05 Apr 2025",
+          "period_start": "2025-03-06",
+          "period_end": "2025-04-05",
+          "quantity": 25,
+          "unit_price": 30.0,
+          "amount": 750.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Feb 2025 to 05 Mar 2025",
+          "period_start": "2025-02-06",
+          "period_end": "2025-03-05",
+          "quantity": 227811,
+          "unit_price": 0.006,
+          "amount": 1366.87
+        }
+      ],
+      "total": 2116.87
+    },
+    {
+      "number": "FGL-202502",
+      "issued_on": "2025-02-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "24 seats x $30, 06 Feb 2025 to 05 Mar 2025",
+          "period_start": "2025-02-06",
+          "period_end": "2025-03-05",
+          "quantity": 24,
+          "unit_price": 30.0,
+          "amount": 720.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Jan 2025 to 05 Feb 2025",
+          "period_start": "2025-01-06",
+          "period_end": "2025-02-05",
+          "quantity": 243187,
+          "unit_price": 0.006,
+          "amount": 1459.12
+        }
+      ],
+      "total": 2179.12
+    },
+    {
+      "number": "FGL-202501",
+      "issued_on": "2025-01-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "24 seats x $30, 06 Jan 2025 to 05 Feb 2025",
+          "period_start": "2025-01-06",
+          "period_end": "2025-02-05",
+          "quantity": 24,
+          "unit_price": 30.0,
+          "amount": 720.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Dec 2024 to 05 Jan 2025",
+          "period_start": "2024-12-06",
+          "period_end": "2025-01-05",
+          "quantity": 221745,
+          "unit_price": 0.006,
+          "amount": 1330.47
+        }
+      ],
+      "total": 2050.47
+    },
+    {
+      "number": "FGL-202412",
+      "issued_on": "2024-12-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "23 seats x $30, 06 Dec 2024 to 05 Jan 2025",
+          "period_start": "2024-12-06",
+          "period_end": "2025-01-05",
+          "quantity": 23,
+          "unit_price": 30.0,
+          "amount": 690.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Nov 2024 to 05 Dec 2024",
+          "period_start": "2024-11-06",
+          "period_end": "2024-12-05",
+          "quantity": 226433,
+          "unit_price": 0.006,
+          "amount": 1358.6
+        }
+      ],
+      "total": 2048.6
+    },
+    {
+      "number": "FGL-202411",
+      "issued_on": "2024-11-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "23 seats x $30, 06 Nov 2024 to 05 Dec 2024",
+          "period_start": "2024-11-06",
+          "period_end": "2024-12-05",
+          "quantity": 23,
+          "unit_price": 30.0,
+          "amount": 690.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Oct 2024 to 05 Nov 2024",
+          "period_start": "2024-10-06",
+          "period_end": "2024-11-05",
+          "quantity": 236806,
+          "unit_price": 0.006,
+          "amount": 1420.84
+        }
+      ],
+      "total": 2110.84
+    },
+    {
+      "number": "FGL-202410",
+      "issued_on": "2024-10-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "22 seats x $30, 06 Oct 2024 to 05 Nov 2024",
+          "period_start": "2024-10-06",
+          "period_end": "2024-11-05",
+          "quantity": 22,
+          "unit_price": 30.0,
+          "amount": 660.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Sep 2024 to 05 Oct 2024",
+          "period_start": "2024-09-06",
+          "period_end": "2024-10-05",
+          "quantity": 222876,
+          "unit_price": 0.006,
+          "amount": 1337.26
+        }
+      ],
+      "total": 1997.26
+    },
+    {
+      "number": "FGL-202409",
+      "issued_on": "2024-09-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "22 seats x $30, 06 Sep 2024 to 05 Oct 2024",
+          "period_start": "2024-09-06",
+          "period_end": "2024-10-05",
+          "quantity": 22,
+          "unit_price": 30.0,
+          "amount": 660.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Aug 2024 to 05 Sep 2024",
+          "period_start": "2024-08-06",
+          "period_end": "2024-09-05",
+          "quantity": 235453,
+          "unit_price": 0.006,
+          "amount": 1412.72
+        }
+      ],
+      "total": 2072.72
+    },
+    {
+      "number": "FGL-202408",
+      "issued_on": "2024-08-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "21 seats x $30, 06 Aug 2024 to 05 Sep 2024",
+          "period_start": "2024-08-06",
+          "period_end": "2024-09-05",
+          "quantity": 21,
+          "unit_price": 30.0,
+          "amount": 630.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Jul 2024 to 05 Aug 2024",
+          "period_start": "2024-07-06",
+          "period_end": "2024-08-05",
+          "quantity": 212937,
+          "unit_price": 0.006,
+          "amount": 1277.62
+        }
+      ],
+      "total": 1907.62
+    },
+    {
+      "number": "FGL-202407",
+      "issued_on": "2024-07-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "21 seats x $30, 06 Jul 2024 to 05 Aug 2024",
+          "period_start": "2024-07-06",
+          "period_end": "2024-08-05",
+          "quantity": 21,
+          "unit_price": 30.0,
+          "amount": 630.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Jun 2024 to 05 Jul 2024",
+          "period_start": "2024-06-06",
+          "period_end": "2024-07-05",
+          "quantity": 209518,
+          "unit_price": 0.006,
+          "amount": 1257.11
+        }
+      ],
+      "total": 1887.11
+    },
+    {
+      "number": "FGL-202406",
+      "issued_on": "2024-06-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "20 seats x $30, 06 Jun 2024 to 05 Jul 2024",
+          "period_start": "2024-06-06",
+          "period_end": "2024-07-05",
+          "quantity": 20,
+          "unit_price": 30.0,
+          "amount": 600.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 May 2024 to 05 Jun 2024",
+          "period_start": "2024-05-06",
+          "period_end": "2024-06-05",
+          "quantity": 209076,
+          "unit_price": 0.006,
+          "amount": 1254.46
+        }
+      ],
+      "total": 1854.46
+    },
+    {
+      "number": "FGL-202405",
+      "issued_on": "2024-05-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "20 seats x $30, 06 May 2024 to 05 Jun 2024",
+          "period_start": "2024-05-06",
+          "period_end": "2024-06-05",
+          "quantity": 20,
+          "unit_price": 30.0,
+          "amount": 600.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Apr 2024 to 05 May 2024",
+          "period_start": "2024-04-06",
+          "period_end": "2024-05-05",
+          "quantity": 184992,
+          "unit_price": 0.006,
+          "amount": 1109.95
+        }
+      ],
+      "total": 1709.95
+    },
+    {
+      "number": "FGL-202404",
+      "issued_on": "2024-04-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "19 seats x $30, 06 Apr 2024 to 05 May 2024",
+          "period_start": "2024-04-06",
+          "period_end": "2024-05-05",
+          "quantity": 19,
+          "unit_price": 30.0,
+          "amount": 570.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Mar 2024 to 05 Apr 2024",
+          "period_start": "2024-03-06",
+          "period_end": "2024-04-05",
+          "quantity": 183014,
+          "unit_price": 0.006,
+          "amount": 1098.08
+        }
+      ],
+      "total": 1668.08
+    },
+    {
+      "number": "FGL-202403",
+      "issued_on": "2024-03-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "19 seats x $30, 06 Mar 2024 to 05 Apr 2024",
+          "period_start": "2024-03-06",
+          "period_end": "2024-04-05",
+          "quantity": 19,
+          "unit_price": 30.0,
+          "amount": 570.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Feb 2024 to 05 Mar 2024",
+          "period_start": "2024-02-06",
+          "period_end": "2024-03-05",
+          "quantity": 161212,
+          "unit_price": 0.006,
+          "amount": 967.27
+        }
+      ],
+      "total": 1537.27
+    },
+    {
+      "number": "FGL-202402",
+      "issued_on": "2024-02-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "19 seats x $30, 06 Feb 2024 to 05 Mar 2024",
+          "period_start": "2024-02-06",
+          "period_end": "2024-03-05",
+          "quantity": 19,
+          "unit_price": 30.0,
+          "amount": 570.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Jan 2024 to 05 Feb 2024",
+          "period_start": "2024-01-06",
+          "period_end": "2024-02-05",
+          "quantity": 175715,
+          "unit_price": 0.006,
+          "amount": 1054.29
+        }
+      ],
+      "total": 1624.29
+    },
+    {
+      "number": "FGL-202401",
+      "issued_on": "2024-01-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "18 seats x $30, 06 Jan 2024 to 05 Feb 2024",
+          "period_start": "2024-01-06",
+          "period_end": "2024-02-05",
+          "quantity": 18,
+          "unit_price": 30.0,
+          "amount": 540.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Dec 2023 to 05 Jan 2024",
+          "period_start": "2023-12-06",
+          "period_end": "2024-01-05",
+          "quantity": 183420,
+          "unit_price": 0.006,
+          "amount": 1100.52
+        }
+      ],
+      "total": 1640.52
+    },
+    {
+      "number": "FGL-202312",
+      "issued_on": "2023-12-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "18 seats x $30, 06 Dec 2023 to 05 Jan 2024",
+          "period_start": "2023-12-06",
+          "period_end": "2024-01-05",
+          "quantity": 18,
+          "unit_price": 30.0,
+          "amount": 540.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Nov 2023 to 05 Dec 2023",
+          "period_start": "2023-11-06",
+          "period_end": "2023-12-05",
+          "quantity": 160578,
+          "unit_price": 0.006,
+          "amount": 963.47
+        }
+      ],
+      "total": 1503.47
+    },
+    {
+      "number": "FGL-202311",
+      "issued_on": "2023-11-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "17 seats x $30, 06 Nov 2023 to 05 Dec 2023",
+          "period_start": "2023-11-06",
+          "period_end": "2023-12-05",
+          "quantity": 17,
+          "unit_price": 30.0,
+          "amount": 510.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Oct 2023 to 05 Nov 2023",
+          "period_start": "2023-10-06",
+          "period_end": "2023-11-05",
+          "quantity": 155124,
+          "unit_price": 0.006,
+          "amount": 930.74
+        }
+      ],
+      "total": 1440.74
+    },
+    {
+      "number": "FGL-202310",
+      "issued_on": "2023-10-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "17 seats x $30, 06 Oct 2023 to 05 Nov 2023",
+          "period_start": "2023-10-06",
+          "period_end": "2023-11-05",
+          "quantity": 17,
+          "unit_price": 30.0,
+          "amount": 510.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Sep 2023 to 05 Oct 2023",
+          "period_start": "2023-09-06",
+          "period_end": "2023-10-05",
+          "quantity": 158260,
+          "unit_price": 0.006,
+          "amount": 949.56
+        }
+      ],
+      "total": 1459.56
+    },
+    {
+      "number": "FGL-202309",
+      "issued_on": "2023-09-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "16 seats x $30, 06 Sep 2023 to 05 Oct 2023",
+          "period_start": "2023-09-06",
+          "period_end": "2023-10-05",
+          "quantity": 16,
+          "unit_price": 30.0,
+          "amount": 480.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Aug 2023 to 05 Sep 2023",
+          "period_start": "2023-08-06",
+          "period_end": "2023-09-05",
+          "quantity": 147446,
+          "unit_price": 0.006,
+          "amount": 884.68
+        }
+      ],
+      "total": 1364.68
+    },
+    {
+      "number": "FGL-202308",
+      "issued_on": "2023-08-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "16 seats x $30, 06 Aug 2023 to 05 Sep 2023",
+          "period_start": "2023-08-06",
+          "period_end": "2023-09-05",
+          "quantity": 16,
+          "unit_price": 30.0,
+          "amount": 480.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Jul 2023 to 05 Aug 2023",
+          "period_start": "2023-07-06",
+          "period_end": "2023-08-05",
+          "quantity": 153089,
+          "unit_price": 0.006,
+          "amount": 918.53
+        }
+      ],
+      "total": 1398.53
+    },
+    {
+      "number": "FGL-202307",
+      "issued_on": "2023-07-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "15 seats x $30, 06 Jul 2023 to 05 Aug 2023",
+          "period_start": "2023-07-06",
+          "period_end": "2023-08-05",
+          "quantity": 15,
+          "unit_price": 30.0,
+          "amount": 450.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Jun 2023 to 05 Jul 2023",
+          "period_start": "2023-06-06",
+          "period_end": "2023-07-05",
+          "quantity": 131779,
+          "unit_price": 0.006,
+          "amount": 790.67
+        }
+      ],
+      "total": 1240.67
+    },
+    {
+      "number": "FGL-202306",
+      "issued_on": "2023-06-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "15 seats x $30, 06 Jun 2023 to 05 Jul 2023",
+          "period_start": "2023-06-06",
+          "period_end": "2023-07-05",
+          "quantity": 15,
+          "unit_price": 30.0,
+          "amount": 450.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 May 2023 to 05 Jun 2023",
+          "period_start": "2023-05-06",
+          "period_end": "2023-06-05",
+          "quantity": 139223,
+          "unit_price": 0.006,
+          "amount": 835.34
+        }
+      ],
+      "total": 1285.34
+    },
+    {
+      "number": "FGL-202305",
+      "issued_on": "2023-05-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "14 seats x $30, 06 May 2023 to 05 Jun 2023",
+          "period_start": "2023-05-06",
+          "period_end": "2023-06-05",
+          "quantity": 14,
+          "unit_price": 30.0,
+          "amount": 420.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Apr 2023 to 05 May 2023",
+          "period_start": "2023-04-06",
+          "period_end": "2023-05-05",
+          "quantity": 134627,
+          "unit_price": 0.006,
+          "amount": 807.76
+        }
+      ],
+      "total": 1227.76
+    },
+    {
+      "number": "FGL-202304",
+      "issued_on": "2023-04-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "14 seats x $30, 06 Apr 2023 to 05 May 2023",
+          "period_start": "2023-04-06",
+          "period_end": "2023-05-05",
+          "quantity": 14,
+          "unit_price": 30.0,
+          "amount": 420.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Mar 2023 to 05 Apr 2023",
+          "period_start": "2023-03-06",
+          "period_end": "2023-04-05",
+          "quantity": 129578,
+          "unit_price": 0.006,
+          "amount": 777.47
+        }
+      ],
+      "total": 1197.47
+    },
+    {
+      "number": "FGL-202303",
+      "issued_on": "2023-03-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "14 seats x $30, 06 Mar 2023 to 05 Apr 2023",
+          "period_start": "2023-03-06",
+          "period_end": "2023-04-05",
+          "quantity": 14,
+          "unit_price": 30.0,
+          "amount": 420.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Feb 2023 to 05 Mar 2023",
+          "period_start": "2023-02-06",
+          "period_end": "2023-03-05",
+          "quantity": 105724,
+          "unit_price": 0.006,
+          "amount": 634.34
+        }
+      ],
+      "total": 1054.34
+    },
+    {
+      "number": "FGL-202302",
+      "issued_on": "2023-02-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "13 seats x $30, 06 Feb 2023 to 05 Mar 2023",
+          "period_start": "2023-02-06",
+          "period_end": "2023-03-05",
+          "quantity": 13,
+          "unit_price": 30.0,
+          "amount": 390.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Jan 2023 to 05 Feb 2023",
+          "period_start": "2023-01-06",
+          "period_end": "2023-02-05",
+          "quantity": 119113,
+          "unit_price": 0.006,
+          "amount": 714.68
+        }
+      ],
+      "total": 1104.68
+    },
+    {
+      "number": "FGL-202301",
+      "issued_on": "2023-01-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "13 seats x $30, 06 Jan 2023 to 05 Feb 2023",
+          "period_start": "2023-01-06",
+          "period_end": "2023-02-05",
+          "quantity": 13,
+          "unit_price": 30.0,
+          "amount": 390.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Dec 2022 to 05 Jan 2023",
+          "period_start": "2022-12-06",
+          "period_end": "2023-01-05",
+          "quantity": 120615,
+          "unit_price": 0.006,
+          "amount": 723.69
+        }
+      ],
+      "total": 1113.69
+    },
+    {
+      "number": "FGL-202212",
+      "issued_on": "2022-12-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "12 seats x $30, 06 Dec 2022 to 05 Jan 2023",
+          "period_start": "2022-12-06",
+          "period_end": "2023-01-05",
+          "quantity": 12,
+          "unit_price": 30.0,
+          "amount": 360.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Nov 2022 to 05 Dec 2022",
+          "period_start": "2022-11-06",
+          "period_end": "2022-12-05",
+          "quantity": 104339,
+          "unit_price": 0.006,
+          "amount": 626.03
+        }
+      ],
+      "total": 986.03
+    },
+    {
+      "number": "FGL-202211",
+      "issued_on": "2022-11-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "12 seats x $30, 06 Nov 2022 to 05 Dec 2022",
+          "period_start": "2022-11-06",
+          "period_end": "2022-12-05",
+          "quantity": 12,
+          "unit_price": 30.0,
+          "amount": 360.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Oct 2022 to 05 Nov 2022",
+          "period_start": "2022-10-06",
+          "period_end": "2022-11-05",
+          "quantity": 103299,
+          "unit_price": 0.006,
+          "amount": 619.79
+        }
+      ],
+      "total": 979.79
+    },
+    {
+      "number": "FGL-202210",
+      "issued_on": "2022-10-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "11 seats x $30, 06 Oct 2022 to 05 Nov 2022",
+          "period_start": "2022-10-06",
+          "period_end": "2022-11-05",
+          "quantity": 11,
+          "unit_price": 30.0,
+          "amount": 330.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Sep 2022 to 05 Oct 2022",
+          "period_start": "2022-09-06",
+          "period_end": "2022-10-05",
+          "quantity": 94426,
+          "unit_price": 0.006,
+          "amount": 566.56
+        }
+      ],
+      "total": 896.56
+    },
+    {
+      "number": "FGL-202209",
+      "issued_on": "2022-09-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "11 seats x $30, 06 Sep 2022 to 05 Oct 2022",
+          "period_start": "2022-09-06",
+          "period_end": "2022-10-05",
+          "quantity": 11,
+          "unit_price": 30.0,
+          "amount": 330.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Aug 2022 to 05 Sep 2022",
+          "period_start": "2022-08-06",
+          "period_end": "2022-09-05",
+          "quantity": 97445,
+          "unit_price": 0.006,
+          "amount": 584.67
+        }
+      ],
+      "total": 914.67
+    },
+    {
+      "number": "FGL-202208",
+      "issued_on": "2022-08-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "11 seats x $30, 06 Aug 2022 to 05 Sep 2022",
+          "period_start": "2022-08-06",
+          "period_end": "2022-09-05",
+          "quantity": 11,
+          "unit_price": 30.0,
+          "amount": 330.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Jul 2022 to 05 Aug 2022",
+          "period_start": "2022-07-06",
+          "period_end": "2022-08-05",
+          "quantity": 99367,
+          "unit_price": 0.006,
+          "amount": 596.2
+        }
+      ],
+      "total": 926.2
+    },
+    {
+      "number": "FGL-202207",
+      "issued_on": "2022-07-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "10 seats x $30, 06 Jul 2022 to 05 Aug 2022",
+          "period_start": "2022-07-06",
+          "period_end": "2022-08-05",
+          "quantity": 10,
+          "unit_price": 30.0,
+          "amount": 300.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Jun 2022 to 05 Jul 2022",
+          "period_start": "2022-06-06",
+          "period_end": "2022-07-05",
+          "quantity": 90757,
+          "unit_price": 0.006,
+          "amount": 544.54
+        }
+      ],
+      "total": 844.54
+    },
+    {
+      "number": "FGL-202206",
+      "issued_on": "2022-06-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "10 seats x $30, 06 Jun 2022 to 05 Jul 2022",
+          "period_start": "2022-06-06",
+          "period_end": "2022-07-05",
+          "quantity": 10,
+          "unit_price": 30.0,
+          "amount": 300.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 May 2022 to 05 Jun 2022",
+          "period_start": "2022-05-06",
+          "period_end": "2022-06-05",
+          "quantity": 83799,
+          "unit_price": 0.006,
+          "amount": 502.79
+        }
+      ],
+      "total": 802.79
+    },
+    {
+      "number": "FGL-202205",
+      "issued_on": "2022-05-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "9 seats x $30, 06 May 2022 to 05 Jun 2022",
+          "period_start": "2022-05-06",
+          "period_end": "2022-06-05",
+          "quantity": 9,
+          "unit_price": 30.0,
+          "amount": 270.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Apr 2022 to 05 May 2022",
+          "period_start": "2022-04-06",
+          "period_end": "2022-05-05",
+          "quantity": 80651,
+          "unit_price": 0.006,
+          "amount": 483.91
+        }
+      ],
+      "total": 753.91
+    },
+    {
+      "number": "FGL-202204",
+      "issued_on": "2022-04-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "9 seats x $30, 06 Apr 2022 to 05 May 2022",
+          "period_start": "2022-04-06",
+          "period_end": "2022-05-05",
+          "quantity": 9,
+          "unit_price": 30.0,
+          "amount": 270.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Mar 2022 to 05 Apr 2022",
+          "period_start": "2022-03-06",
+          "period_end": "2022-04-05",
+          "quantity": 83345,
+          "unit_price": 0.006,
+          "amount": 500.07
+        }
+      ],
+      "total": 770.07
+    },
+    {
+      "number": "FGL-202203",
+      "issued_on": "2022-03-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "9 seats x $30, 06 Mar 2022 to 05 Apr 2022",
+          "period_start": "2022-03-06",
+          "period_end": "2022-04-05",
+          "quantity": 9,
+          "unit_price": 30.0,
+          "amount": 270.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Feb 2022 to 05 Mar 2022",
+          "period_start": "2022-02-06",
+          "period_end": "2022-03-05",
+          "quantity": 73897,
+          "unit_price": 0.006,
+          "amount": 443.38
+        }
+      ],
+      "total": 713.38
+    },
+    {
+      "number": "FGL-202202",
+      "issued_on": "2022-02-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "8 seats x $30, 06 Feb 2022 to 05 Mar 2022",
+          "period_start": "2022-02-06",
+          "period_end": "2022-03-05",
+          "quantity": 8,
+          "unit_price": 30.0,
+          "amount": 240.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 06 Jan 2022 to 05 Feb 2022",
+          "period_start": "2022-01-06",
+          "period_end": "2022-02-05",
+          "quantity": 83034,
+          "unit_price": 0.006,
+          "amount": 498.2
+        }
+      ],
+      "total": 738.2
+    },
+    {
+      "number": "FGL-202201",
+      "issued_on": "2022-01-06",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "8 seats x $30, 06 Jan 2022 to 05 Feb 2022",
+          "period_start": "2022-01-06",
+          "period_end": "2022-02-05",
+          "quantity": 8,
+          "unit_price": 30.0,
+          "amount": 240.0
+        },
+        {
+          "type": "usage",
+          "description": "Build minutes, 01 Jan 2022 to 05 Jan 2022",
+          "period_start": "2022-01-01",
+          "period_end": "2022-01-05",
+          "quantity": 12311,
+          "unit_price": 0.006,
+          "amount": 73.87
+        }
+      ],
+      "total": 313.87
+    },
+    {
+      "number": "FGL-202201-A",
+      "issued_on": "2022-01-01",
+      "currency": "USD",
+      "status": "paid",
+      "lines": [
+        {
+          "type": "seats",
+          "description": "8 seats x $30, 01 Jan 2022 to 05 Jan 2022 (prorated)",
+          "period_start": "2022-01-01",
+          "period_end": "2022-01-05",
+          "quantity": 8,
+          "unit_price": 30.0,
+          "amount": 38.71
+        }
+      ],
+      "total": 38.71
+    }
+  ]
+}

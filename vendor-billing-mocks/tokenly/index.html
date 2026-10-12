@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Usage &amp; billing · tokenly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f4f1ea;--paper2:#ebe6db;--ink:#121212;--ink2:#3d3a35;--mute:#6b675f;--line:#d6d0c3;--hot:#ff4f00}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:var(--paper);color:var(--ink);font:15px/1.5 Geist,system-ui,sans-serif;overflow-x:hidden}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+.mono{font-family:"Geist Mono",ui-monospace,monospace}
+
+.shell{display:grid;grid-template-columns:232px 1fr;min-height:100vh}
+aside{border-right:1px solid var(--line);padding:26px 18px;display:flex;flex-direction:column;gap:4px;position:sticky;top:0;height:100vh}
+.logo{font-family:"Instrument Serif";font-style:italic;font-size:34px;line-height:1;margin:0 8px 26px;letter-spacing:-.01em}
+.logo span{color:var(--hot)}
+aside .lbl{font:11px "Geist Mono",monospace;color:var(--mute);text-transform:uppercase;letter-spacing:.14em;margin:18px 8px 6px}
+aside button{text-align:left;padding:8px;border-radius:6px;color:var(--ink2)}
+aside button:hover{background:var(--paper2)}
+aside button.on{color:var(--ink);font-weight:600;background:var(--paper2);box-shadow:inset 3px 0 0 var(--hot)}
+aside .foot{margin-top:auto;font:12px "Geist Mono",monospace;color:var(--mute);padding:0 8px}
+
+main{padding:34px 48px 90px;min-width:0;display:flex;flex-direction:column;gap:34px;max-width:1280px}
+.topline{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font:12px "Geist Mono",monospace;color:var(--mute);text-transform:uppercase;letter-spacing:.12em}
+.topline .sp{flex:1}
+.chip{border:1px solid var(--ink);border-radius:999px;padding:5px 12px;color:var(--ink)}
+.btn{height:38px;padding:0 16px;border-radius:999px;border:1px solid var(--ink);font-weight:500;text-transform:none;letter-spacing:0;font-family:Geist,sans-serif;font-size:14px;color:var(--ink)}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn.hot{background:var(--hot);border-color:var(--hot);color:var(--ink)}
+
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;align-items:end;border-bottom:1px solid var(--ink);padding-bottom:30px}
+.hero h1{margin:0;font-family:"Instrument Serif";font-weight:400;font-size:clamp(46px,6vw,84px);line-height:.95;letter-spacing:-.02em}
+.hero h1 i{color:var(--hot)}
+.big{font-family:"Instrument Serif";font-size:clamp(70px,9vw,132px);line-height:.9;letter-spacing:-.03em}
+.meta{display:flex;gap:28px;flex-wrap:wrap;margin-top:14px;font-size:13.5px;color:var(--ink2)}
+.meta b{display:block;font:11px "Geist Mono",monospace;color:var(--mute);text-transform:uppercase;letter-spacing:.12em;margin-bottom:2px;font-weight:400}
+.days{display:flex;gap:6px;margin-top:18px}
+.days div{flex:1;border-top:3px solid var(--ink);padding-top:6px;font:12px "Geist Mono",monospace;color:var(--mute)}
+.days div.empty{border-top-color:var(--line);border-top-style:dashed}
+.days div b{display:block;font:500 14px Geist,sans-serif;color:var(--ink)}
+
+h2.sec{margin:0 0 14px;font-family:"Instrument Serif";font-weight:400;font-size:34px;letter-spacing:-.01em}
+h2.sec small{font:12px "Geist Mono",monospace;color:var(--mute);margin-left:10px;letter-spacing:.06em}
+svg text{fill:var(--mute);font:11px "Geist Mono",monospace}
+.models{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--ink)}
+.models div{padding:16px 18px 0 0;border-right:1px solid var(--line);margin-right:18px}
+.models div:last-child{border-right:0}
+.models small{font:11px "Geist Mono",monospace;color:var(--mute);text-transform:uppercase;letter-spacing:.12em}
+.models b{display:block;font-family:"Instrument Serif";font-weight:400;font-size:44px;line-height:1.1}
+.models span{font-size:13px;color:var(--ink2)}
+
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font:11px "Geist Mono",monospace;color:var(--mute);text-transform:uppercase;letter-spacing:.12em;padding:10px 10px;border-bottom:1px solid var(--ink);font-weight:400}
+td{padding:11px 10px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+tbody tr:hover td{background:var(--paper2)}
+td.n,th.n{text-align:right}
+td.wk{font-family:"Geist Mono",monospace;font-size:13px}
+.st{font:11px "Geist Mono",monospace;text-transform:uppercase;letter-spacing:.1em;padding:3px 9px;border-radius:999px;border:1px solid var(--ink2);color:var(--ink2)}
+.st.open{background:var(--hot);border-color:var(--hot);color:var(--ink)}
+.scroll{max-height:560px;overflow:auto}
+.skel{background:linear-gradient(90deg,var(--paper2),#ddd6c6,var(--paper2));background-size:200% 100%;animation:sh 1.2s infinite;color:transparent!important;border-radius:6px}
+@keyframes sh{to{background-position:-200% 0}}
+.toast{position:fixed;right:24px;bottom:24px;z-index:30;max-width:340px;padding:14px 18px;background:var(--ink);color:var(--paper);font-size:14px;border-radius:4px;transform:translateY(16px);opacity:0;transition:.2s}
+.toast.on{opacity:1;transform:none}
+@media (max-width:1000px){.hero{grid-template-columns:1fr}}
+@media (max-width:820px){.shell{grid-template-columns:1fr}aside{display:none}main{padding:24px 16px 80px}.models{grid-template-columns:1fr}.models div{border-right:0;margin:0;padding-bottom:12px;border-bottom:1px solid var(--line)}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside>
+    <div class="logo">token<span>ly</span></div>
+    <button data-fake>Playground</button>
+    <button data-fake>Models</button>
+    <button data-fake>Batches</button>
+    <button data-fake>Fine-tuning</button>
+    <div class="lbl">Organization</div>
+    <button data-fake>API keys</button>
+    <button data-fake>Members</button>
+    <button class="on">Usage &amp; billing</button>
+    <button data-fake>Limits</button>
+    <div class="foot" id="foot">…</div>
+  </aside>
+  <main>
+    <div class="topline"><span>imagen-ai</span><span>/</span><span>billing</span><div class="sp"></div>
+      <span class="chip" id="tier">tier ·</span>
+      <button class="btn" data-fake>Invoices &amp; receipts</button>
+      <button class="btn hot" data-fake>Add credit</button>
+    </div>
+
+    <section class="hero">
+      <div>
+        <h1>This <i>week</i>,<br>so far.</h1>
+        <div class="meta">
+          <div><b>Billing</b>every calendar week, Mon–Sun</div>
+          <div><b>Charged</b>the Monday after</div>
+        </div>
+      </div>
+      <div>
+        <div class="big skel" id="weekAmt">$0,000</div>
+        <div class="meta">
+          <div><b>Week</b><span id="wkId">…</span></div>
+          <div><b>Period</b><span id="wkPeriod">…</span></div>
+          <div><b>Status</b><span id="wkStatus">…</span></div>
+        </div>
+        <div class="days" id="days"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="sec">Weekly spend <small>last 26 weeks</small></h2>
+      <svg id="chart" viewBox="0 0 1200 240" width="100%" preserveAspectRatio="none" style="height:240px;display:block"></svg>
+    </section>
+
+    <section>
+      <h2 class="sec">By model <small id="modelTag">this week</small></h2>
+      <div class="models" id="models"></div>
+    </section>
+
+    <section>
+      <h2 class="sec">Weekly statements <small id="stTag">…</small></h2>
+      <div class="scroll"><table><thead><tr><th>Week</th><th>Period</th><th class="n">tk-large</th><th class="n">tk-small</th><th class="n">embeddings</th><th class="n">Total</th><th>Status</th><th>Charged</th></tr></thead><tbody id="rows"></tbody></table></div>
+    </section>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const $ = id => document.getElementById(id);
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const usd = v => new Intl.NumberFormat("en-US", {style: "currency", currency: "USD"}).format(v);
+const day = iso => new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", {day: "numeric", month: "short", year: "numeric", timeZone: "UTC"});
+const short = iso => new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", {day: "numeric", month: "short", timeZone: "UTC"});
+const weekday = iso => new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", {weekday: "short", timeZone: "UTC"});
+
+async function getJson(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(path + " " + res.status);
+  return res.json();
+}
+function toast(msg) {
+  const t = $("toast");
+  t.textContent = msg;
+  t.classList.add("on");
+  clearTimeout(t._h);
+  t._h = setTimeout(() => t.classList.remove("on"), 2200);
+}
+document.querySelectorAll("[data-fake]").forEach(b => b.addEventListener("click", () => toast("You have read-only access to billing in this organization.")));
+
+function drawChart(weeks) {
+  const asc = [...weeks].sort((a, b) => a.period_start.localeCompare(b.period_start)).slice(-26);
+  const W = 1200, H = 240, pad = {l: 60, r: 8, t: 12, b: 26};
+  const max = Math.max(...asc.map(w => w.total)) * 1.12;
+  const bw = (W - pad.l - pad.r) / asc.length;
+  const y = v => H - pad.b - v / max * (H - pad.t - pad.b);
+  let g = "";
+  for (let k = 0; k <= 3; k++) {
+    const v = max / 3 * k;
+    g += `<line x1="${pad.l}" x2="${W - pad.r}" y1="${y(v)}" y2="${y(v)}" stroke="#d6d0c3"/><text x="${pad.l - 8}" y="${y(v) + 4}" text-anchor="end">$${(v / 1000).toFixed(1)}k</text>`;
+  }
+  asc.forEach((w, i) => {
+    const x = pad.l + i * bw + bw * .18, bwid = bw * .64, open = w.status === "open";
+    g += `<rect x="${x}" y="${y(w.total)}" width="${bwid}" height="${H - pad.b - y(w.total)}" fill="${open ? "#ff4f00" : "#121212"}"><title>${w.iso_week} · ${short(w.period_start)}–${short(w.period_end)}: ${usd(w.total)}${open ? " (open)" : ""}</title></rect>`;
+    if (i % 3 === 0 || open) g += `<text x="${x + bwid / 2}" y="${H - 8}" text-anchor="middle">${w.iso_week.slice(5)}</text>`;
+  });
+  $("chart").innerHTML = g;
+}
+
+async function main() {
+  Promise.all([getJson("api/keys.json"), getJson("api/limits.json")]).then(([k, l]) => {
+    $("foot").textContent = `${k.active} active keys`;
+    $("tier").textContent = `tier ${l.tier} · ${new Intl.NumberFormat("en-US").format(l.requests_per_minute)} rpm`;
+  }).catch(() => {});
+  await sleep(380);
+  const res = await getJson("api/weeks.json");
+  const weeks = [...res.data].sort((a, b) => b.period_start.localeCompare(a.period_start));
+  const cur = weeks.find(w => w.status === "open") || weeks[0];
+
+  $("weekAmt").classList.remove("skel");
+  $("weekAmt").textContent = usd(cur.total);
+  $("wkId").textContent = cur.iso_week;
+  $("wkPeriod").textContent = `${short(cur.period_start)} – ${short(cur.period_end)}`;
+  $("wkStatus").textContent = cur.status === "open" ? `open, charged ${short(new Date(new Date(cur.period_end + "T00:00:00Z").getTime() + 864e5).toISOString().slice(0, 10))}` : `charged ${short(cur.charged_on)}`;
+  const byDate = Object.fromEntries(cur.days.map(d => [d.date, d.amount]));
+  const all = [];
+  for (let t = new Date(cur.period_start + "T00:00:00Z"); t <= new Date(cur.period_end + "T00:00:00Z"); t = new Date(t.getTime() + 864e5)) all.push(t.toISOString().slice(0, 10));
+  $("days").innerHTML = all.map(d => d in byDate ? `<div>${weekday(d)} ${d.slice(8)}<b>${usd(byDate[d])}</b></div>` : `<div class="empty">${weekday(d)} ${d.slice(8)}<b>–</b></div>`).join("");
+  $("modelTag").textContent = `${cur.iso_week}, so far`;
+  $("models").innerHTML = cur.models.map(m => `<div><small>${m.model}</small><b>${usd(m.amount)}</b><span>${cur.total ? (m.amount / cur.total * 100).toFixed(0) : 0}% of the week</span></div>`).join("");
+  drawChart(weeks);
+  $("stTag").textContent = `${weeks.length} weeks · newest first`;
+  $("rows").innerHTML = weeks.map(w => {
+    const m = Object.fromEntries(w.models.map(x => [x.model, x.amount]));
+    return `<tr><td class="wk">${w.iso_week}</td><td>${short(w.period_start)} – ${day(w.period_end)}</td>${["tk-large", "tk-small", "embeddings"].map(k => `<td class="n">${usd(m[k] || 0)}</td>`).join("")}<td class="n"><b>${usd(w.total)}</b></td><td><span class="st ${w.status}">${w.status}</span></td><td>${w.charged_on ? short(w.charged_on) : "–"}</td></tr>`;
+  }).join("");
+}
+main().catch(err => { console.error(err); toast("Usage is temporarily unavailable."); });
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "tier": 4,
+  "requests_per_minute": 10000,
+  "tokens_per_minute": 2000000
+}

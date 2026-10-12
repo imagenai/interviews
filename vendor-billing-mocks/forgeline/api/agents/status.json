@@ -1,0 +1,9 @@
+{
+  "online": 46,
+  "busy": 19,
+  "queues": [
+    "default",
+    "gpu",
+    "macos"
+  ]
+}

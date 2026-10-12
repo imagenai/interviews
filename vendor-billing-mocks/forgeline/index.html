@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Billing · Forgeline CI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Inter+Tight:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a2463;--bg2:#0d2c78;--ink:#e8f1ff;--ink2:#b9cdf2;--mute:#8fa9da;--line:rgba(232,241,255,.22);--line2:rgba(232,241,255,.45);--cy:#5ce1e6;--am:#ffb000}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:var(--bg);color:var(--ink);font:14px/1.5 "Inter Tight",system-ui,sans-serif;overflow-x:hidden;
+  background-image:linear-gradient(rgba(232,241,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(232,241,255,.05) 1px,transparent 1px),
+  linear-gradient(rgba(232,241,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(232,241,255,.09) 1px,transparent 1px);
+  background-size:24px 24px,24px 24px,120px 120px,120px 120px}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+.mono{font-family:"Space Mono",ui-monospace,monospace}
+.disp{font-family:"Big Shoulders Display",Impact,sans-serif;text-transform:uppercase;letter-spacing:.02em}
+
+.top{display:flex;align-items:center;gap:8px;height:64px;padding:0 24px;border-bottom:2px solid var(--line2);background:rgba(10,36,99,.92);position:sticky;top:0;z-index:10}
+.logo{display:flex;align-items:center;gap:10px;margin-right:22px}
+.logo svg{width:30px;height:30px}
+.logo b{font-family:"Big Shoulders Display";font-weight:900;font-size:26px;letter-spacing:.04em;text-transform:uppercase}
+.logo small{font:11px "Space Mono",monospace;color:var(--cy);border:1px solid var(--cy);padding:1px 6px}
+.tab{height:64px;padding:0 14px;color:var(--ink2);font-weight:500;border-bottom:3px solid transparent;margin-bottom:-2px}
+.tab:hover{color:var(--ink)}
+.tab.on{color:var(--ink);border-bottom-color:var(--cy)}
+.sp{flex:1}
+.org{height:36px;display:flex;align-items:center;gap:8px;padding:0 12px;border:1px solid var(--line2);font:12px "Space Mono",monospace;color:var(--ink2)}
+.btn{height:38px;padding:0 16px;border:1px solid var(--line2);font-weight:600;color:var(--ink);white-space:nowrap}
+.btn:hover{background:rgba(232,241,255,.08)}
+.btn.am{background:var(--am);border-color:var(--am);color:#1b1300}
+.btn.am:hover{background:#ffc23d}
+
+.page{width:min(1280px,calc(100% - 32px));margin:28px auto 90px;display:flex;flex-direction:column;gap:22px}
+.head{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.head h1{margin:0;font-family:"Big Shoulders Display";font-weight:900;font-size:clamp(44px,6vw,72px);line-height:.9;text-transform:uppercase;letter-spacing:.01em}
+.head .code{font:12px "Space Mono",monospace;color:var(--cy);margin-bottom:6px}
+.subnav{display:flex;gap:0;border:1px solid var(--line2);width:max-content;max-width:100%;overflow:auto}
+.subnav button{padding:9px 16px;font:12px "Space Mono",monospace;color:var(--ink2);border-right:1px solid var(--line2);text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
+.subnav button:last-child{border-right:0}
+.subnav button.on{background:var(--ink);color:var(--bg)}
+
+.sheet{position:relative;border:1px solid var(--line2);background:rgba(13,44,120,.72);padding:22px 24px}
+.sheet .tag{position:absolute;top:-10px;left:16px;padding:0 8px;background:var(--bg);font:11px "Space Mono",monospace;color:var(--cy);letter-spacing:.12em;text-transform:uppercase}
+.sheet .ref{position:absolute;top:-10px;right:16px;padding:0 8px;background:var(--bg);font:11px "Space Mono",monospace;color:var(--mute)}
+.corner{position:absolute;width:14px;height:14px;border-color:var(--cy);border-style:solid}
+.c1{top:-1px;left:-1px;border-width:2px 0 0 2px}.c2{bottom:-1px;right:-1px;border-width:0 2px 2px 0}
+
+.cycle{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:22px}
+.ruler{margin-top:16px}
+.ruler .track{position:relative;height:38px;border:1px solid var(--line2);background:repeating-linear-gradient(90deg,transparent 0 calc(100%/31 - 1px),var(--line) calc(100%/31 - 1px) calc(100%/31))}
+.ruler .fill{position:absolute;inset:0 auto 0 0;background:repeating-linear-gradient(45deg,rgba(92,225,230,.35) 0 6px,rgba(92,225,230,.12) 6px 12px);border-right:2px solid var(--cy)}
+.ruler .ends{display:flex;justify-content:space-between;font:11px "Space Mono",monospace;color:var(--mute);margin-top:6px}
+.dim{display:flex;align-items:center;gap:8px;font:11px "Space Mono",monospace;color:var(--cy);margin-top:4px}
+.dim i{flex:1;height:1px;background:var(--cy);position:relative}
+.dim i::before,.dim i::after{content:"";position:absolute;top:-4px;width:1px;height:9px;background:var(--cy)}
+.dim i::before{left:0}.dim i::after{right:0}
+.parts{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:20px;border:1px solid var(--line2)}
+.parts div{padding:16px;border-right:1px solid var(--line2)}
+.parts div:last-child{border-right:0}
+.parts small{display:block;font:11px "Space Mono",monospace;color:var(--mute);text-transform:uppercase;letter-spacing:.1em}
+.parts b{display:block;font-family:"Big Shoulders Display";font-weight:800;font-size:40px;line-height:1.05;margin-top:4px}
+.parts span{font-size:12.5px;color:var(--ink2)}
+.title2{font-family:"Big Shoulders Display";font-weight:800;font-size:28px;text-transform:uppercase;letter-spacing:.02em;margin:0}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;margin-top:16px;font-size:14px}
+.kv dt{font:11px "Space Mono",monospace;color:var(--mute);text-transform:uppercase;letter-spacing:.1em;padding-top:2px}
+.kv dd{margin:0;color:var(--ink)}
+
+svg text{fill:var(--mute);font:11px "Space Mono",monospace}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;font:11px "Space Mono",monospace;color:var(--cy);text-transform:uppercase;letter-spacing:.1em;padding:10px 12px;border-bottom:1px solid var(--line2)}
+td{padding:10px 12px;border-bottom:1px dashed var(--line);vertical-align:top;font-variant-numeric:tabular-nums}
+tbody tr:hover td{background:rgba(92,225,230,.07)}
+td.n,th.n{text-align:right}
+td small{display:block;color:var(--mute);font-size:12px}
+.st{font:11px "Space Mono",monospace;text-transform:uppercase;padding:2px 8px;border:1px solid var(--line2)}
+.st.open{color:var(--am);border-color:var(--am)}
+.scroll{max-height:520px;overflow:auto}
+.skel{background:linear-gradient(90deg,rgba(232,241,255,.06),rgba(232,241,255,.16),rgba(232,241,255,.06));background-size:200% 100%;animation:sh 1.2s infinite;color:transparent!important}
+@keyframes sh{to{background-position:-200% 0}}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;transition:.2s;z-index:30;padding:12px 18px;background:var(--am);color:#1b1300;font:600 13px "Inter Tight",sans-serif;border:2px solid #1b1300}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+@media (max-width:980px){.cycle{grid-template-columns:1fr}.tab:not(.on){display:none}}
+@media (max-width:640px){.org,.btn.am{display:none}.parts{grid-template-columns:1fr}.parts div{border-right:0;border-bottom:1px solid var(--line2)}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="logo">
+    <svg viewBox="0 0 30 30" fill="none" stroke="#5ce1e6" stroke-width="2"><path d="M4 22h22M7 22V12l8-6 8 6v10"/><path d="M12 22v-6h6v6"/><circle cx="15" cy="11" r="1.6" fill="#5ce1e6"/></svg>
+    <b>Forgeline</b><small>CI</small>
+  </div>
+  <button class="tab" data-fake>Pipelines</button>
+  <button class="tab" data-fake>Agents</button>
+  <button class="tab" data-fake>Artifacts</button>
+  <button class="tab" data-fake>Insights</button>
+  <button class="tab on">Billing</button>
+  <div class="sp"></div>
+  <span class="org" id="agents">agents: …</span>
+  <span class="org">org: imagen-ai ▾</span>
+  <button class="btn am" data-fake>+ New pipeline</button>
+</header>
+
+<main class="page">
+  <div class="head">
+    <div><div class="code">ORG / IMAGEN-AI / BILLING</div><h1>Billing</h1></div>
+    <div class="sp"></div>
+    <button class="btn" data-fake>Payment method</button>
+    <button class="btn" data-fake>Tax details</button>
+  </div>
+  <div class="subnav"><button class="on">Overview</button><button data-fake>Spend limits</button><button data-fake>Usage export</button><button data-fake>Plan</button></div>
+
+  <section class="cycle">
+    <div class="sheet"><span class="corner c1"></span><span class="corner c2"></span>
+      <span class="tag">Current cycle</span><span class="ref" id="cycleRef">…</span>
+      <h2 class="title2" id="cycleTitle">…</h2>
+      <div class="ruler"><div class="track"><div class="fill" id="fill" style="width:0"></div></div>
+        <div class="ends"><span id="cStart">…</span><span id="cDay">…</span><span id="cEnd">…</span></div>
+        <div class="dim"><i></i><span id="cLen">…</span><i></i></div></div>
+      <div class="parts">
+        <div><small>Seats · billed in advance</small><b class="skel" id="seatsAmt">$0,000</b><span id="seatsSub">&nbsp;</span></div>
+        <div><small>Build minutes · billed in arrears</small><b class="skel" id="minAmt">$0,000</b><span id="minSub">&nbsp;</span></div>
+      </div>
+    </div>
+    <div class="sheet"><span class="corner c1"></span><span class="corner c2"></span>
+      <span class="tag">Plan</span>
+      <h2 class="title2" id="planName">…</h2>
+      <dl class="kv">
+        <dt>Seats</dt><dd id="pSeats">…</dd>
+        <dt>Seat price</dt><dd id="pSeat">…</dd>
+        <dt>Build minute</dt><dd id="pMin">…</dd>
+        <dt>Cycle</dt><dd id="pCycle">…</dd>
+        <dt>Next invoice</dt><dd id="pNext">…</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sheet"><span class="corner c1"></span><span class="corner c2"></span>
+    <span class="tag">Build minutes · last 90 days</span><span class="ref">daily</span>
+    <svg id="chart" viewBox="0 0 1200 220" width="100%" preserveAspectRatio="none" style="height:220px;display:block;margin-top:8px"></svg>
+  </section>
+
+  <section class="sheet"><span class="corner c1"></span><span class="corner c2"></span>
+    <span class="tag">Invoices</span><span class="ref" id="invRef">…</span>
+    <div class="scroll" style="margin-top:8px"><table><thead><tr><th>Invoice</th><th>Issued</th><th>Seats</th><th>Build minutes</th><th class="n">Total</th><th>Status</th></tr></thead><tbody id="inv"></tbody></table></div>
+  </section>
+</main>
+<div class="toast" id="toast"></div>
+
+<script>
+const $ = id => document.getElementById(id);
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const usd = v => new Intl.NumberFormat("en-US", {style: "currency", currency: "USD"}).format(v);
+const num = v => new Intl.NumberFormat("en-US").format(v);
+const day = iso => new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", {day: "2-digit", month: "short", year: "numeric", timeZone: "UTC"});
+const short = iso => new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", {day: "2-digit", month: "short", timeZone: "UTC"});
+const daysBetween = (a, b) => Math.round((new Date(b + "T00:00:00Z") - new Date(a + "T00:00:00Z")) / 864e5);
+
+async function getJson(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(path + " " + res.status);
+  return res.json();
+}
+function toast(msg) {
+  const t = $("toast");
+  t.textContent = msg;
+  t.classList.add("on");
+  clearTimeout(t._h);
+  t._h = setTimeout(() => t.classList.remove("on"), 2200);
+}
+document.querySelectorAll("[data-fake]").forEach(b => b.addEventListener("click", () => toast("Billing admins only. Ask an org owner.")));
+
+function drawChart(rows) {
+  const asc = [...rows].sort((a, b) => a.date.localeCompare(b.date)).slice(-90);
+  const W = 1200, H = 220, pad = {l: 56, r: 8, t: 10, b: 24};
+  const max = Math.max(...asc.map(r => r.build_minutes)) * 1.1;
+  const bw = (W - pad.l - pad.r) / asc.length;
+  const y = v => H - pad.b - v / max * (H - pad.t - pad.b);
+  let g = "";
+  for (let k = 0; k <= 3; k++) {
+    const v = max / 3 * k;
+    g += `<line x1="${pad.l}" x2="${W - pad.r}" y1="${y(v)}" y2="${y(v)}" stroke="rgba(232,241,255,.14)" stroke-dasharray="3 4"/><text x="${pad.l - 8}" y="${y(v) + 3}" text-anchor="end">${Math.round(v / 1000)}k</text>`;
+  }
+  asc.forEach((r, i) => {
+    const x = pad.l + i * bw + 1;
+    g += `<rect x="${x}" y="${y(r.build_minutes)}" width="${Math.max(bw - 2, 1)}" height="${H - pad.b - y(r.build_minutes)}" fill="none" stroke="#5ce1e6" stroke-width="1"><title>${day(r.date)}: ${num(r.build_minutes)} min, ${usd(r.cost)}</title></rect>`;
+    if (r.date.endsWith("-06")) g += `<line x1="${x}" x2="${x}" y1="${pad.t}" y2="${H - pad.b}" stroke="#ffb000" stroke-width="1.5"/><text x="${x + 4}" y="${pad.t + 10}" style="fill:#ffb000">cycle ${short(r.date)}</text>`;
+    if (i % 15 === 0) g += `<text x="${x}" y="${H - 6}">${short(r.date)}</text>`;
+  });
+  $("chart").innerHTML = g;
+}
+
+async function main() {
+  getJson("api/agents/status.json").then(a => $("agents").textContent = `agents: ${a.online} online · ${a.busy} busy`).catch(() => {});
+  await sleep(420);
+  const [sub, inv, usage] = await Promise.all([getJson("api/subscription.json"), getJson("api/invoices.json"), getJson("api/usage.json")]);
+  const invoices = [...inv.data].sort((a, b) => b.issued_on.localeCompare(a.issued_on));
+  const current = invoices.find(i => i.issued_on === sub.current_period_start);
+  const seatLine = current.lines.find(l => l.type === "seats");
+  const usedRows = usage.data.filter(r => r.date >= sub.current_period_start && r.date <= sub.current_period_end);
+  const usedMin = usedRows.reduce((s, r) => s + r.build_minutes, 0);
+  const lastDay = usedRows.length ? usedRows.map(r => r.date).sort().pop() : sub.current_period_start;
+  const cycleLen = daysBetween(sub.current_period_start, sub.current_period_end) + 1;
+  const dayOf = daysBetween(sub.current_period_start, lastDay) + 1;
+
+  for (const id of ["seatsAmt", "minAmt"]) $(id).classList.remove("skel");
+  $("cycleTitle").textContent = `${short(sub.current_period_start)} → ${short(sub.current_period_end)}`;
+  $("cycleRef").textContent = `INV ${current.number}`;
+  $("fill").style.width = (dayOf / cycleLen * 100) + "%";
+  $("cStart").textContent = day(sub.current_period_start);
+  $("cEnd").textContent = day(sub.current_period_end);
+  $("cDay").textContent = `usage through ${short(lastDay)} · day ${dayOf}`;
+  $("cLen").textContent = `${cycleLen} DAYS`;
+  $("seatsAmt").textContent = usd(seatLine.amount);
+  $("seatsSub").textContent = `${seatLine.quantity} seats × ${usd(seatLine.unit_price)} · on invoice ${current.number}`;
+  $("minAmt").textContent = usd(usedMin * sub.build_minute_price);
+  $("minSub").textContent = `${num(usedMin)} min so far · billed ${short(sub.next_invoice_on)}`;
+  $("planName").textContent = sub.plan;
+  $("pSeats").textContent = sub.seats;
+  $("pSeat").textContent = `${usd(sub.price_per_seat)} / seat / cycle`;
+  $("pMin").textContent = `${usd(sub.build_minute_price)} / min`;
+  $("pCycle").textContent = `monthly, from the ${sub.billing_anchor_day}th`;
+  $("pNext").textContent = day(sub.next_invoice_on);
+  drawChart(usage.data);
+  $("invRef").textContent = `${invoices.length} invoices · newest first`;
+  $("inv").innerHTML = invoices.map(i => {
+    const seats = i.lines.find(l => l.type === "seats"), mins = i.lines.find(l => l.type === "usage");
+    return `<tr><td class="mono">${i.number}</td><td>${day(i.issued_on)}</td>
+      <td>${usd(seats.amount)}<small>${seats.quantity} seats · ${short(seats.period_start)} – ${short(seats.period_end)}</small></td>
+      <td>${mins ? usd(mins.amount) + `<small>${num(mins.quantity)} min · ${short(mins.period_start)} – ${short(mins.period_end)}</small>` : "–"}</td>
+      <td class="n"><b>${usd(i.total)}</b></td><td><span class="st ${i.status}">${i.status}</span></td></tr>`;
+  }).join("");
+}
+main().catch(err => { console.error(err); toast("Could not load billing."); });
+</script>
+</body>
+</html>
