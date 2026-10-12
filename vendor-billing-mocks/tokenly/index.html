@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#f4f1ea;--paper2:#ebe6db;--ink:#121212;--ink2:#3d3a35;--mute:#6b675f;--line:#d6d0c3;--hot:#ff4f00}
+:root{--paper:#f4f1ea;--paper2:#ebe6db;--ink:#121212;--ink2:#3d3a35;--mute:#6b675f;--line:#d6d0c3;--hot:#ff4f00;--hot-text:#c23d00}
 *{box-sizing:border-box}
 html,body{margin:0;min-height:100%}
 body{background:var(--paper);color:var(--ink);font:15px/1.5 Geist,system-ui,sans-serif;overflow-x:hidden}
@@ -20,7 +20,7 @@ button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
 .shell{display:grid;grid-template-columns:232px 1fr;min-height:100vh}
 aside{border-right:1px solid var(--line);padding:26px 18px;display:flex;flex-direction:column;gap:4px;position:sticky;top:0;height:100vh}
 .logo{font-family:"Instrument Serif";font-style:italic;font-size:34px;line-height:1;margin:0 8px 26px;letter-spacing:-.01em}
-.logo span{color:var(--hot)}
+.logo span{color:var(--hot-text)}
 aside .lbl{font:11px "Geist Mono",monospace;color:var(--mute);text-transform:uppercase;letter-spacing:.14em;margin:18px 8px 6px}
 aside button{text-align:left;padding:8px;border-radius:6px;color:var(--ink2)}
 aside button:hover{background:var(--paper2)}
@@ -37,7 +37,7 @@ main{padding:34px 48px 90px;min-width:0;display:flex;flex-direction:column;gap:3
 
 .hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;align-items:end;border-bottom:1px solid var(--ink);padding-bottom:30px}
 .hero h1{margin:0;font-family:"Instrument Serif";font-weight:400;font-size:clamp(46px,6vw,84px);line-height:.95;letter-spacing:-.02em}
-.hero h1 i{color:var(--hot)}
+.hero h1 i{color:var(--hot-text)}
 .big{font-family:"Instrument Serif";font-size:clamp(70px,9vw,132px);line-height:.9;letter-spacing:-.03em}
 .meta{display:flex;gap:28px;flex-wrap:wrap;margin-top:14px;font-size:13.5px;color:var(--ink2)}
 .meta b{display:block;font:11px "Geist Mono",monospace;color:var(--mute);text-transform:uppercase;letter-spacing:.12em;margin-bottom:2px;font-weight:400}
