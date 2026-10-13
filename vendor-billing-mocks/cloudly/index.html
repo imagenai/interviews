@@ -31,7 +31,7 @@ body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
 .mono{font-family:"JetBrains Mono",ui-monospace,monospace}
 button{font:inherit;color:inherit;cursor:pointer}
 
-/* shell */
+
 .app{display:grid;grid-template-columns:248px 1fr;min-height:100vh}
 aside{border-right:1px solid var(--line);background:rgba(4,5,13,.6);backdrop-filter:blur(18px);
   padding:18px 14px;display:flex;flex-direction:column;gap:22px;position:sticky;top:0;height:100vh}
@@ -51,7 +51,7 @@ aside{border-right:1px solid var(--line);background:rgba(4,5,13,.6);backdrop-fil
 .acct{margin-top:auto;padding:12px;border-radius:14px;background:var(--glass);border:1px solid var(--line);font-size:12px;color:var(--mute)}
 .acct b{display:block;color:var(--ink);font-weight:600;font-size:13px}
 
-/* top bar */
+
 .main{min-width:0;display:flex;flex-direction:column}
 .top{display:flex;align-items:center;gap:12px;padding:14px 28px;border-bottom:1px solid var(--line);
   background:rgba(4,5,13,.45);backdrop-filter:blur(14px);position:sticky;top:0;z-index:5}
@@ -66,7 +66,7 @@ aside{border-right:1px solid var(--line);background:rgba(4,5,13,.6);backdrop-fil
   background:conic-gradient(from 200deg,var(--o),var(--v),var(--c),var(--o));color:#05050c}
 .spacer{flex:1}
 
-/* content */
+
 .content{padding:26px 28px 80px;display:flex;flex-direction:column;gap:20px;max-width:1440px;width:100%}
 .crumbs{font-size:12px;color:var(--mute);letter-spacing:.04em}
 .crumbs b{color:var(--ink-2);font-weight:500}
@@ -223,161 +223,6 @@ td.t{font-weight:600}
 </div>
 <div class="toast" id="toast"></div>
 
-<script>
-const $ = id => document.getElementById(id);
-const usd = new Intl.NumberFormat("en-US", {style: "currency", currency: "USD"});
-const SVC = ["compute", "storage", "network"];
-const COLORS = {compute: "#ff7a2f", storage: "#8b5cff", network: "#38e1ff"};
-const sleep = ms => new Promise(r => setTimeout(r, ms));
-
-async function getJson(path) {
-  const res = await fetch(path, {headers: {Accept: "application/json"}});
-  if (!res.ok) throw new Error(path + " " + res.status);
-  return res.json();
-}
-
-function toast(msg) {
-  const t = $("toast");
-  t.innerHTML = msg;
-  t.classList.add("on");
-  clearTimeout(t._h);
-  t._h = setTimeout(() => t.classList.remove("on"), 2200);
-}
-document.querySelectorAll("[data-fake]").forEach(b =>
-  b.addEventListener("click", () => toast("<b>Read-only workspace.</b> Ask a billing admin to enable this action.")));
-
-function prevMonth(ym) {
-  const d = new Date(ym + "-01T00:00:00Z");
-  d.setUTCMonth(d.getUTCMonth() - 1);
-  return d.toISOString().slice(0, 7);
-}
-const dayLabel = iso => new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", {day: "2-digit", month: "short", year: "numeric", timeZone: "UTC"});
-
-async function loadShell() {
-  const [session, notes] = await Promise.all([getJson("api/session.json"), getJson("api/notifications.json")]);
-  $("acctName").textContent = session.account;
-  $("acctRegion").textContent = session.user.role;
-  $("region").textContent = session.region;
-  $("avatar").textContent = session.user.name.split(" ").map(p => p[0]).join("");
-  $("avatar").title = session.user.name;
-  $("unread").textContent = notes.unread;
-  $("notes").innerHTML = notes.items.map(n => `<div>${n.text}<small>${n.kind} · ${dayLabel(n.at.slice(0, 10))}</small></div>`).join("");
-  $("bell").onclick = () => $("notes").classList.toggle("on");
-}
-
-function drawChart(days) {
-  const svg = $("chart"), W = 900, H = 300, pad = {l: 56, r: 12, t: 16, b: 30};
-  const asc = [...days].reverse();
-  const max = Math.max(...asc.map(d => d.total)) * 1.15;
-  const x = i => pad.l + (i + .5) * (W - pad.l - pad.r) / asc.length;
-  const y = v => H - pad.b - v / max * (H - pad.t - pad.b);
-  const bw = (W - pad.l - pad.r) / asc.length * .56;
-  let g = `<defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff7a2f" stop-opacity=".35"/><stop offset="1" stop-color="#ff7a2f" stop-opacity="0"/></linearGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>`;
-  for (let k = 0; k <= 4; k++) {
-    const v = max / 4 * k, yy = y(v);
-    g += `<line x1="${pad.l}" x2="${W - pad.r}" y1="${yy}" y2="${yy}" stroke="rgba(255,255,255,.06)"/><text x="${pad.l - 8}" y="${yy + 3}" text-anchor="end">$${(v / 1000).toFixed(1)}k</text>`;
-  }
-  asc.forEach((d, i) => {
-    let base = 0;
-    SVC.forEach(s => {
-      const h = d[s] / max * (H - pad.t - pad.b);
-      g += `<rect x="${x(i) - bw / 2}" y="${y(base) - h}" width="${bw}" height="${Math.max(h - 1, 0)}" rx="2" fill="${COLORS[s]}" opacity=".85"/>`;
-      base += d[s];
-    });
-    if (i % 2 === 0 || asc.length < 10) g += `<text x="${x(i)}" y="${H - 10}" text-anchor="middle">${d.date.slice(8)}</text>`;
-  });
-  const line = asc.map((d, i) => `${i ? "L" : "M"}${x(i)},${y(d.total)}`).join("");
-  g += `<path d="${line}L${x(asc.length - 1)},${y(0)}L${x(0)},${y(0)}Z" fill="url(#area)"/>`;
-  g += `<path d="${line}" fill="none" stroke="#ffb36b" stroke-width="2" filter="url(#glow)"/>`;
-  asc.forEach((d, i) => { g += `<circle cx="${x(i)}" cy="${y(d.total)}" r="3.5" fill="#05050c" stroke="#ffb36b" stroke-width="2"/><rect data-i="${i}" x="${x(i) - bw}" y="${pad.t}" width="${bw * 2}" height="${H - pad.t - pad.b}" fill="transparent"/>`; });
-  svg.innerHTML = g;
-  const tip = $("tip");
-  svg.querySelectorAll("rect[data-i]").forEach(r => {
-    r.addEventListener("mouseenter", () => {
-      const d = asc[+r.dataset.i];
-      tip.innerHTML = `${dayLabel(d.date)}<b>${usd.format(d.total)}</b>`;
-      tip.style.left = (x(+r.dataset.i) / W * 100) + "%";
-      tip.style.top = (y(d.total) / H * 300) + "px";
-      tip.style.opacity = 1;
-    });
-    r.addEventListener("mouseleave", () => tip.style.opacity = 0);
-  });
-}
-
-function drawDonut(bySvc, total) {
-  const R = 78, C = 2 * Math.PI * R;
-  let off = 0, g = `<circle cx="95" cy="95" r="${R}" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="18"/>`;
-  SVC.forEach(s => {
-    const len = bySvc[s] / total * C;
-    g += `<circle cx="95" cy="95" r="${R}" fill="none" stroke="${COLORS[s]}" stroke-width="18" stroke-dasharray="${len - 3} ${C}" stroke-dashoffset="${-off}" transform="rotate(-90 95 95)" stroke-linecap="round" style="filter:drop-shadow(0 0 6px ${COLORS[s]})"/>`;
-    off += len;
-  });
-  $("donut").innerHTML = g;
-  $("donutTotal").textContent = usd.format(total).replace(/\.\d+$/, "");
-  $("svc").innerHTML = SVC.map(s => `<div><i style="background:${COLORS[s]}"></i>${s}<b>${usd.format(bySvc[s])}</b><em>${(bySvc[s] / total * 100).toFixed(1)}%</em></div>`).join("");
-}
-
-function sparkline(days) {
-  const asc = [...days].reverse().map(d => d.total), max = Math.max(...asc), min = Math.min(...asc);
-  const pts = asc.map((v, i) => `${i / (asc.length - 1) * 70},${26 - (v - min) / (max - min || 1) * 22}`).join(" ");
-  $("spark").innerHTML = `<polyline points="${pts}" fill="none" stroke="#ffb36b" stroke-width="1.6"/>`;
-}
-
-async function loadCosts() {
-  await sleep(450);
-  const data = await getJson("api/cost-and-usage.json");
-  const month = data.generated_at.slice(0, 7), prev = prevMonth(month);
-  const byDay = new Map(), byMonth = new Map();
-  let prevTotal = 0;
-  for (const r of data.results) {
-    const dollars = r.cost / 100;
-    const ym = r.date.slice(0, 7);
-    const m = byMonth.get(ym) || {month: ym, compute: 0, storage: 0, network: 0, total: 0};
-    m[r.service] += dollars;
-    m.total += dollars;
-    byMonth.set(ym, m);
-    if (ym === prev) prevTotal += dollars;
-    if (ym !== month) continue;
-    const d = byDay.get(r.date) || {date: r.date, compute: 0, storage: 0, network: 0, total: 0};
-    d[r.service] += dollars;
-    d.total += dollars;
-    byDay.set(r.date, d);
-  }
-  const days = [...byDay.values()].sort((a, b) => b.date.localeCompare(a.date));
-  const mtd = days.reduce((s, d) => s + d.total, 0);
-  const bySvc = Object.fromEntries(SVC.map(s => [s, days.reduce((t, d) => t + d[s], 0)]));
-  const top = SVC.reduce((a, b) => bySvc[a] > bySvc[b] ? a : b);
-  const monthName = new Date(month + "-01T00:00:00Z").toLocaleDateString("en-GB", {month: "long", timeZone: "UTC"});
-
-  for (const id of ["kMtd", "kPrev", "kAvg", "kTop"]) $(id).classList.remove("skel");
-  $("kMtd").textContent = usd.format(mtd);
-  $("kMtdS").textContent = `${monthName}, through ${dayLabel(days[0].date)}`;
-  $("kPrev").textContent = usd.format(prevTotal);
-  $("kPrevS").textContent = new Date(prev + "-01T00:00:00Z").toLocaleDateString("en-GB", {month: "long", year: "numeric", timeZone: "UTC"});
-  $("kAvg").textContent = usd.format(mtd / days.length);
-  $("kAvgS").textContent = `${days.length} complete days`;
-  $("kTop").textContent = top;
-  $("kTopS").textContent = `${(bySvc[top] / mtd * 100).toFixed(0)}% of ${monthName}`;
-  $("chartTag").textContent = `${monthName} · ${days.length} days`;
-  sparkline(days);
-  drawChart(days);
-  drawDonut(bySvc, mtd);
-  const max = Math.max(...days.map(d => d.total));
-  const months = [...byMonth.values()].sort((a, b) => b.month.localeCompare(a.month));
-  const monthMax = Math.max(...months.map(m => m.total));
-  const monthLabel = ym => new Date(ym + "-01T00:00:00Z").toLocaleDateString("en-GB", {month: "short", year: "numeric", timeZone: "UTC"});
-  $("monTag").textContent = `since ${monthLabel(months[months.length - 1].month)} · ${month === months[0].month ? "current month to date" : ""}`;
-  $("months").innerHTML = months.map((m, i) => {
-    const prior = months[i + 1];
-    const change = prior && m.month !== month ? `${m.total >= prior.total ? "+" : ""}${((m.total / prior.total - 1) * 100).toFixed(1)}%` : (m.month === month ? "to date" : "–");
-    return `<tr><td>${monthLabel(m.month)}</td>${SVC.map(s => `<td class="n">${usd.format(m[s])}</td>`).join("")}<td class="n t">${usd.format(m.total)}</td><td class="n">${change}</td><td><div class="bar" style="width:${m.total / monthMax * 100}%"></div></td></tr>`;
-  }).join("");
-  $("rows").innerHTML = days.map(d => `<tr><td>${dayLabel(d.date)}</td>${SVC.map(s => `<td class="n">${usd.format(d[s])}</td>`).join("")}<td class="n t">${usd.format(d.total)}</td><td><div class="bar" style="width:${d.total / max * 100}%"></div></td></tr>`).join("");
-}
-
-loadShell().catch(console.error);
-loadCosts().catch(err => { console.error(err); toast("<b>Could not load costs.</b> Try again in a minute."); });
-</script>
+<script>const t=t=>document.getElementById(t),e=new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"}),o=["compute","storage","network"],n={compute:"#ff7a2f",storage:"#8b5cff",network:"#38e1ff"};async function a(t){const e=await fetch(t,{headers:{Accept:"application/json"}});if(!e.ok)throw new Error(t+" "+e.status);return e.json()}function r(e){const o=t("toast");o.innerHTML=e,o.classList.add("on"),clearTimeout(o._h),o._h=setTimeout(()=>o.classList.remove("on"),2200)}document.querySelectorAll("[data-fake]").forEach(t=>t.addEventListener("click",()=>r("<b>Read-only workspace.</b> Ask a billing admin to enable this action.")));const s=t=>new Date(t+"T00:00:00Z").toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric",timeZone:"UTC"});(async function(){const[e,o]=await Promise.all([a("api/session.json"),a("api/notifications.json")]);t("acctName").textContent=e.account,t("acctRegion").textContent=e.user.role,t("region").textContent=e.region,t("avatar").textContent=e.user.name.split(" ").map(t=>t[0]).join(""),t("avatar").title=e.user.name,t("unread").textContent=o.unread,t("notes").innerHTML=o.items.map(t=>`<div>${t.text}<small>${t.kind} · ${s(t.at.slice(0,10))}</small></div>`).join(""),t("bell").onclick=()=>t("notes").classList.toggle("on")})().catch(console.error),async function(){var r;await(r=450,new Promise(t=>setTimeout(t,r)));const i=await a("api/cost-and-usage.json"),l=i.generated_at.slice(0,7),c=function(t){const e=new Date(t+"-01T00:00:00Z");return e.setUTCMonth(e.getUTCMonth()-1),e.toISOString().slice(0,7)}(l),d=new Map,m=new Map;let f=0;for(const t of i.results){const e=t.cost/100,o=t.date.slice(0,7),n=m.get(o)||{month:o,compute:0,storage:0,network:0,total:0};if(n[t.service]+=e,n.total+=e,m.set(o,n),o===c&&(f+=e),o!==l)continue;const a=d.get(t.date)||{date:t.date,compute:0,storage:0,network:0,total:0};a[t.service]+=e,a.total+=e,d.set(t.date,a)}const h=[...d.values()].sort((t,e)=>e.date.localeCompare(t.date)),$=h.reduce((t,e)=>t+e.total,0),p=Object.fromEntries(o.map(t=>[t,h.reduce((e,o)=>e+o[t],0)])),u=o.reduce((t,e)=>p[t]>p[e]?t:e),g=new Date(l+"-01T00:00:00Z").toLocaleDateString("en-GB",{month:"long",timeZone:"UTC"});for(const e of["kMtd","kPrev","kAvg","kTop"])t(e).classList.remove("skel");t("kMtd").textContent=e.format($),t("kMtdS").textContent=`${g}, through ${s(h[0].date)}`,t("kPrev").textContent=e.format(f),t("kPrevS").textContent=new Date(c+"-01T00:00:00Z").toLocaleDateString("en-GB",{month:"long",year:"numeric",timeZone:"UTC"}),t("kAvg").textContent=e.format($/h.length),t("kAvgS").textContent=`${h.length} complete days`,t("kTop").textContent=u,t("kTopS").textContent=`${(p[u]/$*100).toFixed(0)}% of ${g}`,t("chartTag").textContent=`${g} · ${h.length} days`,function(e){const o=[...e].reverse().map(t=>t.total),n=Math.max(...o),a=Math.min(...o),r=o.map((t,e)=>`${e/(o.length-1)*70},${26-(t-a)/(n-a||1)*22}`).join(" ");t("spark").innerHTML=`<polyline points="${r}" fill="none" stroke="#ffb36b" stroke-width="1.6"/>`}(h),function(a){const r=t("chart"),i=900,l=300,c=56,d=12,m=16,f=30,h=[...a].reverse(),$=1.15*Math.max(...h.map(t=>t.total)),p=t=>c+(t+.5)*(i-c-d)/h.length,u=t=>l-f-t/$*(l-m-f),g=(i-c-d)/h.length*.56;let x='<defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff7a2f" stop-opacity=".35"/><stop offset="1" stop-color="#ff7a2f" stop-opacity="0"/></linearGradient>\n    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>';for(let t=0;t<=4;t++){const e=$/4*t,o=u(e);x+=`<line x1="${c}" x2="${i-d}" y1="${o}" y2="${o}" stroke="rgba(255,255,255,.06)"/><text x="${c-8}" y="${o+3}" text-anchor="end">$${(e/1e3).toFixed(1)}k</text>`}h.forEach((t,e)=>{let a=0;o.forEach(o=>{const r=t[o]/$*(l-m-f);x+=`<rect x="${p(e)-g/2}" y="${u(a)-r}" width="${g}" height="${Math.max(r-1,0)}" rx="2" fill="${n[o]}" opacity=".85"/>`,a+=t[o]}),(e%2==0||h.length<10)&&(x+=`<text x="${p(e)}" y="290" text-anchor="middle">${t.date.slice(8)}</text>`)});const y=h.map((t,e)=>`${e?"L":"M"}${p(e)},${u(t.total)}`).join("");x+=`<path d="${y}L${p(h.length-1)},${u(0)}L${p(0)},${u(0)}Z" fill="url(#area)"/>`,x+=`<path d="${y}" fill="none" stroke="#ffb36b" stroke-width="2" filter="url(#glow)"/>`,h.forEach((t,e)=>{x+=`<circle cx="${p(e)}" cy="${u(t.total)}" r="3.5" fill="#05050c" stroke="#ffb36b" stroke-width="2"/><rect data-i="${e}" x="${p(e)-g}" y="${m}" width="${2*g}" height="${l-m-f}" fill="transparent"/>`}),r.innerHTML=x;const k=t("tip");r.querySelectorAll("rect[data-i]").forEach(t=>{t.addEventListener("mouseenter",()=>{const o=h[+t.dataset.i];k.innerHTML=`${s(o.date)}<b>${e.format(o.total)}</b>`,k.style.left=p(+t.dataset.i)/i*100+"%",k.style.top=u(o.total)/l*300+"px",k.style.opacity=1}),t.addEventListener("mouseleave",()=>k.style.opacity=0)})}(h),function(a,r){const s=2*Math.PI*78;let i=0,l='<circle cx="95" cy="95" r="78" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="18"/>';o.forEach(t=>{const e=a[t]/r*s;l+=`<circle cx="95" cy="95" r="78" fill="none" stroke="${n[t]}" stroke-width="18" stroke-dasharray="${e-3} ${s}" stroke-dashoffset="${-i}" transform="rotate(-90 95 95)" stroke-linecap="round" style="filter:drop-shadow(0 0 6px ${n[t]})"/>`,i+=e}),t("donut").innerHTML=l,t("donutTotal").textContent=e.format(r).replace(/\.\d+$/,""),t("svc").innerHTML=o.map(t=>`<div><i style="background:${n[t]}"></i>${t}<b>${e.format(a[t])}</b><em>${(a[t]/r*100).toFixed(1)}%</em></div>`).join("")}(p,$);const x=Math.max(...h.map(t=>t.total)),y=[...m.values()].sort((t,e)=>e.month.localeCompare(t.month)),k=Math.max(...y.map(t=>t.total)),w=t=>new Date(t+"-01T00:00:00Z").toLocaleDateString("en-GB",{month:"short",year:"numeric",timeZone:"UTC"});t("monTag").textContent=`since ${w(y[y.length-1].month)} · ${l===y[0].month?"current month to date":""}`,t("months").innerHTML=y.map((t,n)=>{const a=y[n+1],r=a&&t.month!==l?`${t.total>=a.total?"+":""}${(100*(t.total/a.total-1)).toFixed(1)}%`:t.month===l?"to date":"–";return`<tr><td>${w(t.month)}</td>${o.map(o=>`<td class="n">${e.format(t[o])}</td>`).join("")}<td class="n t">${e.format(t.total)}</td><td class="n">${r}</td><td><div class="bar" style="width:${t.total/k*100}%"></div></td></tr>`}).join(""),t("rows").innerHTML=h.map(t=>`<tr><td>${s(t.date)}</td>${o.map(o=>`<td class="n">${e.format(t[o])}</td>`).join("")}<td class="n t">${e.format(t.total)}</td><td><div class="bar" style="width:${t.total/x*100}%"></div></td></tr>`).join("")}().catch(t=>{console.error(t),r("<b>Could not load costs.</b> Try again in a minute.")});</script>
 </body>
 </html>

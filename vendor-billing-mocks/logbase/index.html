@@ -16,7 +16,7 @@ body{background:var(--bg);color:var(--ink);font:14px/1.5 "IBM Plex Sans",system-
 button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
 .mono{font-family:"IBM Plex Mono",monospace}
 
-/* hero with a synthwave horizon */
+
 .hero{position:relative;height:250px;overflow:hidden;background:linear-gradient(180deg,#14052b 0%,#2a0a4a 55%,#4a0f5a 75%,#0c0418 100%)}
 .sun{position:absolute;left:74%;bottom:58px;width:220px;height:220px;transform:translateX(-50%);border-radius:50%;
   background:linear-gradient(180deg,var(--sun) 0%,var(--pink) 70%);
@@ -43,7 +43,7 @@ button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
   color:#fff;text-shadow:0 0 18px rgba(255,45,149,.8)}
 .htitle p{margin:8px 0 0;color:var(--ink2)}
 
-/* live tail ticker */
+
 .tail{display:flex;gap:28px;overflow:hidden;white-space:nowrap;border-block:1px solid var(--line);background:#09030f;padding:9px 0;font:12px "IBM Plex Mono",monospace;color:var(--mute)}
 .tail .track{display:flex;gap:28px;animation:tick 40s linear infinite}
 @keyframes tick{to{transform:translateX(-50%)}}
@@ -164,127 +164,6 @@ td.cr{color:var(--sun)}
 </main>
 <div class="toast" id="toast"></div>
 
-<script>
-const $ = id => document.getElementById(id);
-const sleep = ms => new Promise(r => setTimeout(r, ms));
-const usd = v => new Intl.NumberFormat("en-US", {style: "currency", currency: "USD"}).format(v);
-const day = iso => new Date(iso.slice(0, 10) + "T00:00:00Z").toLocaleDateString("en-GB", {day: "2-digit", month: "short", year: "numeric", timeZone: "UTC"});
-
-async function getJson(path) {
-  const res = await fetch(path);
-  if (!res.ok) throw new Error(path + " " + res.status);
-  return res.json();
-}
-function toast(msg) {
-  const t = $("toast");
-  t.textContent = msg;
-  t.classList.add("on");
-  clearTimeout(t._h);
-  t._h = setTimeout(() => t.classList.remove("on"), 2200);
-}
-document.querySelectorAll("[data-fake]").forEach(b => b.addEventListener("click", () => toast("Billing actions need the Owner role.")));
-
-function liveTail() {
-  const svc = ["api-gw", "auth", "editor-svc", "culling", "uploader", "billing-svc", "xmp-writer", "preview"];
-  const msgs = [["i", "INFO", "request served in 42ms"], ["i", "INFO", "job enqueued"], ["w", "WARN", "retrying upstream call (2/5)"],
-                ["i", "INFO", "cache hit ratio 0.93"], ["e", "ERROR", "upstream timeout after 30s"], ["i", "INFO", "worker heartbeat"],
-                ["w", "WARN", "queue depth above 1k"], ["i", "INFO", "export finished"]];
-  let html = "";
-  for (let n = 0; n < 40; n++) {
-    const [c, lvl, m] = msgs[n % msgs.length];
-    const ts = `14:${String(10 + n % 50).padStart(2, "0")}:${String((n * 7) % 60).padStart(2, "0")}`;
-    html += `<span>${ts} <span class="${c}">${lvl}</span> ${svc[(n * 3) % svc.length]} ${m}</span>`;
-  }
-  $("track").innerHTML = html + html;
-}
-
-function drawChart(daysAsc) {
-  const svg = $("chart"), W = 860, H = 260, pad = {l: 52, r: 10, t: 14, b: 28};
-  const max = Math.max(...daysAsc.map(d => d.v)) * 1.18;
-  const bw = (W - pad.l - pad.r) / daysAsc.length;
-  const y = v => H - pad.b - v / max * (H - pad.t - pad.b);
-  let g = `<defs><linearGradient id="nb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff2d95"/><stop offset="1" stop-color="#9d4dff" stop-opacity=".25"/></linearGradient></defs>`;
-  for (let k = 0; k <= 4; k++) {
-    const v = max / 4 * k;
-    g += `<line x1="${pad.l}" x2="${W - pad.r}" y1="${y(v)}" y2="${y(v)}" stroke="rgba(196,140,255,.1)"/><text x="${pad.l - 8}" y="${y(v) + 3}" text-anchor="end">$${Math.round(v)}</text>`;
-  }
-  daysAsc.forEach((d, i) => {
-    const x = pad.l + i * bw + bw * .18, w = bw * .64;
-    g += `<rect x="${x}" y="${y(d.v)}" width="${w}" height="${H - pad.b - y(d.v)}" rx="3" fill="url(#nb)"><title>${day(d.date)}: ${usd(d.v)}</title></rect>`;
-    g += `<rect x="${x}" y="${y(d.v)}" width="${w}" height="2" fill="#fff" opacity=".8"/>`;
-    g += `<text x="${x + w / 2}" y="${H - 9}" text-anchor="middle">${d.date.slice(8, 10)}</text>`;
-  });
-  svg.innerHTML = g;
-}
-
-function ring(days) {
-  const R = 70, C = 2 * Math.PI * R, frac = Math.min(days / 90, 1);
-  $("ring").innerHTML = `<circle cx="85" cy="85" r="${R}" fill="none" stroke="rgba(196,140,255,.12)" stroke-width="12"/>
-    <circle cx="85" cy="85" r="${R}" fill="none" stroke="#21f3ff" stroke-width="12" stroke-linecap="round" stroke-dasharray="${C * frac} ${C}" transform="rotate(-90 85 85)" style="filter:drop-shadow(0 0 8px #21f3ff)"/>`;
-  $("ringV").textContent = days;
-}
-
-async function loadShell() {
-  const [acct, alerts] = await Promise.all([getJson("api/account.json"), getJson("api/alerts/summary.json")]);
-  $("plan").textContent = acct.plan;
-  $("alerts").innerHTML = `⚠ <b>${alerts.firing}</b> firing`;
-  $("aPlan").textContent = acct.plan;
-  $("aSrc").textContent = acct.sources;
-  $("aReg").textContent = acct.ingest_region;
-  ring(acct.retention_days);
-}
-
-async function loadCharges() {
-  await sleep(500);
-  const res = await getJson("api/charges.json");
-  const month = res.generated_at.slice(0, 7);
-  const seen = new Set(), charges = [];
-  for (const c of res.data) {
-    if (seen.has(c.id)) continue;
-    seen.add(c.id);
-    charges.push(c);
-  }
-  charges.sort((a, b) => b.created.localeCompare(a.created));
-  const inMonth = charges.filter(c => c.created.startsWith(month));
-  const usage = inMonth.filter(c => c.type === "usage");
-  const credits = inMonth.filter(c => c.type === "credit");
-  const usageTotal = usage.reduce((s, c) => s + c.amount, 0);
-  const creditTotal = credits.reduce((s, c) => s + c.amount, 0);
-  const monthName = new Date(month + "-01T00:00:00Z").toLocaleDateString("en-GB", {month: "long", year: "numeric", timeZone: "UTC"});
-
-  for (const id of ["kMtd", "kUsage", "kCredit", "kAvg"]) $(id).classList.remove("skel");
-  $("kMtd").textContent = usd(usageTotal - creditTotal);
-  $("kUsage").textContent = usd(usageTotal);
-  $("kUsageS").textContent = `${usage.length} daily charges`;
-  $("kCredit").textContent = "−" + usd(creditTotal);
-  $("kCreditS").textContent = credits.map(c => c.description).join(", ") || "none this month";
-  $("kAvg").textContent = usd(usageTotal / usage.length);
-  $("kAvgS").textContent = "usage only";
-  $("hsub").textContent = `${monthName} · through ${day(usage[0].created)} · account ${res.account}`;
-  $("chTag").textContent = monthName;
-  drawChart(usage.map(c => ({date: c.created.slice(0, 10), v: c.amount})).reverse());
-  const byMonth = new Map();
-  for (const c of charges) {
-    const ym = c.created.slice(0, 7);
-    const m = byMonth.get(ym) || {month: ym, usage: 0, credits: 0};
-    if (c.type === "credit") m.credits += c.amount; else m.usage += c.amount;
-    byMonth.set(ym, m);
-  }
-  const statements = [...byMonth.values()].sort((a, b) => b.month.localeCompare(a.month));
-  const monthLabel = ym => new Date(ym + "-01T00:00:00Z").toLocaleDateString("en-GB", {month: "long", year: "numeric", timeZone: "UTC"});
-  $("stTag").textContent = `${statements.length} months · newest first`;
-  $("statements").innerHTML = statements.map(m => `<tr><td>${monthLabel(m.month)}</td><td class="n">${usd(m.usage)}</td><td class="n cr">${m.credits ? "−" + usd(m.credits) : "–"}</td><td class="n">${usd(m.usage - m.credits)}</td><td><span class="badge ${m.month === month ? "credit" : ""}">${m.month === month ? "open" : "paid"}</span></td></tr>`).join("");
-
-  $("rowsTag").textContent = `${monthName} · ${inMonth.length} records · newest first`;
-  $("rows").innerHTML = inMonth.map(c => {
-    const credit = c.type === "credit";
-    return `<tr><td>${day(c.created)}</td><td class="mono">${c.id}</td><td><span class="badge ${c.type}">${c.type}</span></td><td>${c.description}</td><td class="n ${credit ? "cr" : ""}">${credit ? "−" : ""}${usd(c.amount)}</td></tr>`;
-  }).join("");
-}
-
-liveTail();
-loadShell().catch(console.error);
-loadCharges().catch(err => { console.error(err); toast("Billing service unavailable."); });
-</script>
+<script>const t=t=>document.getElementById(t),e=t=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"}).format(t),n=t=>new Date(t.slice(0,10)+"T00:00:00Z").toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric",timeZone:"UTC"});async function r(t){const e=await fetch(t);if(!e.ok)throw new Error(t+" "+e.status);return e.json()}function o(e){const n=t("toast");n.textContent=e,n.classList.add("on"),clearTimeout(n._h),n._h=setTimeout(()=>n.classList.remove("on"),2200)}document.querySelectorAll("[data-fake]").forEach(t=>t.addEventListener("click",()=>o("Billing actions need the Owner role."))),function(){const e=["api-gw","auth","editor-svc","culling","uploader","billing-svc","xmp-writer","preview"],n=[["i","INFO","request served in 42ms"],["i","INFO","job enqueued"],["w","WARN","retrying upstream call (2/5)"],["i","INFO","cache hit ratio 0.93"],["e","ERROR","upstream timeout after 30s"],["i","INFO","worker heartbeat"],["w","WARN","queue depth above 1k"],["i","INFO","export finished"]];let r="";for(let t=0;t<40;t++){const[o,a,s]=n[t%n.length];r+=`<span>${`14:${String(10+t%50).padStart(2,"0")}:${String(7*t%60).padStart(2,"0")}`} <span class="${o}">${a}</span> ${e[3*t%e.length]} ${s}</span>`}t("track").innerHTML=r+r}(),async function(){const[e,n]=await Promise.all([r("api/account.json"),r("api/alerts/summary.json")]);t("plan").textContent=e.plan,t("alerts").innerHTML=`⚠ <b>${n.firing}</b> firing`,t("aPlan").textContent=e.plan,t("aSrc").textContent=e.sources,t("aReg").textContent=e.ingest_region,function(e){const n=2*Math.PI*70,r=Math.min(e/90,1);t("ring").innerHTML=`<circle cx="85" cy="85" r="70" fill="none" stroke="rgba(196,140,255,.12)" stroke-width="12"/>\n    <circle cx="85" cy="85" r="70" fill="none" stroke="#21f3ff" stroke-width="12" stroke-linecap="round" stroke-dasharray="${n*r} ${n}" transform="rotate(-90 85 85)" style="filter:drop-shadow(0 0 8px #21f3ff)"/>`,t("ringV").textContent=e}(e.retention_days)}().catch(console.error),async function(){var o;await(o=500,new Promise(t=>setTimeout(t,o)));const a=await r("api/charges.json"),s=a.generated_at.slice(0,7),i=new Set,c=[];for(const t of a.data)i.has(t.id)||(i.add(t.id),c.push(t));c.sort((t,e)=>e.created.localeCompare(t.created));const d=c.filter(t=>t.created.startsWith(s)),l=d.filter(t=>"usage"===t.type),h=d.filter(t=>"credit"===t.type),u=l.reduce((t,e)=>t+e.amount,0),m=h.reduce((t,e)=>t+e.amount,0),f=new Date(s+"-01T00:00:00Z").toLocaleDateString("en-GB",{month:"long",year:"numeric",timeZone:"UTC"});for(const e of["kMtd","kUsage","kCredit","kAvg"])t(e).classList.remove("skel");t("kMtd").textContent=e(u-m),t("kUsage").textContent=e(u),t("kUsageS").textContent=`${l.length} daily charges`,t("kCredit").textContent="−"+e(m),t("kCreditS").textContent=h.map(t=>t.description).join(", ")||"none this month",t("kAvg").textContent=e(u/l.length),t("kAvgS").textContent="usage only",t("hsub").textContent=`${f} · through ${n(l[0].created)} · account ${a.account}`,t("chTag").textContent=f,function(r){const o=t("chart"),a=260,s=52,i=10,c=14,d=28,l=1.18*Math.max(...r.map(t=>t.v)),h=(860-s-i)/r.length,u=t=>a-d-t/l*(a-c-d);let m='<defs><linearGradient id="nb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff2d95"/><stop offset="1" stop-color="#9d4dff" stop-opacity=".25"/></linearGradient></defs>';for(let t=0;t<=4;t++){const e=l/4*t;m+=`<line x1="${s}" x2="${860-i}" y1="${u(e)}" y2="${u(e)}" stroke="rgba(196,140,255,.1)"/><text x="${s-8}" y="${u(e)+3}" text-anchor="end">$${Math.round(e)}</text>`}r.forEach((t,r)=>{const o=s+r*h+.18*h,i=.64*h;m+=`<rect x="${o}" y="${u(t.v)}" width="${i}" height="${a-d-u(t.v)}" rx="3" fill="url(#nb)"><title>${n(t.date)}: ${e(t.v)}</title></rect>`,m+=`<rect x="${o}" y="${u(t.v)}" width="${i}" height="2" fill="#fff" opacity=".8"/>`,m+=`<text x="${o+i/2}" y="251" text-anchor="middle">${t.date.slice(8,10)}</text>`}),o.innerHTML=m}(l.map(t=>({date:t.created.slice(0,10),v:t.amount})).reverse());const g=new Map;for(const t of c){const e=t.created.slice(0,7),n=g.get(e)||{month:e,usage:0,credits:0};"credit"===t.type?n.credits+=t.amount:n.usage+=t.amount,g.set(e,n)}const p=[...g.values()].sort((t,e)=>e.month.localeCompare(t.month));t("stTag").textContent=`${p.length} months · newest first`,t("statements").innerHTML=p.map(t=>{return`<tr><td>${n=t.month,new Date(n+"-01T00:00:00Z").toLocaleDateString("en-GB",{month:"long",year:"numeric",timeZone:"UTC"})}</td><td class="n">${e(t.usage)}</td><td class="n cr">${t.credits?"−"+e(t.credits):"–"}</td><td class="n">${e(t.usage-t.credits)}</td><td><span class="badge ${t.month===s?"credit":""}">${t.month===s?"open":"paid"}</span></td></tr>`;var n}).join(""),t("rowsTag").textContent=`${f} · ${d.length} records · newest first`,t("rows").innerHTML=d.map(t=>{const r="credit"===t.type;return`<tr><td>${n(t.created)}</td><td class="mono">${t.id}</td><td><span class="badge ${t.type}">${t.type}</span></td><td>${t.description}</td><td class="n ${r?"cr":""}">${r?"−":""}${e(t.amount)}</td></tr>`}).join("")}().catch(t=>{console.error(t),o("Billing service unavailable.")});</script>
 </body>
 </html>

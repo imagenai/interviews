@@ -27,7 +27,7 @@ body::before{content:"";position:fixed;inset:-30%;z-index:-1;filter:blur(60px);o
 button{font:inherit;color:inherit;cursor:pointer}
 .u{font-family:Unbounded,Manrope,sans-serif}
 
-/* floating top nav */
+
 .topwrap{position:sticky;top:14px;z-index:10;display:flex;justify-content:center;padding:0 16px}
 .top{display:flex;align-items:center;gap:6px;padding:8px 8px 8px 18px;border-radius:999px;background:rgba(255,255,255,.78);
   backdrop-filter:blur(20px) saturate(1.6);border:1px solid rgba(255,255,255,.9);box-shadow:0 18px 50px -20px rgba(60,60,140,.45);width:min(1180px,100%)}
@@ -56,7 +56,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .card h2{margin:0 0 4px;font-family:Unbounded;font-weight:600;font-size:16px;letter-spacing:-.02em}
 .card .hint{color:var(--mute);font-size:13px;margin:0 0 18px}
 
-/* the holographic plan card */
+
 .holo{position:relative;overflow:hidden;border-radius:26px;padding:26px;color:#fff;min-height:250px;display:flex;flex-direction:column;
   background:linear-gradient(125deg,#1a1c48 0%,#2b2f7a 45%,#5b3fa8 100%)}
 .holo::before{content:"";position:absolute;inset:-50%;background:conic-gradient(from 0deg,transparent,rgba(124,240,213,.55),transparent 30%,rgba(255,154,213,.5),transparent 60%,rgba(255,211,107,.45),transparent);
@@ -185,69 +185,6 @@ button{font:inherit;color:inherit;cursor:pointer}
 </main>
 <div class="toast" id="toast"></div>
 
-<script>
-const $ = id => document.getElementById(id);
-const sleep = ms => new Promise(r => setTimeout(r, ms));
-const money = (v, cur) => new Intl.NumberFormat("en-IE", {style: "currency", currency: cur}).format(v);
-const day = iso => new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", {day: "numeric", month: "short", year: "numeric", timeZone: "UTC"});
-const short = iso => new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", {day: "numeric", month: "short", timeZone: "UTC"});
-const FACE = ["#7cf0d5", "#ff9ad5", "#ffd36b", "#7b8cff", "#b8f5a0", "#ffb38a", "#c9a7ff", "#8fe3ff"];
-
-async function getJson(path) {
-  const res = await fetch(path);
-  if (!res.ok) throw new Error(path + " " + res.status);
-  return res.json();
-}
-function toast(msg) {
-  const t = $("toast");
-  t.textContent = msg;
-  t.classList.add("on");
-  clearTimeout(t._h);
-  t._h = setTimeout(() => t.classList.remove("on"), 2200);
-}
-document.querySelectorAll("[data-fake]").forEach(b => b.addEventListener("click", () => toast("Only workspace owners can do this. Ask Noa or Omer.")));
-
-async function loadWorkspace() {
-  const ws = await getJson("api/workspace.json");
-  $("wsName").textContent = ws.name;
-  $("wsInit").textContent = ws.name.slice(0, 2).toUpperCase();
-  $("faces").innerHTML = ws.members_preview.map((m, i) => `<span style="background:${FACE[i % FACE.length]}">${m}</span>`).join("")
-    + `<em>+${ws.members_total - ws.members_preview.length} more</em>`;
-}
-
-async function loadBilling() {
-  await sleep(400);
-  const [sub, inv] = await Promise.all([getJson("api/subscription.json"), getJson("api/invoices.json")]);
-  const invoices = [...inv.data].sort((a, b) => b.issued_on.localeCompare(a.issued_on));
-  const current = invoices.find(i => i.period_start === sub.current_period_start);
-
-  for (const id of ["amount", "seats"]) $(id).classList.remove("skel");
-  $("plan").textContent = sub.plan;
-  $("amount").textContent = money(current.total, current.currency);
-  $("period").textContent = `${short(sub.current_period_start)} – ${short(sub.current_period_end)}`;
-  $("next").textContent = day(sub.next_charge_on);
-  $("cycle").textContent = `Monthly, on the ${sub.billing_anchor_day}th`;
-  $("seats").innerHTML = `${sub.seats_used} <small>/ ${sub.seats} seats</small>`;
-  $("meter").style.width = (sub.seats_used / sub.seats * 100) + "%";
-  $("seatHint").textContent = sub.seats_used >= sub.seats ? "All seats in use. New invites will add seats." : `${sub.seats - sub.seats_used} seats free`;
-  $("ppu").textContent = money(sub.price_per_seat, sub.currency) + " / month";
-  $("cur").textContent = sub.currency === "EUR" ? "Euro (€)" : sub.currency;
-  const lifetime = invoices.reduce((t, i) => t + i.total, 0);
-  $("invHint").textContent = `${invoices.length} invoices since ${day(invoices[invoices.length - 1].issued_on)} · ${money(lifetime, current.currency)} billed in total. Billed in advance at the start of every period.`;
-  $("inv").innerHTML = invoices.map(i => `
-    <div class="invrow">
-      <div class="doc">PDF</div>
-      <div class="num">${i.number}<div class="seat">Issued ${day(i.issued_on)}</div></div>
-      <div class="per">${short(i.period_start)} – ${day(i.period_end)}</div>
-      <div class="seat">${i.seats} seats</div>
-      <div class="tot">${money(i.total, i.currency)}</div>
-      <div style="display:flex;gap:8px;align-items:center"><span class="st ${i.status}">${i.status}</span><button class="pdf" data-fake>↓</button></div>
-    </div>`).join("");
-  $("inv").querySelectorAll("[data-fake]").forEach(b => b.addEventListener("click", () => toast("Invoice PDFs are emailed to billing contacts.")));
-}
-
-loadWorkspace().catch(console.error);
-loadBilling().catch(err => { console.error(err); toast("Couldn't load billing. Refresh to try again."); });
-</script>
+<script>const e=e=>document.getElementById(e),t=(e,t)=>new Intl.NumberFormat("en-IE",{style:"currency",currency:t}).format(e),n=e=>new Date(e+"T00:00:00Z").toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"}),s=e=>new Date(e+"T00:00:00Z").toLocaleDateString("en-GB",{day:"numeric",month:"short",timeZone:"UTC"}),a=["#7cf0d5","#ff9ad5","#ffd36b","#7b8cff","#b8f5a0","#ffb38a","#c9a7ff","#8fe3ff"];async function o(e){const t=await fetch(e);if(!t.ok)throw new Error(e+" "+t.status);return t.json()}function r(t){const n=e("toast");n.textContent=t,n.classList.add("on"),clearTimeout(n._h),n._h=setTimeout(()=>n.classList.remove("on"),2200)}document.querySelectorAll("[data-fake]").forEach(e=>e.addEventListener("click",()=>r("Only workspace owners can do this. Ask Noa or Omer."))),async function(){const t=await o("api/workspace.json");e("wsName").textContent=t.name,e("wsInit").textContent=t.name.slice(0,2).toUpperCase(),e("faces").innerHTML=t.members_preview.map((e,t)=>`<span style="background:${a[t%a.length]}">${e}</span>`).join("")+`<em>+${t.members_total-t.members_preview.length} more</em>`}().catch(console.error),async function(){var a;await(a=400,new Promise(e=>setTimeout(e,a)));const[i,c]=await Promise.all([o("api/subscription.json"),o("api/invoices.json")]),l=[...c.data].sort((e,t)=>t.issued_on.localeCompare(e.issued_on)),d=l.find(e=>e.period_start===i.current_period_start);for(const t of["amount","seats"])e(t).classList.remove("skel");e("plan").textContent=i.plan,e("amount").textContent=t(d.total,d.currency),e("period").textContent=`${s(i.current_period_start)} – ${s(i.current_period_end)}`,e("next").textContent=n(i.next_charge_on),e("cycle").textContent=`Monthly, on the ${i.billing_anchor_day}th`,e("seats").innerHTML=`${i.seats_used} <small>/ ${i.seats} seats</small>`,e("meter").style.width=i.seats_used/i.seats*100+"%",e("seatHint").textContent=i.seats_used>=i.seats?"All seats in use. New invites will add seats.":i.seats-i.seats_used+" seats free",e("ppu").textContent=t(i.price_per_seat,i.currency)+" / month",e("cur").textContent="EUR"===i.currency?"Euro (€)":i.currency;const u=l.reduce((e,t)=>e+t.total,0);e("invHint").textContent=`${l.length} invoices since ${n(l[l.length-1].issued_on)} · ${t(u,d.currency)} billed in total. Billed in advance at the start of every period.`,e("inv").innerHTML=l.map(e=>`\n    <div class="invrow">\n      <div class="doc">PDF</div>\n      <div class="num">${e.number}<div class="seat">Issued ${n(e.issued_on)}</div></div>\n      <div class="per">${s(e.period_start)} – ${n(e.period_end)}</div>\n      <div class="seat">${e.seats} seats</div>\n      <div class="tot">${t(e.total,e.currency)}</div>\n      <div style="display:flex;gap:8px;align-items:center"><span class="st ${e.status}">${e.status}</span><button class="pdf" data-fake>↓</button></div>\n    </div>`).join(""),e("inv").querySelectorAll("[data-fake]").forEach(e=>e.addEventListener("click",()=>r("Invoice PDFs are emailed to billing contacts.")))}().catch(e=>{console.error(e),r("Couldn't load billing. Refresh to try again.")});</script>
 </body>
 </html>
